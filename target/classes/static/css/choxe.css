@@ -1,0 +1,253 @@
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: transparent;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+    background-color: #eeeeee;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #eeeeee;
+}
+
+.btn-tieptuc {
+    border: none;
+}
+
+.slider-big-gallery .slider-gallery-next,
+.slider-big-gallery .slider-gallery-prev {
+    background-image: url('/static/img-web/sprite.png');
+    background-size: 480px auto;
+    opacity: 0.4;
+}
+
+.slider-big-gallery:hover .slider-gallery-next,
+.slider-big-gallery:hover .slider-gallery-prev {
+    opacity: 1;
+}
+
+.slider-big-gallery .slider-gallery-next {
+    position: relative;
+}
+
+.slider-big-gallery .slider-gallery-prev {
+    position: relative;
+}
+
+.slider-big-gallery .slider-gallery-prev {
+    background-position: 553px 1451px;
+    width: 28px;
+    height: 28px;
+    background-color: #eee;
+    float: left;
+    z-index: 999;
+}
+
+.slider-big-gallery .slider-gallery-next {
+    background-position: 530px 1451px;
+    width: 28px;
+    height: 28px;
+    background-color: #eee;
+    float: right;
+    z-index: 999;
+    right: -1px;
+}
+
+.slider-big-gallery .pointer-prev,
+.slider-big-gallery .pointer-next {
+    top: 48%;
+}
+
+.slick-slide {
+    max-height: 540px;
+}
+
+.salon .detail-salon {
+    height: 300px;
+}
+
+.detail-salon.salon-vip-new .bor-col,
+.detail-salon.salon-vip-new .content-salon,
+.detail-salon.salon-vip-new img {
+    border-color: #ff9e33 !important;
+}
+
+.dki.dki-canhan.btn_dnhap {
+    border: none;
+}
+
+.tit-news h2 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    display: inline;
+}
+
+.tinh-thanh h3 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    display: inline;
+    margin: 0;
+}
+
+.name-store {
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 767px) {
+    .bd-home-index h1 {
+        margin-top: -20px !important;
+        margin-bottom: 20px;
+    }
+    .header_dl .banner_dl {
+        min-height: 360px;
+    }
+    .details_dl .desccript_salon {
+        min-height: 400px;
+    }
+    .list-news .news .list-opt {
+        display: none;
+    }
+    .list-news .news:hover .list-opt {
+        display: block;
+    }
+}
+
+.detail-salon .bor-col .content-salon {
+    height: 132px;
+}
+
+.detail-salon .content-salon h4.name_salon {
+    overflow: hidden;
+    height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .call-button.fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+    }
+    .list-opt.list-opt-detail a {
+        text-align: left !important;
+    }
+    .salon .detail-salon {
+        height: auto !important;
+    }
+    .detail-salon .bor-col .content-salon {
+        height: auto;
+    }
+    .detail-salon .content-salon h4.name_salon {
+        height: auto;
+    }
+}
+
+
+/* Khoa Nguyen modi start */
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+
+/* Top-level menu */
+
+nav>ul>li {
+    float: left;
+    position: relative;
+}
+
+nav>ul>li>a {
+    padding: 5px 6px;
+    /* border-left: 1px solid #000; */
+    display: block;
+}
+
+nav>ul>li:first-child {
+    margin: 0;
+}
+
+nav>ul>li:first-child a {
+    border: 0;
+}
+
+
+/* Dropdown Menu */
+
+nav ul li ul {
+    position: absolute;
+    background: #7d9dab;
+    /* width: 100%;  */
+    margin: 0;
+    padding: 0;
+    display: none;
+    z-index: 99;
+}
+
+nav ul li ul li {
+    text-align: left;
+    width: 200px;
+    padding-left: 5px;
+}
+
+nav ul li ul a {
+    padding: 5px 0;
+}
+
+nav ul li ul a:hover {
+    color: #fff;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+.btn-show-phone-list {
+    background-color: transparent;
+    border: 1.5px solid #de5011;
+    /* padding: 3px 5px; */
+    color: #de5011;
+    margin-top: 6px;
+    width: 90%;
+    line-height: 25px;
+}
+
+.btn-show-phone-list:hover {
+    background-color: #de5011;
+    color: #fff;
+}
+
+.btn-hide-phone-list {
+    background-color: transparent;
+    border: none;
+    color: #de5011;
+    width: 90%;
+}

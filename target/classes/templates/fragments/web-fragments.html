@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--HEAD WEB-->
+<head th:fragment="head-web">
+    <script>
+        var dataLayer = window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'event': 'view_homepage',
+            'google_tag_params': {
+                'emailaddress': '',
+                'emailaddress_raw': '',
+                'sitetype': 'd',
+                'dynx_pagetype': 'home'
+            }
+        });
+
+        var ga_tracker_name = null;
+
+        function init_ga_name() {
+            if (typeof ga === 'function') {
+                ga(function() {
+                    var ga_trackers = ga.getAll();
+                    ga_tracker_name = ga_trackers[0].get('name');
+                    console.log('GA: ' + ga_tracker_name);
+                });
+            } else {
+                console.log('GA Not loaded');
+                setTimeout(function() {
+                    init_ga_name();
+                }, 500);
+            }
+        }
+        init_ga_name();
+    </script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P234VKS');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>➤ Mua bán xe ô tô cũ mới đã qua sử dụng, xe hơi cũ mới giá rẻ | ChoXe.net</title>
+
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "url": "https://choxe.net/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://choxe.net/xe?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+    <link rel="canonical" href="https://choxe.net/" />
+    <meta name="description" content="Bán xe ô tô cũ mới tại Hà Nội, xe hơi cũ giá rẻ tại Tp HCM, đăng tin bán ô tô cũ mới Choxe.net: Toyota, Kia, Ford, Mercedes, Mazda cũ..." />
+    <!-- <meta name="keywords" content="cho xe oto, chợ xe ô tô, mua ban oto, mua oto, ban oto, mua ô tô, bán ô tô, xe hơi, bốn bánh, chợ xe, cho oto, chợ ô tô, chợ xe hơi"> -->
+    <meta name="keywords" content="mua bán ô tô, bán xe hơi cũ, chợ xe cũ, đăng tin bán ô tô">
+    <meta name="author" content="Chợ Xe" />
+
+    <meta property="fb:app_id" content="1891135751174652" />
+    <meta name="msvalidate.01" content="EBFA198867638E16AF90513C35BA4F78" />
+
+    <meta property="og:url" content="https://choxe.net/" />
+    <meta property="og:title" content="Mua bán xe ô tô cũ mới đã qua sử dụng, xe hơi cũ mới giá rẻ | ChoXe.net" />
+    <meta property="og:description" content="Bán xe ô tô cũ mới tại Hà Nội, xe hơi cũ giá rẻ tại Tp HCM, đăng tin bán ô tô cũ mới Choxe.net: Toyota, Kia, Ford, Mercedes, Mazda cũ..." />
+    <meta property="og:image" content="/static/img-web/og-logo.png" />
+    <meta property="og:site_name" content="choxe.net" />
+    <meta property="og:type" content="website" />
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="application-name" content="ChoXe.net" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/frontend/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/frontend/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/frontend/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/frontend/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/frontend/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/frontend/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/frontend/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/frontend/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/frontend/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/frontend/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/frontend/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/frontend/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/frontend/icons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/frontend/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/frontend/css/common3f56.css?v=11">
+
+</head>
+
+<!--HEADER-->
+<header class="header header-pc" th:fragment="header">
+    <!-- Header PC-->
+        <div class="header-top">
+            <div class="container p17">
+                <div class="col-left">
+                    <a class="logo" th:href="@{/Web/index}"></a>
+                </div>
+
+                <div class="col-right">
+                    <ul class="menu-top row m0 p0">
+                        <li class="sl-khu-vuc">
+
+                        </li>
+                        <li class="list-menu-top menu-home">
+                            <a class="" th:href="@{/Web/index}"><i class="icon-sprite-24 icon-home"></i></a>
+                        </li>
+                        <li class="list-menu-top"><a th:href="@{/Web/dang-tin}" class="">Đăng tin bán ô tô</a></li>
+                        <!-- BOX USER QUAN LI TAI KHOAN -->
+                        <li class="box-user dropdown fr">
+                            <ul class="user-dropdown">
+                                <li class="dropdown-toggle notification">
+                                    <a href="https://choxe.vn/thong-bao"><i class="icon-sprite-24 icon-ring"></i> <span class="badge"></span></a>
+                                </li>
+                                <li class="dropdown-toggle user" type="button" id="menu1" data-toggle="dropdown">
+                                    <div class="img-user">
+                                        <img src="https://choxe.vn/assets/frontend/img/avatar_default.png" width="45" height="45">
+                                    </div>
+
+                                    <span class="caret"></span>
+                                </li>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                    <li role="presentation">
+                                        <div  class="name-user">Huy Phạm</div>
+                                        <div class="email"><b th:inline="text">[[${#httpServletRequest.remoteUser}]]</b></div>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Quản lý Tài khoản</a></li>
+                                    <li><a class="" href="#">Nâng cấp tài khoản</a></li>
+
+<!--                                    <li class="divider"></li>-->
+<!--&lt;!&ndash;                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/tin-luu">Tin bán xe đã lưu <span class="txt-num">(0)</span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/danh-sach-yeu-thich">Xe yêu thích <span class="txt-num">(0)</span></a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/xem-gan-day">Đã xem gần đây <span class="txt-num">(0)</span></a></li>&ndash;&gt;-->
+<!--                                    <li role="presentation" class="divider"></li>-->
+
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" th:href="@{/Web/dang-tin}">Đăng tin bán ô tô<span class="txt-num"></span></a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" th:href="@{/Web/danh-sach-bai-dang}">Xe đang rao bán <span class="txt-num">(0)</span></a></li>
+                                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                                        <li role="presentation">
+                                                <a role="menuitem" tabindex="-1" th:href="@{/doc/index}">Trang Quan tri</a>
+                                        </li>
+                                    </div>
+<!--                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/quan-ly-oto/cho-duyet">Xe chờ duyệt <span class="txt-num">(0)</span></a></li>-->
+<!--                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/quan-ly-oto/thay-doi-cho-duyet">Xe thay đổi chờ duyệt <span class="txt-num">(0)</span></a></li>-->
+
+                                    <!-- User Menu-->
+                                    <li class="logout">
+                                        <a class="app-nav__item" href="javascript: document.logoutForm.submit()" role="menuitem"><i class="icon-sprite-24 icon-logout"></i> Đăng xuất</a>
+
+                                        <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                                            <input hidden type="submit" value="Sign Out"/>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-mid">
+            <div class="container">
+                <div class="col-xs-5 col-sm-5 col-md-5 p0">
+                    <div class="box-search">
+                        <form action="https://choxe.net/tim-xe/">
+                            <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm" value="" />
+                            <button class="btn-search"><i class="icon-sprite-24 icon-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+<!--                <div class="col-xs-7 col-sm-7 col-md-7 p0 txr">-->
+<!--                    <a class="seen-favo" href="tin-luu.html"><i class="icon-40-save"></i> <span>Tin đã lưu</span></a>-->
+<!--                    <a class="seen-favo" href="danh-sach-yeu-thich.html"><i class="icon-40-heart"></i> <span>Xe yêu thích</span></a>-->
+<!--                    <a class="seen-favo" href="salon-moi-gioi.html"><i class="icon-40-oto"></i> <span>Dành cho Salon, Môi giới</span></a>-->
+<!--                </div>-->
+            </div>
+        </div>
+
+        <!--        <div class="header-menu">-->
+        <!--            <div class="container p0">-->
+        <!--                <nav>-->
+        <!--                    <ul>-->
+        <!--                        <li><a href="https://choxe.net/danh-sach-dai-ly">Tìm Salon</a></li>-->
+        <!--                        &lt;!&ndash; <li><a href="https://choxe.net/blog/category/bang-gia-xe-o-to" target="_blank">Bảng giá xe ô tô</a></li> &ndash;&gt;-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe">Bảng giá xe ô tô</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-toyota"> Giá xe Toyota</a></li>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-mercedes"> Giá xe Mercedes Benz</a></li>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-kia"> Giá xe Kia</a></li>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-mazda"> Giá xe Mazda</a></li>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-ford"> Giá xe Ford</a></li>-->
+        <!--                                <li><a href="https://choxe.net/blog/bang-gia-xe-oto-huyndai"> Giá xe Hyundai</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/toyota">Giá xe Toyota</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/toyota/vios"> Giá xe Toyota Vios cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/toyota/innova"> Giá xe Toyota Innova cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/toyota/fortuner"> Giá xe Toyota Fortuner cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/toyota/camry"> Giá xe Toyota Camry cũ</a></li>-->
+
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/mercedes-benz">Giá xe Mercedes</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mercedes-benz/c?q=c200"> Giá xe Mercedes C200 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mercedes-benz/c?q=c250"> Giá xe Mercedes C250 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mercedes-benz?q=e200"> Giá xe Mercedes E200 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mercedes-benz?q=e250"> Giá xe Mercedes E250 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mercedes-benz/s"> Giá xe Mercedes S400 cũ</a></li>-->
+
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/mazda">Giá xe Mazda</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mazda/3"> Giá xe Mazda 3 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mazda/cx-5"> Giá xe Mazda CX-5 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mazda/6"> Giá xe Mazda 6 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mazda/bt-50"> Giá xe Mazda BT-50 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/mazda/2"> Giá xe Mazda 2 cũ</a></li>-->
+
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/kia">Giá xe KIA</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/kia/morning"> Giá xe Kia Morning cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/kia/cerato"> Giá xe Kia Cerato cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/kia/sorento"> Giá xe Kia Sorento cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/kia/optima"> Giá xe Kia Optima cũ</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/hyundai">Giá xe Hyundai</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/hyundai/i10"> Giá xe Hyundai i10 cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/hyundai/elantra"> Giá xe Hyundai Elantra cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/hyundai/accent"> Giá xe Hyundai Accent cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/hyundai/santa-fe"> Giá xe Hyundai Santa Fe cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/hyundai/tucson"> Giá xe Hyundai Tucson cũ</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/ford">Giá xe Ford</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/ford/ranger"> Giá xe Ford Ranger cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/ford/ecosport"> Giá xe Ford Ecosport cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/ford/everest"> Giá xe Ford Everest cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/ford/explorer"> Giá xe Ford Explorer cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/ford/transit"> Giá xe Ford Transit cũ</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/ford">Giá xe Honda</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/honda/city"> Giá xe Honda City cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/honda/cr-v"> Giá xe Honda CR-V cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/honda/civic"> Giá xe Honda Civic cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/honda/accord"> Giá xe Honda Accord cũ</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe-cu/truck">Giá xe tải cũ</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/truck/hyundai"> Giá xe tải Hyundai cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/truck/isuzu"> Giá xe tải Isuzu cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/truck/suzuki"> Giá xe tải Suzuki cũ</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe-cu/truck/hino"> Giá xe tải Hino cũ</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+
+        <!--                        <li>-->
+        <!--                            <a href="https://choxe.net/xe/truck">Bảng giá xe tải</a>-->
+        <!--                            <ul>-->
+        <!--                                <li><a href="https://choxe.net/xe/truck/isuzu"> Bảng giá xe tải Isuzu</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe/truck/hino"> Bảng giá xe tải Hino</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe/truck/hyundai"> Bảng giá xe tải Hyundai</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe/truck/kia"> Bảng giá xe tải Kia</a></li>-->
+        <!--                                <li><a href="https://choxe.net/xe/truck/thaco"> Bảng giá xe tải Thaco</a></li>-->
+        <!--                            </ul>-->
+        <!--                        </li>-->
+        <!--                    </ul>-->
+        <!--                </nav>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!-- Menu thu gọn  -->
+        <div class="short-menu">
+            <div class="white-menu">
+                <div class="container">
+                    <div class="">
+                        <ul class="menu-top row m0 p0">
+                            <li class="list-menu-top">
+                                <a class="logo" th:href="@{/Web/index}"></a>
+                            </li>
+                            <li class="sl-khu-vuc">
+
+                            </li>
+                            <li class="list-menu-top menu-home">
+                                <a class="" th:href="@{/Web/index}"><i class="icon-sprite-24 icon-home"></i></a>
+                            </li>
+                            <!--								<li class="list-menu-top"><a href="-->
+                            <!--" class="">Muốn mua ôtô</a></li>-->
+                            <li class="list-menu-top"><a th:href="@{/Web/dang-tin}" class="">Đăng tin bán ô tô</a></li>
+                            <!--<li class="list-menu-top"><a href="https://choxe.net/so-sanh" class="">So sánh xe</a></li>-->
+                            <!--								<li class="list-menu-top"><a href="-->
+                            <!--" class="">Học lái xe</a></li>-->
+                            <li class="list-menu-top w180">
+                                <div class="box-search">
+                                    <form action="https://choxe.net/tim-xe">
+                                        <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm" value="">
+                                        <button class="btn-search"><i class="icon-sprite-24 icon-search"></i></button>
+                                    </form>
+                                </div>
+                            </li>
+                            <li class="list-menu-top fr login-up">
+                                <ul class="">
+                                    <!-- BOX USER QUAN LI TAI KHOAN -->
+                                    <li class="box-user dropdown fr">
+                                        <ul class="user-dropdown">
+                                            <li class="dropdown-toggle notification">
+                                                <a href="https://choxe.vn/thong-bao"><i class="icon-sprite-24 icon-ring"></i> <span class="badge"></span></a>
+                                            </li>
+                                            <li class="dropdown-toggle user" type="button" id="menuw" data-toggle="dropdown">
+                                                <div class="img-user">
+                                                    <img src="https://choxe.vn/assets/frontend/img/avatar_default.png" width="45" height="45">
+                                                </div>
+
+                                                <span class="caret"></span>
+                                            </li>
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                                                <li role="presentation">
+                                                    <div  class="name-user">Huy Phạm</div>
+                                                    <div class="email"><b th:inline="text">[[${#httpServletRequest.remoteUser}]]</b></div>
+                                                </li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Quản lý Tài khoản</a></li>
+                                                <li><a class="" href="#">Nâng cấp tài khoản</a></li>
+
+                                                <li class="divider"></li>
+<!--                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/tin-luu">Tin bán xe đã lưu <span class="txt-num">(0)</span></a></li>-->
+<!--                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/danh-sach-yeu-thich">Xe yêu thích <span class="txt-num">(0)</span></a></li>-->
+<!--                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/xem-gan-day">Đã xem gần đây <span class="txt-num">(0)</span></a></li>-->
+                                                <li role="presentation" class="divider"></li>
+
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" th:href="@{/Web/dang-tin}">Đăng tin bán ô tô<span class="txt-num"></span></a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" th:href="@{/Web/danh-sach-bai-dang}">Xe đang rao bán <span class="txt-num">(0)</span></a></li>
+                                                <li role="presentation">
+                                                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                                                        <a role="menuitem" tabindex="-1" th:href="@{/doc/index}">Trang chủ Admin</a>
+                                                    </div>
+                                                </li>
+<!--                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/quan-ly-oto/cho-duyet">Xe chờ duyệt <span class="txt-num">(0)</span></a></li>-->
+<!--                                                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://choxe.vn/quan-ly-oto/thay-doi-cho-duyet">Xe thay đổi chờ duyệt <span class="txt-num">(0)</span></a></li>-->
+
+                                                <!-- User Menu-->
+                                                <li class="logout">
+                                                    <a class="app-nav__item" href="javascript: document.logoutForm.submit()" role="menuitem"><i class="icon-sprite-24 icon-logout"></i> Đăng xuất</a>
+
+                                                    <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                                                        <input hidden type="submit" value="Sign Out"/>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Menu thu gọn  -->
+    <!-- End Header PC-->
+    <!-- Header Mobile -->
+    <div class="header-mobile">
+
+        <nav class="nav-mobile">
+            <a class="btn-open-menu" data-toggle="modal" data-target="#menu_left">
+                <i class="icon-sprite-24 icon-bars"></i>
+            </a>
+            <a class="logo" th:href="@{/Web/index}"></a>
+            <a class="icon-right" data-toggle="modal" data-target="#menu_right">
+                <i class="icon-sprite-24 icon-dky"></i>
+                <span class="caret"></span>
+            </a>
+        </nav>
+
+        <!-- Modal Menu Left -->
+        <div class="modal left fade modal-menu" id="menu_left" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                        <ul class="list-menu-mb">
+                            <li><a class="" th:href="@{/Web/index}"><i class="icon-sprite-24 icon-home"></i> Trang chủ Chợ xe</a></li>
+                            <!--								<li><a class="" href="--><!--"><i class="icon-sprite-24 icon-oto-small"></i> Muốn mua ô tô</a></li>-->
+                            <li><a class="" th:href="@{/Web/dang-tin}"><i class="icon-sprite-24 icon-dtin"></i> Đăng tin bán ô tô</a></li>
+                            <li>
+                                <div sec:authorize="hasRole('ROLE_ADMIN')">
+                                    <a  th:href="@{/doc/index}">Trang chủ Admin</a>
+                                </div>
+                            </li>
+<!--                            <li><a class="txt-red" href="deal-oto-hot.html"><i class="icon-sprite-24 icon-hotdeal-red"></i> Deal HOT</a></li>-->
+<!--                            &lt;!&ndash;<li><a class="" href="https://choxe.net/so-sanh"><i class="icon-sprite-24 icon-ss-small"></i> So sánh xe</a></li>&ndash;&gt;-->
+<!--                            &lt;!&ndash;								<li><a class="" href="&ndash;&gt;&lt;!&ndash;"><i class="icon-sprite-24 icon-volang"></i> Học lái xe</a></li>&ndash;&gt;-->
+<!--                            <li><a class="" href="danh-sach-dai-ly.html"><i class="icon-sprite-24 icon-salon-small"></i> Tìm Salon</a></li>-->
+<!--                            <li><a class="" href="danh-sach-moi-gioi.html"><i class="icon-sprite-24 icon-moi-gioi"></i> Tìm Môi giới</a></li>-->
+                            <!--								<li><a class="" href="--><!--"><i class="icon-sprite-24 icon-tso-small"></i> Thông số kỹ thật</a></li>-->
+                            <!--								<li><a class="" href="--><!--"><i class="icon-sprite-24 icon-help-small"></i> Hưỡng dẫn mua xe</a></li>-->
+                            <!-- User Menu-->
+                            <li class="logout">
+                                <a class="app-nav__item" href="javascript: document.logoutForm.submit()" role="menuitem"><i class="icon-sprite-24 icon-logout"></i> Đăng xuất</a>
+
+                                <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+                                    <input hidden type="submit" value="Sign Out"/>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-header">
+
+                        <ul class="list-menu-mb">
+<!--                            <li><a class="" href="tin-luu.html"><i class="icon-sprite-24 icon-save-small"></i> Tin bán xe đã lưu <span class="txt-num"></span></a></li>-->
+<!--                            <li><a class="" href="danh-sach-yeu-thich.html"><i class="icon-sprite-24 icon-heart-small"></i> Xe yêu thích <span class="txt-num"></span></a></li>-->
+<!--                            <li><a class="" href="dang-nhap/index75b9.html"><i class="icon-sprite-24 icon-seen-small"></i> Đã xem gần đây <span class="txt-num"></span></a></li>-->
+                        </ul>
+                    </div>
+
+<!--                    <div class="md-footer">-->
+<!--                        <a class="" href="salon-moi-gioi.html"><i class="icon-sprite-24 icon-salon-blue"></i> Dành cho Salon, Môi giới</a>-->
+<!--                    </div>-->
+
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div>
+        <!-- End Modal menu left -->
+
+        <!-- Modal Menu Right -->
+        <div class="modal right fade modal-menu modal-menu-right" id="menu_right" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="row m0">
+                        <div class="col-xs-6 p0">
+<!--                         TRONG-->
+                        </div>
+                        <div class="col-xs-6 p0">
+                            <a class="a-dnhap" th:href="@{/login}">
+                                Đăng nhập
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="modal-header">
+                        <ul class="list-menu-mb">
+                            <li><a class="" href="#">Quản lý Tài khoản</a></li>
+                            <li><a class="" href="#">Nâng cấp tài khoản</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-header">
+                        <ul class="list-menu-mb">
+                            <li><a class="" href="#">Thông báo <span class="txt-red"></span></a></li>
+                            <li><a class="" th:href="@{/Web/dang-tin}">Đăng tin bán ô tô <span class="txt-num"></span></a></li>
+                            <li><a class="" th:href="@{/Web/danh-sach-bai-dang}">Xe đang rao bán <span class="txt-num"></span></a></li>
+                            <li>
+                                <div sec:authorize="hasRole('ROLE_ADMIN')">
+                                    <a class="" th:href="@{/doc/index}">Trang chủ Admin</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div><!-- modal-content -->
+            </div><!-- modal-dialog -->
+        </div>
+        <!-- End Modal Menu Right -->
+
+    </div>
+    <!-- End Header mobile -->
+</header>
+
+
+<!-- ASIDE WEB-->
+<div th:fragment="aside" class="col-left">
+        <div class="box-filter">
+            <div class="tab-content">
+
+                <!-- Content Tab Xe cũ -->
+                <div id="xe-cu" class="tab-pane fade in active">
+                    <form method="post" th:action="@{/Web/xe/search}" th:object="${search}"  enctype="multipart/form-data">
+
+                        <div class="sl-filter">
+                            <select class="select2 form-control sl-hang-xe" id="sl-hang-sx" name="make[]"  th:field="*{brandd}">
+                                <option th:each="brand : ${brands}" th:value="${brand.id}" th:text="${brand.name}"></option>
+                            </select>
+                        </div>
+                        <div class="sl-filter">
+                            <div class="col-xs-6 col-sm-6 p0">
+                                <label class="lbinput" style="color: #fff;">
+                                    <input type="checkbox" class="icheck" name="status[]" th:field="*{old}" th:value="Cũ"   /> <span>Xe cũ</span>
+                                </label>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 p0">
+                                <label class="lbinput" style="color: #fff;">
+                                    <input type="checkbox" class="icheck" name="status[]" th:field="*{neww}" th:value="Mới"  /> <span>Xe mới</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="row m0">
+                            <div class="title">Giá bán</div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 p0 pr3">
+                                <div class="sl-filter">
+                                    <select class="select2 form-control" id="sl-from-gia1" name="price_from" th:field="*{pricefrom}">
+                                        <option value=100000000>100 triệu</option>
+                                        <option value=200000000>200 triệu</option>
+                                        <option value=300000000>300 triệu</option>
+                                        <option value=400000000>400 triệu</option>
+                                        <option value=500000000>500 triệu</option>
+                                        <option value=600000000>600 triệu</option>
+                                        <option value=700000000>700 triệu</option>
+                                        <option value=800000000>800 triệu</option>
+                                        <option value=1000000000>1 tỷ </option>
+                                        <option value=1200000000>1.2 tỷ </option>
+                                        <option value=1400000000>1.4 tỷ </option>
+                                        <option value=1600000000>1.6 tỷ </option>
+                                        <option value=2000000000>2 tỷ </option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-6 p0 pl3">
+                                <div class="sl-filter">
+                                    <select class="select2 form-control" id="sl-from-gia" name="price_to" th:field="*{priceto}">
+                                        <option value=100000000>100 triệu</option>
+                                        <option value=200000000>200 triệu</option>
+                                        <option value=300000000>300 triệu</option>
+                                        <option value=400000000>400 triệu</option>
+                                        <option value=500000000>500 triệu</option>
+                                        <option value=600000000>600 triệu</option>
+                                        <option value=700000000>700 triệu</option>
+                                        <option value=800000000>800 triệu</option>
+                                        <option value=1000000000>1 tỷ </option>
+                                        <option value=1200000000>1.2 tỷ </option>
+                                        <option value=1400000000>1.4 tỷ </option>
+                                        <option value=1600000000>1.6 tỷ </option>
+                                        <option value=2000000000>2 tỷ </option>
+                                    </select>																								</select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hidden more-search">
+                            <div class="sl-filter">
+                                <select class="select2 form-control" th:field="*{city}">
+                                    <option  th:each="item : ${provinces}" th:value="${item.code}" th:text="${item.name}" name="state"></option>
+                                </select>
+                            </div>
+
+                            <!--                                        <div class="sl-filter hidden-xs">-->
+                            <!--                                            <select class="select2 form-control sl-font16" name="user_type[]">-->
+                            <!--                            <option value="" selected>Người bán</option>-->
+                            <!--                            <option value="personal">Cá nhân</option>-->
+                            <!--                            <option value="salon">Đại lý</option>-->
+                            <!--                            <option value="agency">Môi giới</option>-->
+                            <!--                        </select>-->
+                            <!--                                        </div>-->
+
+                            <div class="row m0">
+                                <div class="title">Năm sản xuất</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 p0 pr3">
+                                    <div class="sl-filter">
+                                        <select class="select2 form-control" id="sl-from-nam06" name="year_from" th:field="*{yearfrom}">
+                                            <option value=2022>2022</option>
+                                            <option value=2021>2021</option>
+                                            <option value=2020>2020</option>
+                                            <option value=2019>2019</option>
+                                            <option value=2018>2018</option>
+                                            <option value=2017>2017</option>
+                                            <option value=2016>2016</option>
+                                            <option value=2015>2015</option>
+                                            <option value=2014>2014</option>
+                                            <option value=2013>2013</option>
+                                            <option value=2012>2012</option>
+                                            <option value=2011>2011</option>
+                                            <option value=2010>2010</option>
+                                            <option value=2009>2009</option>
+                                            <option value=2008>2008</option>
+                                            <option value=2007>2007</option>
+                                            <option value=2006>2006</option>
+                                            <option value=2005>2005</option>
+                                            <option value=2004>2004</option>
+                                            <option value=2003>2003</option>
+                                            <option value=2002>2002</option>
+                                            <option value=2001>2001</option>
+                                            <option value=2000>2000</option>
+                                            <option value=1999>1999</option>
+                                            <option value=1998>1998</option>
+                                            <option value=1997>1997</option>
+                                            <option value=1996>1996</option>
+                                            <option value=1995>1995</option>
+                                            <option value=1994>1994</option>
+                                            <option value=1993>1993</option>
+                                            <option value=1992>1992</option>
+                                            <option value=1991>1991</option>
+                                            <option value=1990>1990</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6 col-sm-6 col-md-6 p0 pl3">
+                                    <div class="sl-filter">
+                                        <select class="select2 form-control" id="sl-to-nam06" name="year_to" th:field="*{yearto}">
+                                            <option value=2022>2022</option>
+                                            <option value=2021>2021</option>
+                                            <option value=2020>2020</option>
+                                            <option value=2019>2019</option>
+                                            <option value=2018>2018</option>
+                                            <option value=2017>2017</option>
+                                            <option value=2016>2016</option>
+                                            <option value=2015>2015</option>
+                                            <option value=2014>2014</option>
+                                            <option value=2013>2013</option>
+                                            <option value=2012>2012</option>
+                                            <option value=2011>2011</option>
+                                            <option value=2010>2010</option>
+                                            <option value=2009>2009</option>
+                                            <option value=2008>2008</option>
+                                            <option value=2007>2007</option>
+                                            <option value=2006>2006</option>
+                                            <option value=2005>2005</option>
+                                            <option value=2004>2004</option>
+                                            <option value=2003>2003</option>
+                                            <option value=2002>2002</option>
+                                            <option value=2001>2001</option>
+                                            <option value=2000>2000</option>
+                                            <option value=1999>1999</option>
+                                            <option value=1998>1998</option>
+                                            <option value=1997>1997</option>
+                                            <option value=1996>1996</option>
+                                            <option value=1995>1995</option>
+                                            <option value=1994>1994</option>
+                                            <option value=1993>1993</option>
+                                            <option value=1992>1992</option>
+                                            <option value=1991>1991</option>
+                                            <option value=1990>1990</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--                                        <div class="sl-filter">-->
+                            <!--                                            <select class="select2 form-control" id="sl-loai-xe" name="body_style[]">-->
+                            <!--                                                <option value="sedan">Sedan</option>-->
+                            <!--                                                <option value="suv">SUV</option>-->
+                            <!--                                                <option value="truck">Xe tải</option>-->
+                            <!--                                                <option value="hatchback">Hatchback</option>-->
+                            <!--                                                <option value="mpv">MPV</option>-->
+                            <!--                                                <option value="pick-up">Xe Bán tải</option>-->
+                            <!--                                                <option value="van-minivan">Van/Minivan</option>-->
+                            <!--                                                <option value="coupe">Coupe</option>-->
+                            <!--                                            </select>-->
+                            <!--                                        </div>-->
+                        </div>
+
+                        <button type="submit" class="btn btn-orange-48 mt15">
+                            <i class="icon-sprite-24 icon-search-white"></i> Tìm Kiếm
+                        </button>
+
+                        <div class="txc mt10">
+                            <a class="tk-nang-cao" th:href="@{/Web/tim-kiem}">Tìm kiếm nâng cao »</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- End box filter -->
+        <!-- Lọc nhanh theo loại xe -->
+        <div class="quick-filter mt15 hidden-xs">
+            <div class="title-bg">Lọc nhanh theo loại xe</div>
+            <div class="list-loai-xe">
+                <div class="row m0">
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=sedan}">
+                            <i class="icon-xe icon-xe-1"></i> Sedan </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=suv}">
+                            <i class="icon-xe icon-xe-4"></i> SUV </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=truck}">
+                            <i class="icon-xe icon-xe-9"></i> Xe tải </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=hatchback}">
+                            <i class="icon-xe icon-xe-2"></i> Hatchback </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=mpv}">
+                            <i class="icon-xe icon-xe-8"></i> MPV </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=pick-up}">
+                            <i class="icon-xe icon-xe-6"></i> Xe Bán tải </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=van-minivan}">
+                            <i class="icon-xe icon-xe-6"></i> Van/Minivan </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 p0">
+                        <a class="loai-xe" th:href="@{/Web/xe/form?rs=coupe}">
+                            <i class="icon-xe icon-xe-5"></i> Coupe </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End Lọc nhanh theo loại xe -->
+        <!-- Box link Mua/Bán -->
+        <div class="box-left hidden-xs">
+            <ul class="list-tit">
+                <li class="tit-mua-ban">Bán
+                    <ul class="list-link">
+                        <li><a class="" href="https://choxe.net/dang-tin">Đăng tin bán ô tô</a></li>
+                        <li><a class="" href="https://choxe.net/quan-ly-oto/dang-ban">Xe đang rao bán</a></li>
+                        <li><a class="" href="https://choxe.net/quan-ly-oto/da-ban">Xe đã bán</a></li>
+                        <li><a class="" href="https://choxe.net/quan-ly-oto/cho-duyet">Xe chờ duyệt </a></li>
+                    </ul>
+                </li>
+                <li class="tit-mua-ban">Mua
+                    <ul class="list-link">
+                        <li><a class="" href="https://choxe.net/tin-luu">Tin bán xe đã lưu</a></li>
+                        <li><a class="" href="https://choxe.net/xe-moi">Mua Ô tô mới</a></li>
+                        <li><a class="" href="https://choxe.net/xe-cu">Mua Xe cũ</a></li>
+                        <li><a class="" href="https://choxe.net/danh-sach-dai-ly">Tìm kiếm đại lý</a></li>
+                        <li><a class="" href="https://choxe.net/danh-sach-yeu-thich">Xe yêu thích</a></li>
+                        <li><a class="" href="https://choxe.net/xem-gan-day">Đã xem gần đây</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- End Box link Mua/Bán -->
+        <!-- blog -->
+        <div class="quick-filter mt15 hidden-xs">
+            <div class="title-bg">Blogs</div>
+            <div class="list-loai-xe p15mb">
+                <div class="row m0 pt15">
+                    <a class="list-moi-gioi" href="https://choxe.net/blog/co-nen-mua-kia-morning-cu-tham-khao-xe-kia-morning-cu-gia-tot" target="_blank">
+                        <div class="avatar">
+                            <img class="" src="https://choxe.net/blog/wp-content/uploads/2019/01/xe-kia-morning-cu0000.png" height="70px" width="75">
+                        </div>
+                        <div class="infor-moi-gioi">
+                            <div class="name-moi-gioi" style="overflow: hidden; text-overflow: ellipsis;font-weight: 500;">
+                                Có nên mua Kia Morning cũ? Tham khảo xe Kia Morning cũ giá tốt </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row m0 pt15">
+                    <a class="list-moi-gioi" href="https://choxe.net/blog/xe-o-to-co-dien" target="_blank">
+                        <div class="avatar">
+                            <img class="" src="https://choxe.net/blog/wp-content/uploads/2019/02/xe-o-to-co-dien0000.png" height="70px" width="75">
+                        </div>
+                        <div class="infor-moi-gioi">
+                            <div class="name-moi-gioi" style="overflow: hidden; text-overflow: ellipsis;font-weight: 500;">
+                                Hàng loạt mẫu xe ô tô cổ điển được chào bán giá rẻ hơn cả xe máy </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row m0 pt15">
+                    <a class="list-moi-gioi" href="https://choxe.net/blog/ban-xe-toyota-innova-cu-gia-tot-nhat-thi-truong" target="_blank">
+                        <div class="avatar">
+                            <img class="" src="https://choxe.net/blog/wp-content/uploads/2021/12/xe-toyota-innova-cu0000.png" height="70px" width="75">
+                        </div>
+                        <div class="infor-moi-gioi">
+                            <div class="name-moi-gioi" style="overflow: hidden; text-overflow: ellipsis;font-weight: 500;">
+                                Bán xe Toyota Innova cũ giá tốt, uy tín, chất lượng trên toàn quốc </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row m0 pt15">
+                    <a class="list-moi-gioi" href="https://choxe.net/blog/cach-tu-pha-nuoc-rua-kinh-xe-o-to-tai-nha" target="_blank">
+                        <div class="avatar">
+                            <img class="" src="https://choxe.net/blog/wp-content/uploads/2021/12/nuoc-rua-kinh-o-to0000-1.png" height="70px" width="75">
+                        </div>
+                        <div class="infor-moi-gioi">
+                            <div class="name-moi-gioi" style="overflow: hidden; text-overflow: ellipsis;font-weight: 500;">
+                                Cách tự pha nước rửa kính xe ô tô đơn giản tại nhà </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="row m0 pt15">
+                    <a class="list-moi-gioi" href="https://choxe.net/blog/cach-mo-cua-xe-khi-quen-chia-khoa" target="_blank">
+                        <div class="avatar">
+                            <img class="" src="https://choxe.net/blog/wp-content/uploads/2019/07/quen-chia-khoa-xe0000.png" height="70px" width="75">
+                        </div>
+                        <div class="infor-moi-gioi">
+                            <div class="name-moi-gioi" style="overflow: hidden; text-overflow: ellipsis;font-weight: 500;">
+                                Cách mở cửa xe khi quên chìa khóa xe trong ô tô bạn nên biết </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--End blog -->
+</div>
+
+
+<!--BOX TIM KIEM XE THEO TINH THANH-->
+<div th:fragment="tinhThanh" class="deal mt25 tinh-thanh hidden-xs">
+        <div class="title-underline">Xem xe theo tỉnh thành</div>
+        <div class="row m0 mt20 mt10mb">
+            <div class="col-xs-6 col-sm-3 p0 mt5" >
+                <a class="city" th:each="province : ${provinces}" th:href="@{'/Web/tinh-thanh/'+ ${province.code}}" th:text="${province.name}"><i class="icon-24 icon-sprite-24 icon-address"></i><span class="txt-num">()</span></a>
+            </div>
+        </div>
+        <hr class="visible-xs m0 mt5 ">
+
+        <div class="a-see-all ">
+            <a class=" " th:href="@{/Web/tinh-thanh}">Xem tất cả Tỉnh thành »</a>
+        </div>
+</div>
+
+
+<!--BOX TIM KIEM XE THEO HANG-->
+<div th:fragment="hangXe" class="deal hang-sx">
+    <!-- Box Hãng xe -->
+        <div class="title-underline">Xem xe theo hãng </div>
+        <a class="txt-see-all hidden-xs" th:href="@{/Web/hang-xe}">Xem tất cả hãng xe »</a>
+        <ul class="row logo-hang" >
+            <li style="text-align: center" th:each="brand : ${brands}">
+                <a class="" th:href="@{'/Web/hang-xe/' + ${brand.id}}" th:text="${brand.name}">
+                </a>
+            </li>
+        </ul>
+
+        <hr class="visible-xs m0 mt5">
+
+        <div class="a-see-all">
+            <a class="" th:href="@{/Web/hang-xe}">Xem tất cả Hãng xe »</a>
+        </div>
+    <!-- End Box hãng xe -->
+</div>
+
+
+<!--BOX BAN XE TIM KIEM -->
+<div th:fragment="boxXeTimKiem" class="col-right pl30">
+    <div class="visible-xs">
+        <div class="div-filter-mb row m0">
+            <div class="map-link cbreadcrumb" style="padding-top: 10px">
+                <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a class="" href="index.html" itemprop="item"><span itemprop="name">Chợ xe</span></a>
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        >                     <a href="xe/index.html" itemprop="item"><span itemprop="name">Xe</span></a>
+                    </li>
+                </ul>
+            </div>                        <div class="filter-price">
+            <a href="xe654d.html?sort=price_asc"><i class="icon-sprite-24 icon-filter-price"></i> Giá thấp đến cao</a>
+        </div>
+            <div class="div-loc-mb">
+                <a href="#" class="toggle-filter"><i class="icon-sprite-24 icon-loc"></i> Lọc</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Lọc Mobile -->
+
+    <div class="row m0 mt15 nonemb">
+        <div class="map-link cbreadcrumb" style="padding-top: 10px">
+            <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a class="" href="index.html" itemprop="item"><span itemprop="name">Chợ xe</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    >                     <a href="xe/index.html" itemprop="item"><span itemprop="name">Xe</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="list-filter row">
+
+    </div>
+    <style>
+                    @media (min-width: 767px) {
+                        .pos-sl-sx {
+                            top: 33px !important;
+                        }
+                    }
+        </style>
+    <!-- Box Xe bán gấp -->
+    <div class="deal table-xe" id="block-2nd">
+        <h1 class="title-underline">
+            Mua bán xe ô tô  cũ mới        </h1>
+
+        <div class="row sap-xep fr pos-sl-sx hidden-xs">
+            <div class="sl-sap-xep select2 ">
+                <select class="form-control" id="sl-sort">
+                    <option value="https://choxe.net/xe" selected>Sắp xếp mặc định</option>
+                    <option value="https://choxe.net/xe?sort=price_asc" >Giá thấp đến cao</option>
+                    <option value="https://choxe.net/xe?sort=price_desc" >Giá cao đến thấp</option>
+                    <option value="https://choxe.net/xe?sort=timestamp_desc" >Tin đăng mới nhất</option>
+                </select>
+            </div>
+        </div>
+
+        <p class="font16 mt15 p15mb font14mb">Tìm được <span class="txt-orange" th:text="'(' + ${sumCar} + ')'"></span> tin bán xe</p>
+        <div>
+            <p th:text="${notification}"></p>
+        </div>
+    </div>
+
+    <table class="table list-news">
+
+        <tr th:each="item : ${news}">
+            <td class="row news  items-341228 pos-0">
+                <div class="news-detail">
+                    <div class="info-left">
+                        <a th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}" class="img">
+                            <img class=""
+                                 th:src="'data:image/jpg;base64,' + ${item.carNew.picCars[0].name}"
+                                 width="175" height="118" alt="Xe Cũ "/></a>
+                        <div class="block-txt-mb">
+                            <a class="tit-news" th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}">
+                                <h2 th:text="${item.title}"></h2>
+                            </a>
+                            <div class="price visible-xs" th:text="${item.carNew.price}"> </div>
+
+                            <div class="row" style="margin: 0">
+                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.state}">
+                                    <i class="icon-24 icon-sprite-24 icon-status"></i> </div>
+
+                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.create_car}">
+                                    <i class="icon-24 icon-sprite-24 icon-calendar2"></i> </div>
+
+                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gone}">
+                                    <i class="icon-24 icon-sprite-24 icon-speed2"></i>
+                                    <span class="hidden-xs"> km</span>
+                                </div>
+
+                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gear}">
+                                    <i class="icon-24 icon-sprite-24 icon-auto2"></i> </div>
+                            </div>
+
+                            <div class="city visible-xs" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                            <hr>
+                            <div class="old-news">Đăng 4 ngày trước</div>
+                        </div>
+                        <div class="row list-opt hidden-xs">
+                            <!--                    <div class="col-xs-3 col-sm-3 p0">-->
+                            <!--                        <a class="compare" href="-->
+                            <!--">-->
+                            <!--                            <i class="icon-sprite-24 icon-compare"></i>-->
+                            <!--                            So Sánh-->
+                            <!--                        </a>-->
+                            <!--                    </div>-->
+
+                            <div class="col-xs-3 col-sm-5 p0">
+                                <button class="btn-show-phone-list" onclick="showPhoneNumner(341635, '0945609563')" id="salon_id_3416352">
+                                    Xem số điện thoại
+                                </button>
+                            </div>
+
+                            <div class="col-xs-3 col-sm-3 p0">
+                                <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor" data-toggle="tooltip" title="Thích loại xe này" data-placement="bottom">
+                                    <i class="icon-sprite-24 icon-heart"></i> Yêu thích
+                                </a>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 p0">
+                                <a href="tin-luu.html?auto_id=341635" class="save" data-toggle="tooltip" title="Lưu tin này" data-placement="bottom">
+                                    <i class="icon-sprite-24 icon-save"></i> Lưu tin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-addr txr hidden-xs">
+                        <div class="price" th:text="${item.carNew.price}"></div>
+                        <div class="city" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End Box xe bán gấp -->
+</div>
+
+<!--BOX BAN XE GAP-->
+<div th:fragment="boxBanXeGap" class="deal table-xe">
+        <div class="title-underline">
+            Bán gấp </div>
+
+        <a class="txt-see-all hidden-xs" th:href="@{/Web/xe}">Xem tất cả xe bán gấp »</a>
+
+        <table class="table list-news">
+
+            <tr th:each="item : ${news}">
+                <td class="row news  items-341228 pos-0">
+                    <div class="news-detail">
+                        <div class="info-left">
+                            <a th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}" class="img">
+                                <img class=""
+                                     th:src="'data:image/jpg;base64,' + ${item.carNew.picCars[0].name}"
+                                     width="175" height="118" alt="Xe Cũ "/></a>
+                            <div class="block-txt-mb">
+                                <a class="tit-news" th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}">
+                                    <h2 th:text="${item.title}"></h2>
+                                </a>
+                                <div class="price visible-xs" th:text="${item.carNew.price}"> </div>
+
+                                <div class="row" style="margin: 0">
+                                    <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.state}">
+                                        <i class="icon-24 icon-sprite-24 icon-status"></i> </div>
+
+                                    <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.create_car}">
+                                        <i class="icon-24 icon-sprite-24 icon-calendar2"></i> </div>
+
+                                    <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gone}">
+                                        <i class="icon-24 icon-sprite-24 icon-speed2"></i>
+                                        <span class="hidden-xs"> km</span>
+                                    </div>
+
+                                    <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gear}">
+                                        <i class="icon-24 icon-sprite-24 icon-auto2"></i> </div>
+                                </div>
+
+                                <div class="city visible-xs" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                                <hr>
+                                <div class="old-news">Đăng 4 ngày trước</div>
+                            </div>
+                            <div class="row list-opt hidden-xs">
+                                <!--                    <div class="col-xs-3 col-sm-3 p0">-->
+                                <!--                        <a class="compare" href="-->
+                                <!--">-->
+                                <!--                            <i class="icon-sprite-24 icon-compare"></i>-->
+                                <!--                            So Sánh-->
+                                <!--                        </a>-->
+                                <!--                    </div>-->
+
+                                <div class="col-xs-3 col-sm-5 p0">
+                                    <button class="btn-show-phone-list" onclick="showPhoneNumner(341635, '0945609563')" id="salon_id_341635">
+                                        Xem số điện thoại
+                                    </button>
+                                </div>
+
+                                <div class="col-xs-3 col-sm-3 p0">
+                                    <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor" data-toggle="tooltip" title="Thích loại xe này" data-placement="bottom">
+                                        <i class="icon-sprite-24 icon-heart"></i> Yêu thích
+                                    </a>
+                                </div>
+                                <div class="col-xs-3 col-sm-3 p0">
+                                    <a href="tin-luu.html?auto_id=341635" class="save" data-toggle="tooltip" title="Lưu tin này" data-placement="bottom">
+                                        <i class="icon-sprite-24 icon-save"></i> Lưu tin
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-addr txr hidden-xs">
+                            <div class="price" th:text="${item.carNew.price}"></div>
+                            <div class="city" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="txc p15mb">
+            <a class="btn btn-see-more" th:href="@{/Web/xe}">
+                <i class="icon-sprite-24 icon-plus"></i> XEM THÊM Ô TÔ BÁN GẤP
+            </a>
+        </div>
+    <!-- End Box xe bán gấp -->
+</div>
+
+
+
+<!-- Footer -->
+<div class="footer " th:fragment="footer">
+    <div class="container ">
+        <div class="row m0 ">
+            <div class="col-xs-8 col-sm-8 p0 div-1st ">
+                <div class="txt-footer ">
+                    &copy 2005-2017 by ChoXe.net. All rights reserved.<br> Công Ty Cổ Phần Ô Tô Xuyên Việt; Mã số thuế: 0304013473<br> Lầu 1, B5-B6 Khu Kim Sơn - Đường Nguyễn Hữu Thọ, phường Tân Phong, Quận 7, TPHCM. <br> Tel: 091.144.2883 - Email:
+                    cskh@choxe.net
+                    <br /> Liên kết:
+                    <a href="https://orchard.vn " target="_blank ">Nước hoa chính hãng</a> |
+                    <a href="https://spa360.vn " target="_blank ">Spa360.vn</a> |
+                    <a href="https://adsplus.vn " target="_blank ">Quảng cáo adwords</a>
+                </div>
+            </div>
+            <div class="visible-xs mt10 mb10 ">
+                <a class="btn btn-blue2-48 " href="https://choxe.net/salon-moi-gioi "><i class="icon-sprite-24 icon-xe-white "></i> Dành cho Salon, Môi giới</a>
+                <div class="btn-kvuc row m0 ">
+                    <div class="col-xs-6 p0 ">
+                        <a class="btn-mien-bac " href="https://choxe.net/khu-vuc/1 ">Miền Bắc</a>
+                    </div>
+                    <div class="col-xs-6 p0 ">
+                        <a class="btn-mien-nam " href="https://choxe.net/khu-vuc/2 ">Miền Nam</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-sm-4 p0 txr div-2nd ">
+                <div class="list-ft ">
+                    <a class="font16 " href="https://choxe.net/gioi-thieu.html ">Giới thiệu</a> <span class="m5 ">|</span>
+                    <a class="font16 " href="https://choxe.net/thoa-thuan-su-dung.html ">Quy chế hoạt động</a> <span class="m5 ">|</span>
+                    <a class="font16 " href="https://docs.google.com/document/d/1G-rPJC7DZJQMLSZ_RecYl1Wkub_Mk43Q0_5rd5fGq9s/edit# " target="_blank ">Báo giá</a>
+                </div>
+                <div class="hotline mt10 "> Hotline: <a href="tel:091.144.2883 "><span class="bold txt-orange font24 "> 091.144.2883</span></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

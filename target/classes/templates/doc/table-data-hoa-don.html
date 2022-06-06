@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" th:replace="~{layouts/main-layouts :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #home-header},
+                                                ~{:: #home-aside},
+                                                ~{:: #home-mainContent}
+                                               )}">
+<body>
+<!-- Navbar-->
+<div class="app-header" id="home-header" th:replace="~{/fragments/app-fragments :: header}"></div>
+<div id="home-aside" th:replace="~{/fragments/app-fragments :: aside}"></div>
+
+<main id="home-mainContent">
+    <div class="app-title">
+        <ul class="app-breadcrumb breadcrumb side">
+            <li class="breadcrumb-item active"><a href="#"><b>Danh sách hoá đơn</b></a></li>
+        </ul>
+        <div id="clock"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <div class="row element-button">
+                        <div class="col-sm-2">
+
+                            <a class="btn btn-add btn-sm" th:href="@{/doc/form-add-hoa-don}" title="Thêm"><i class="fas fa-plus"></i>
+                                Tạo mới tin</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
+                                    class="fas fa-file-upload"></i> Tải từ file</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
+                                    class="fas fa-print"></i> In dữ liệu</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
+                                    class="fas fa-copy"></i> Sao chép</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
+                                    class="fas fa-file-pdf"></i> Xuất PDF</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
+                                    class="fas fa-trash-alt"></i> Xóa tất cả </a>
+                        </div>
+                    </div>
+                    <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0" border="0" id="sampleTable">
+                        <thead>
+                        <tr>
+                            <th width="10"><input type="checkbox" id="all"></th>
+                            <th>Mã hoá đơn</th>
+                            <th>Mã đơn hàng</th>
+                            <th>Mã Loại Tin</th>
+                            <th>Thời hạn</th>
+                            <th>Tổng tiền</th>
+                            <th>Tình trạng</th>
+                            <th>Tính năng</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="hoadon : ${hoadons}" >
+                            <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                            <td th:text="${hoadon.id}"></td>
+                            <td>
+                                <a class="btn btn-primary btn-sm edit" th:href="@{'/doc/form-edit-don-hang/' + ${hoadon.newTinhTong.id}}" title="Sửa">Xem chi tiết</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-primary btn-sm edit" th:href="@{'/doc/form-edit-san-pham/' + ${hoadon.loaiTin.id}}" title="Sửa">Xem chi tiết</a>
+                            </td>
+                            <td th:text="${hoadon.quantity}"></td>
+                            <td th:text="${hoadon.totalPrice}"></td>
+                            <td>
+                                <span class="badge bg-success" th:text="${hoadon.state}"></span>
+                            </td>
+                            <td><a class="btn btn-primary btn-sm trash" th:href="@{'/doc/delete-hoa-don/' + ${hoadon.id}}" title="Xóa"><i class="fas fa-trash-alt"></i></a>
+                                <a class="btn btn-primary btn-sm edit" th:href="@{'/doc/form-edit-hoa-don/' + ${hoadon.id}}" title="Sửa"><i class="fa fa-edit"></i></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+
+</html>
