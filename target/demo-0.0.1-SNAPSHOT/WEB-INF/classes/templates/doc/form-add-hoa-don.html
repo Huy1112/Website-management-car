@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" th:replace="~{layouts/main-layouts :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #home-header},
+                                                ~{:: #home-aside},
+                                                ~{:: #home-mainContent}
+                                               )}">
+<body>
+<style>
+    .Choicefile {
+      display: block;
+      background: #14142B;
+      border: 1px solid #fff;
+      color: #fff;
+      width: 150px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 5px 0px;
+      border-radius: 5px;
+      font-weight: 500;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .Choicefile:hover {
+      text-decoration: none;
+      color: white;
+    }
+
+    #uploadfile,
+    .removeimg {
+      display: none;
+    }
+
+    #thumbbox {
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .removeimg {
+      height: 25px;
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 5px;
+      left: 5px;
+      background-size: 25px;
+      width: 25px;
+      /* border: 3px solid red; */
+      border-radius: 50%;
+
+    }
+
+    .removeimg::before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      content: '';
+      border: 1px solid red;
+      background: red;
+      text-align: center;
+      display: block;
+      margin-top: 11px;
+      transform: rotate(45deg);
+    }
+
+    .removeimg::after {
+      /* color: #FFF; */
+      /* background-color: #DC403B; */
+      content: '';
+      background: red;
+      border: 1px solid red;
+      text-align: center;
+      display: block;
+      transform: rotate(-45deg);
+      margin-top: -2px;
+    }
+</style>
+<div class="app-header" id="home-header" th:replace="~{/fragments/app-fragments :: header}"></div>
+<div id="home-aside" th:replace="~{/fragments/app-fragments :: aside}"></div>
+<!-- Main Content-->
+<main id="home-mainContent">
+  <div class="app-title">
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item">Danh sách hoá đơn</li>
+      <li class="breadcrumb-item"><a href="#">Thêm hoá đơn</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+
+      <div class="tile">
+
+        <h3 class="tile-title">Tạo mới hoá đơn</h3>
+        <div class="tile-body">
+          <form class="row" th:action="@{/doc/form-add-hoa-don}" th:object="${hoadon}" method="post">
+
+            <div class="form-group  col-md-6">
+              <label for="exampleSelect1" class="control-label">Đơn hàng</label>
+              <select class="form-control" th:field="*{idNew}"  id="exampleSelect1" >
+                <option th:each="new1 : ${news}"  th:value="${new1.id}" th:text="${new1.title}"></option>
+              </select>
+
+              <div class="alert alert-warning" th:if="${#fields.hasErrors('idNew')}" th:errors="*{idNew}" ></div>
+            </div>
+
+            <div class="form-group  col-md-6">
+              <label for="exampleSelect1" class="control-label">Loại Tin</label>
+              <select class="form-control" th:field="*{idLoaiTin}"  id="exampleSelect2" >
+                <option th:each="loaitin : ${loaitins}"  th:value="${loaitin.id}" th:text="${loaitin.name}"></option>
+              </select>
+
+              <div class="alert alert-warning" th:if="${#fields.hasErrors('idLoaiTin')}" th:errors="*{idLoaiTin}" ></div>
+            </div>
+            <div class="form-group  col-md-6">
+              <label for="exampleSelect1" class="control-label">Số ngày đăng tin</label>
+              <select class="form-control" th:field="*{quantity}"  id="exampleSelect3" >
+                <option value="7">7 ngày</option>
+                <option value="15">15 ngày</option>
+                <option value="30">30 ngày</option>
+              </select>
+
+              <div class="alert alert-warning" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}" ></div>
+            </div>
+            <div class="form-group col-md-6">
+              <label class="control-label">Tình trạng</label>
+              <select class="form-control" th:field="*{state}"  id="exampleSelect4">
+                <option value="Còn hạn">Còn hạn</option>
+                <option value="Hết hạn">Hết hạn</option>
+              </select>
+
+              <div class="alert alert-warning" th:if="${#fields.hasErrors('state')}" th:errors="*{state}" ></div>
+            </div>
+            <input class="btn btn-save" type="submit" value="Lưu lại"/>
+            <a class="btn btn-cancel" th:href="@{/doc/table-data-hoa-don}">Hủy bỏ</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" th:replace="~{layouts/main-layouts :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #home-header},
+                                                ~{:: #home-aside},
+                                                ~{:: #home-mainContent}
+                                               )}">
+<body>
+<div class="app-header" id="home-header" th:replace="~{/fragments/app-fragments :: header}"></div>
+<div id="home-aside" th:replace="~{/fragments/app-fragments :: aside}"></div>
+<!-- Main Content-->
+<main id="home-mainContent">
+      <div class="app-title">
+        <ul class="app-breadcrumb breadcrumb side">
+          <li class="breadcrumb-item active"><a href="#"><b>Danh sách đơn hàng</b></a></li>
+        </ul>
+        <div id="clock"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="tile">
+            <div class="tile-body">
+              <div class="row element-button">
+                <div class="col-sm-2">
+  
+                  <a class="btn btn-add btn-sm" th:href="@{/doc/form-add-don-hang}" title="Thêm"><i class="fas fa-plus"></i>
+                    Tạo mới tin</a>
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-add btn-sm" data-toggle="modal" data-target="#exampleModalCenter"><b><i
+                          class="fas fa-folder-plus"></i> Tạo hãng xe mới</b></a>
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-delete btn-sm nhap-tu-file" type="button" title="Nhập" onclick="myFunction(this)"><i
+                      class="fas fa-file-upload"></i> Tải từ file</a>
+                </div>
+  
+                <div class="col-sm-2">
+                  <a class="btn btn-delete btn-sm print-file" type="button" title="In" onclick="myApp.printTable()"><i
+                      class="fas fa-print"></i> In dữ liệu</a>
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-delete btn-sm print-file js-textareacopybtn" type="button" title="Sao chép"><i
+                      class="fas fa-copy"></i> Sao chép</a>
+                </div>
+  
+                <div class="col-sm-2">
+                  <a class="btn btn-excel btn-sm" href="" title="In"><i class="fas fa-file-excel"></i> Xuất Excel</a>
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-delete btn-sm pdf-file" type="button" title="In" onclick="myFunction(this)"><i
+                      class="fas fa-file-pdf"></i> Xuất PDF</a>
+                </div>
+                <div class="col-sm-2">
+                  <a class="btn btn-delete btn-sm" type="button" title="Xóa" onclick="myFunction(this)"><i
+                      class="fas fa-trash-alt"></i> Xóa tất cả </a>
+                </div>
+              </div>
+              <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0" border="0" id="sampleTable">
+                <thead>
+                  <tr>
+                    <th width="10"><input type="checkbox" id="all"></th>
+                    <th width="10%">ID tin</th>
+                    <th width="10%">Nhân viên</th>
+                    <th width="10%">Tên</th>
+                    <th width="40%">Mô tả</th>
+                    <th width="10%">Xe</th>
+                    <th width="10%">Tình trạng</th>
+                    <th width="10%">Tính năng</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="new1 : ${news}" >
+                    <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                    <td th:text="${new1.id}" width="10%"></td>
+                    <td th:text="${new1.user.name}" width="10%"></td>
+                    <td th:text="${new1.title}" width="10%"></td>
+                    <td th:text="${new1.description}" width="40%"></td>
+                    <td width="10%">
+                    <a class="btn btn-primary btn-sm edit" th:href="@{'/doc/form-edit-car/' + ${new1.carNew.id}}" title="Sửa">Xem chi tiết</a>
+                    </td>
+                    <td width="10%"><span class="badge bg-success" th:text="${new1.support}"></span></td>
+                    <td width="10%"> <a class="btn btn-primary btn-sm trash" th:href="@{'/doc/deleteNew/' + ${new1.id}}" title="Xóa"><i class="fas fa-trash-alt"></i></a>
+                      <a class="btn btn-primary btn-sm edit" th:href="@{'/doc/form-edit-don-hang/' + ${new1.id}}" title="Sửa"><i class="fa fa-edit"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+<!--MODAL-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+       data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group  col-md-12">
+              <span class="thong-tin-thanh-toan">
+                <h5>Tạo Hãng xe mới</h5>
+              </span>
+            </div>
+
+            <form  method="post" th:action="@{/doc/add-brand-car}" th:object="${brandCar}" enctype="multipart/form-data">
+              <div class="form-group col-md-12">
+                <label class="control-label">Nhập tên hãng xe mới</label>
+                <input class="form-control" th:field="*{name}" type="text"  required>
+              </div>
+              <BR>
+              <div class="form-group col-md-12">
+                <label class="control-label">Thêm Hình Ảnh</label>
+                <div>
+                  <input type="file" th:field="*{picture}" accept="image/png, image/jpeg, image/jpg"/>
+                  <div class="alert alert-warning" th:if="${#fields.hasErrors('picture')}" th:errors="*{picture}"></div>
+                </div>
+              </div>
+              <BR>
+              <button class="btn btn-save" type="submit">Lưu lại</button>
+              <a class="btn btn-cancel" data-dismiss="modal" href="#">Hủy bỏ</a>
+              <BR>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
