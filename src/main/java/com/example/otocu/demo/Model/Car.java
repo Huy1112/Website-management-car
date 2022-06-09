@@ -1,6 +1,7 @@
 package com.example.otocu.demo.Model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -11,7 +12,6 @@ import java.util.List;
 @Entity
 @Table(name = "car")
 @Data
-@ToString
 public class Car implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,7 +50,9 @@ public class Car implements Serializable {
     private List<PicCar> picCars;
     @OneToOne(mappedBy = "carNew",cascade = CascadeType.ALL)
     private New news;
+    public Car() {
 
+    }
 
     public Car(String name, int create_car, String nation, String form, String state, String gear, String fuel, String gone, String quality, int price) {
         this.name = name;
@@ -64,4 +66,8 @@ public class Car implements Serializable {
         this.quality = quality;
         this.price = price;
     }
+
+
+
+
 }

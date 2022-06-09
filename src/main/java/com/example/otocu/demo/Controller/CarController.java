@@ -6,7 +6,6 @@ import com.example.otocu.demo.ModelData.Search;
 import com.example.otocu.demo.Repository.BrandCarRepository;
 import com.example.otocu.demo.Repository.NewRepository;
 import com.example.otocu.demo.Repository.ProvinceRepository;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,7 +17,7 @@ import java.util.List;
 @RequestMapping(value = "/Web")
 public class CarController {
     @Autowired
-    private NewRepository newRepository;
+    private NewRepository newRepositoryd;
     @Autowired
     private ProvinceRepository provinceRepository;
     @Autowired
@@ -26,7 +25,7 @@ public class CarController {
 
     @GetMapping(value = {"/xe"})
     public String getAll(Model model){
-        List<New> list = newRepository.findAll();
+        List<New> list = newRepositoryd.findAll();
         model.addAttribute( "news",list);
         model.addAttribute("provinces",provinceRepository.findAll());
         model.addAttribute("search",new Search());
@@ -36,19 +35,19 @@ public class CarController {
     }
     @GetMapping("/xe/form")
     public String getCarByID1(@RequestParam String rs, Model model) {
-        Integer sumCar = newRepository.findSumCar(rs);
+        Integer sumCar = newRepositoryd.findSumCar(rs);
 
         model.addAttribute("provinces",provinceRepository.findAll());
         model.addAttribute("search",new Search());
         model.addAttribute("brands",brandCarRepository.findAll());
-        model.addAttribute("news",newRepository.findByFormCar(rs));
-        model.addAttribute("sumCar", newRepository.findSumCar(rs));
+        model.addAttribute("news",newRepositoryd.findByFormCar(rs));
+        model.addAttribute("sumCar", newRepositoryd.findSumCar(rs));
         return "Web/xe";
     }
     @PostMapping(value = "/xe/search")
     public String getCars(@ModelAttribute("search") Search search, Model model){
 
-        List<New> rs = newRepository.search(search.getOld(),
+        List<New> rs = newRepositoryd.search(search.getOld(),
                 search.getNeww(),
                 search.getCity(),
                 search.getBrandd(),

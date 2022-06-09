@@ -9,6 +9,7 @@ import com.example.otocu.demo.Repository.*;
 import com.example.otocu.demo.Singleton.UserInstance;
 import com.example.otocu.demo.Singleton.newInstance;
 import com.example.otocu.demo.utils.FileUploadUtil;
+import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,9 @@ import java.security.Principal;
 import java.util.List;
 
 
+@Setter
+@Getter
+@Data
 @Controller
 @RequestMapping("/doc")
 public class oderController {

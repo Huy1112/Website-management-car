@@ -1,6 +1,4 @@
 package com.example.otocu.demo.Model;
-
-import com.sun.tools.javah.Gen;
 import lombok.Data;
 
 import javax.persistence.*;

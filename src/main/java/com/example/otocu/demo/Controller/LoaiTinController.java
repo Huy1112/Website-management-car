@@ -6,7 +6,6 @@ import com.example.otocu.demo.Model.User;
 import com.example.otocu.demo.Repository.LoaiTinRepository;
 import com.example.otocu.demo.Repository.NewRepository;
 import com.example.otocu.demo.Singleton.UserInstance;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
