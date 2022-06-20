@@ -34,18 +34,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/index").permitAll()
                 .antMatchers(adminAccess).hasRole("ADMIN").anyRequest().authenticated()
                 .antMatchers(userAccess).hasAnyRole("ADMIN","USER").anyRequest().authenticated()
                 .and()
-                .formLogin().defaultSuccessUrl("/Web/index", true)
-//                .loginPage("/login")
-//                .usernameParameter("username")
-//                .passwordParameter("password");
-//                .defaultSuccessUrl("/Web/index");
+                .formLogin()
+                .loginPage("/login")
+                .usernameParameter("username")
+                .passwordParameter("password-field")
+                .defaultSuccessUrl("/Web/index" , true)
                 .and()
                 .logout().logoutUrl("/logout")
-                .logoutSuccessUrl("/login.html");
+                .logoutSuccessUrl("/index.html");
     }
 
     @Bean
