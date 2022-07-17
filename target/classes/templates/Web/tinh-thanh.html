@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
-<div th:replace="~{/fragments/web-fragments :: head-web}"></div>
+<div th:replace="~{fragments/web-fragments :: head-web}"></div>
 
 <body class="bd-home-index">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<div th:replace="~{/fragments/web-fragments :: header}"></div>
+<div th:replace="~{fragments/web-fragments :: header}"></div>
 <!-- Body -->
 <main class="main-content bg-light-blue"  >
     <div class="container">
         <div class="row m0">
             <!-- Column Left -->
-            <div th:replace="~{/fragments/web-fragments :: aside}"></div>
+            <div th:replace="~{fragments/web-fragments :: aside}"></div>
             <!-- End Column Left -->
             <!-- Column Right -->
             <div class="col-right pl30">
                 <div class="hidden-xs">
                     <!-- Xem xe theo tỉnh thành -->
-                    <div th:replace="~{/fragments/web-fragments :: tinhThanh}"></div>
+                    <div th:replace="~{fragments/web-fragments :: tinhThanh}"></div>
                     <!-- Box Xe bán gấp -->
                     <p th:text="${thongbao}"></p>
-                    <div id="block-2nd" th:replace="~{/fragments/web-fragments :: boxBanXeGap}"></div>
+                    <div id="block-2nd" th:replace="~{fragments/web-fragments :: boxBanXeGap}"></div>
                 </div>
             </div><!-- End Column Right -->
         </div>
     </div>
 </main>
-<div th:replace="~{/fragments/web-fragments :: footer}"></div>
+<div th:replace="~{fragments/web-fragments :: footer}"></div>
 
 
 <div id="btn-top">

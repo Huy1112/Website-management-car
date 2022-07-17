@@ -1,168 +1,168 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
-<!--<head>-->
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-<!--    <meta name="description" content="">-->
-<!--    <meta name="author" content="">-->
-<!--    <title>Spring Security Example</title>-->
-<!--    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="container">-->
-<!--    <h2 class="form-signin-heading">Welcome to OTO CU, please login</h2>-->
-<!--    <div th:if="${param.error}" class="alert alert-danger">-->
-<!--        Invalid username and password.-->
-<!--    </div>-->
-<!--    <div th:if="${param.logout}" class="alert alert-success">-->
-<!--        You have been logged out.-->
-<!--    </div>-->
-<!--    <form class="form-signin" method="POST" th:action="@{/login}">-->
-<!--        <p>-->
-<!--            <label for="username" class="sr-only">Username</label>-->
-<!--            <input type="text" id="username" name="username" class="form-control"-->
-<!--                   placeholder="Username" required autofocus>-->
-<!--        </p>-->
-<!--        <p>-->
-<!--            <label for="password" class="sr-only">Password</label>-->
-<!--            <input type="password" id="password" name="password" class="form-control"-->
-<!--                   placeholder="Password" required>-->
-<!--        </p>-->
-<!--        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>-->
-<!--    </form>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
-<html lang="vi" xmlns:th="http://www.w3.org/1999/xhtml">
-
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Đăng nhập quản trị | Website quản trị v2.0</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/util.css" >
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Spring Security Example</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-    <div class="limiter">
-        <div class="container-login100">
-            <div class="wrap-login100">
-                <div class="login100-pic js-tilt" data-tilt>
-                    <img src="/images/team.jpg" alt="IMG">
-                </div>
-                <!--=====TIÊU ĐỀ======-->
-<!--                th:action="@{/login}"-->
-                <form class="login100-form validate-form"  method="post" th:action="@{/login}">
-                    <span class="login100-form-title">
-                        <b>ĐĂNG NHẬP HỆ THỐNG POS</b>
-                    </span>
-
-                    <!--=====FORM INPUT TÀI KHOẢN VÀ PASSWORD======-->
-                    <form>
-                        <div class="wrap-input100 validate-input">
-                            <input class="input100" type="text" placeholder="Tài khoản quản trị" name="username"
-                                id="username" required autofocus>
-<!--                            required autofocus-->
-                            <span class="focus-input100"></span>
-                            <span class="symbol-input100">
-                                <i class='bx bx-user'></i>
-                            </span>
-                        </div>
-                        <div class="wrap-input100 validate-input">
-                            <input autocomplete="off" class="input100" type="password" placeholder="Mật khẩu"
-                                name="current-password" id="password-field" >
-                            <span toggle="#password-field" class="bx fa-fw bx-hide field-icon click-eye"></span>
-                            <span class="focus-input100"></span>
-                            <span class="symbol-input100">
-                                <i class='bx bx-key'></i>
-                            </span>
-                        </div>
-<!--                        <form class="form-signin" method="POST" th:action="@{/login}">&ndash;&gt;-->
-                            <!--        <p>-->
-                            <!--            <label for="username" class="sr-only">Username</label>-->
-                            <!--            <input type="text" id="username" name="username" class="form-control"-->
-                            <!--                   placeholder="Username" required autofocus>-->
-                            <!--        </p>-->
-                            <!--        <p>-->
-                            <!--            <label for="password" class="sr-only">Password</label>-->
-                            <!--            <input type="password" id="password" name="password" class="form-control"-->
-                            <!--                   placeholder="Password" required>-->
-                            <!--        </p>-->
-                            <!--        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>-->
-                            <!--    </form>-->
-                        <!--=====ĐĂNG NHẬP======-->
-                        <div class="container-login100-form-btn">
-                            <input type="submit" value="Đăng nhập"  id="submit"  />
-                        </div>
-                        <!--=====LINK TÌM MẬT KHẨU======-->
-                        <div class="text-right p-t-12">
-                            <a class="txt2" th:href="@{/forgot}">
-                                Bạn quên mật khẩu?
-                            </a>
-                        </div>
-<!--                        <div>-->
-<!--                            <div th:if="${param.error}">-->
-<!--                                Invalid username and password.-->
-<!--                            </div>-->
-<!--                            <div th:if="${param.logout}">-->
-<!--                                You have been logged out.-->
-<!--                            </div>-->
-<!--                            <p th:text="${notification}"></p>-->
-<!--                        </div>-->
-                    </form>
-                    <!--=====FOOTER======-->
-                    <div class="text-center p-t-70 txt2">
-                        Phần mềm quản lý bán hàng <i class="far fa-copyright" aria-hidden="true"></i>
-                        <script type="text/javascript">document.write(new Date().getFullYear());</script> <a
-                            class="txt2" href="https://www.facebook.com/truongvo.vd1503/"> Code bởi Trường </a>
-                    </div>
-                </form>
-            </div>
-        </div>
+<div class="container">
+    <h2 class="form-signin-heading">Welcome to OTO CU, please login</h2>
+    <div th:if="${param.error}" class="alert alert-danger">
+        Invalid username and password.
     </div>
-    <!--Javascript-->
-    <script src="/js/main.js"></script>
-    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
-    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
-    <script src="/vendor/bootstrap/js/popper.js"></script>
-    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/vendor/select2/select2.min.js"></script>
-    <script type="text/javascript">
-        //show - hide mật khẩu
-        function myFunction() {
-            var x = document.getElementById("myInput");
-            if (x.type === "password") {
-                x.type = "text"
-            } else {
-                x.type = "password";
-            }
-        }
-        $(".click-eye").click(function () {
-            $(this).toggleClass("bx-show bx-hide");
-            var input = $($(this).attr("toggle"));
-            if (input.attr("type") == "password") {
-                input.attr("type", "text");
-            } else {
-                input.attr("type", "password");
-            }
-        });
-    </script>
+    <div th:if="${param.logout}" class="alert alert-success">
+        You have been logged out.
+    </div>
+    <form class="form-signin" method="POST" th:action="@{/login}">
+        <p>
+            <label for="username" class="sr-only">Username</label>
+            <input type="text" id="username" name="username" class="form-control"
+                   placeholder="Username" required autofocus>
+        </p>
+        <p>
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" name="password" class="form-control"
+                   placeholder="Password" required>
+        </p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    </form>
+</div>
 </body>
-
 </html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="vi" xmlns:th="http://www.w3.org/1999/xhtml">-->
+
+<!--<head>-->
+<!--    <title>Đăng nhập quản trị | Website quản trị v2.0</title>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/css/util.css" >-->
+<!--    <link rel="stylesheet" type="text/css" href="/css/main.css">-->
+<!--    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">-->
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--    <div class="limiter">-->
+<!--        <div class="container-login100">-->
+<!--            <div class="wrap-login100">-->
+<!--                <div class="login100-pic js-tilt" data-tilt>-->
+<!--                    <img src="/images/team.jpg" alt="IMG">-->
+<!--                </div>-->
+<!--                &lt;!&ndash;=====TIÊU ĐỀ======&ndash;&gt;-->
+<!--&lt;!&ndash;                th:action="@{/login}"&ndash;&gt;-->
+<!--                <form class="login100-form validate-form"  method="post" th:action="@{/login}">-->
+<!--                    <span class="login100-form-title">-->
+<!--                        <b>ĐĂNG NHẬP HỆ THỐNG POS</b>-->
+<!--                    </span>-->
+
+<!--                    &lt;!&ndash;=====FORM INPUT TÀI KHOẢN VÀ PASSWORD======&ndash;&gt;-->
+<!--                    <form>-->
+<!--                        <div class="wrap-input100 validate-input">-->
+<!--                            <input class="input100" type="text" placeholder="Tài khoản quản trị" name="username"-->
+<!--                                id="username" required autofocus>-->
+<!--&lt;!&ndash;                            required autofocus&ndash;&gt;-->
+<!--                            <span class="focus-input100"></span>-->
+<!--                            <span class="symbol-input100">-->
+<!--                                <i class='bx bx-user'></i>-->
+<!--                            </span>-->
+<!--                        </div>-->
+<!--                        <div class="wrap-input100 validate-input">-->
+<!--                            <input autocomplete="off" class="input100" type="password" placeholder="Mật khẩu"-->
+<!--                                name="current-password" id="password-field" >-->
+<!--                            <span toggle="#password-field" class="bx fa-fw bx-hide field-icon click-eye"></span>-->
+<!--                            <span class="focus-input100"></span>-->
+<!--                            <span class="symbol-input100">-->
+<!--                                <i class='bx bx-key'></i>-->
+<!--                            </span>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                        <form class="form-signin" method="POST" th:action="@{/login}">&ndash;&gt;&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <label for="username" class="sr-only">Username</label>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <input type="text" id="username" name="username" class="form-control"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                   placeholder="Username" required autofocus>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <label for="password" class="sr-only">Password</label>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <input type="password" id="password" name="password" class="form-control"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                   placeholder="Password" required>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>&ndash;&gt;-->
+<!--                            &lt;!&ndash;    </form>&ndash;&gt;-->
+<!--                        &lt;!&ndash;=====ĐĂNG NHẬP======&ndash;&gt;-->
+<!--                        <div class="container-login100-form-btn">-->
+<!--                            <input type="submit" value="Đăng nhập"  id="submit"  />-->
+<!--                        </div>-->
+<!--                        &lt;!&ndash;=====LINK TÌM MẬT KHẨU======&ndash;&gt;-->
+<!--                        <div class="text-right p-t-12">-->
+<!--                            <a class="txt2" th:href="@{/forgot}">-->
+<!--                                Bạn quên mật khẩu?-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                        <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:if="${param.error}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                Invalid username and password.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:if="${param.logout}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                You have been logged out.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p th:text="${notification}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
+<!--                    </form>-->
+<!--                    &lt;!&ndash;=====FOOTER======&ndash;&gt;-->
+<!--                    <div class="text-center p-t-70 txt2">-->
+<!--                        Phần mềm quản lý bán hàng <i class="far fa-copyright" aria-hidden="true"></i>-->
+<!--                        <script type="text/javascript">document.write(new Date().getFullYear());</script> <a-->
+<!--                            class="txt2" href="https://www.facebook.com/truongvo.vd1503/"> Code bởi Trường </a>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;Javascript&ndash;&gt;-->
+<!--    <script src="/js/main.js"></script>-->
+<!--    <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>-->
+<!--    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>-->
+<!--    <script src="/vendor/bootstrap/js/popper.js"></script>-->
+<!--    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>-->
+<!--    <script src="/vendor/select2/select2.min.js"></script>-->
+<!--    <script type="text/javascript">-->
+<!--        //show - hide mật khẩu-->
+<!--        function myFunction() {-->
+<!--            var x = document.getElementById("myInput");-->
+<!--            if (x.type === "password") {-->
+<!--                x.type = "text"-->
+<!--            } else {-->
+<!--                x.type = "password";-->
+<!--            }-->
+<!--        }-->
+<!--        $(".click-eye").click(function () {-->
+<!--            $(this).toggleClass("bx-show bx-hide");-->
+<!--            var input = $($(this).attr("toggle"));-->
+<!--            if (input.attr("type") == "password") {-->
+<!--                input.attr("type", "text");-->
+<!--            } else {-->
+<!--                input.attr("type", "password");-->
+<!--            }-->
+<!--        });-->
+<!--    </script>-->
+<!--</body>-->
+
+<!--</html>-->
 
 
 

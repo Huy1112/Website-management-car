@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
 
-<head th:replace="~{/fragments/web-fragments :: head-web}"></head>
+<div th:replace="~{fragments/web-fragments :: head-web}"></div>
 
 <body class="bd-home-index">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
@@ -323,26 +323,26 @@
     <div class="container">
         <div class="row m0">
             <!-- Column Left -->
-            <div th:replace="~{/fragments/web-fragments :: aside}"></div>
+            <div th:replace="~{fragments/web-fragments :: aside}"></div>
             <!-- End Column Left -->
             <!-- Column Right -->
             <div class="col-right pl30">
                 <div class="hidden-xs">
                     <!-- Box Hãng xe -->
-                    <div th:replace="~{/fragments/web-fragments :: hangXe}"></div>
+                    <div th:replace="~{fragments/web-fragments :: hangXe}"></div>
                     <!-- End Box hãng xe -->
                     <!-- Box Xe bán gấp -->
                     <p th:text="${thongbao}"></p>
-                    <div id="block-2nd" th:replace="~{/fragments/web-fragments :: boxBanXeGap}"></div>
+                    <div id="block-2nd" th:replace="~{fragments/web-fragments :: boxBanXeGap}"></div>
                     <!-- End Box xe bán gấp -->
                     <!-- Xem xe theo tỉnh thành -->
-                    <div th:replace="~{/fragments/web-fragments :: tinhThanh}"></div>
+                    <div th:replace="~{fragments/web-fragments :: tinhThanh}"></div>
                 </div>
             </div><!-- End Column Right -->
         </div>
     </div>
 </main>
-<div th:replace="~{/fragments/web-fragments :: footer}"></div>
+<div th:replace="~{fragments/web-fragments :: footer}"></div>
 <div id="btn-top">
     <i class="icon-sprite-24 icon-to-top"></i>
 </div>

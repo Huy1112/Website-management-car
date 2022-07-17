@@ -40,11 +40,11 @@
 <!--    <title>Đăng nhập quản trị | Website quản trị v2.0</title>-->
 <!--    <meta charset="UTF-8">-->
 <!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!--    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css}">-->
-<!--    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css}">-->
-<!--    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css}">-->
-<!--    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css}">-->
-<!--    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css}">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">-->
+<!--    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">-->
 <!--    <link rel="stylesheet" type="text/css" href="/css/util.css" >-->
 <!--    <link rel="stylesheet" type="text/css" href="/css/main.css">-->
 <!--    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
@@ -65,7 +65,7 @@
 <!--                </div>-->
 <!--                &lt;!&ndash;=====TIÊU ĐỀ======&ndash;&gt;-->
 <!--&lt;!&ndash;                th:action="@{/login}"&ndash;&gt;-->
-<!--                <form class="login100-form validate-form"  method="post">-->
+<!--                <form class="login100-form validate-form"  method="post" th:action="@{/login}">-->
 <!--                    <span class="login100-form-title">-->
 <!--                        <b>ĐĂNG NHẬP HỆ THỐNG POS</b>-->
 <!--                    </span>-->
@@ -74,7 +74,7 @@
 <!--                    <form>-->
 <!--                        <div class="wrap-input100 validate-input">-->
 <!--                            <input class="input100" type="text" placeholder="Tài khoản quản trị" name="username"-->
-<!--                                id="username" >-->
+<!--                                id="username" required autofocus>-->
 <!--&lt;!&ndash;                            required autofocus&ndash;&gt;-->
 <!--                            <span class="focus-input100"></span>-->
 <!--                            <span class="symbol-input100">-->
@@ -90,7 +90,19 @@
 <!--                                <i class='bx bx-key'></i>-->
 <!--                            </span>-->
 <!--                        </div>-->
-
+<!--&lt;!&ndash;                        <form class="form-signin" method="POST" th:action="@{/login}">&ndash;&gt;&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <label for="username" class="sr-only">Username</label>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <input type="text" id="username" name="username" class="form-control"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                   placeholder="Username" required autofocus>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <label for="password" class="sr-only">Password</label>&ndash;&gt;-->
+<!--                            &lt;!&ndash;            <input type="password" id="password" name="password" class="form-control"&ndash;&gt;-->
+<!--                            &lt;!&ndash;                   placeholder="Password" required>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        </p>&ndash;&gt;-->
+<!--                            &lt;!&ndash;        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>&ndash;&gt;-->
+<!--                            &lt;!&ndash;    </form>&ndash;&gt;-->
 <!--                        &lt;!&ndash;=====ĐĂNG NHẬP======&ndash;&gt;-->
 <!--                        <div class="container-login100-form-btn">-->
 <!--                            <input type="submit" value="Đăng nhập"  id="submit"  />-->
@@ -101,15 +113,15 @@
 <!--                                Bạn quên mật khẩu?-->
 <!--                            </a>-->
 <!--                        </div>-->
-<!--                        <div>-->
-<!--                            <div th:if="${param.error}">-->
-<!--                                Invalid username and password.-->
-<!--                            </div>-->
-<!--                            <div th:if="${param.logout}">-->
-<!--                                You have been logged out.-->
-<!--                            </div>-->
-<!--                            <p th:text="${notification}"></p>-->
-<!--                        </div>-->
+<!--&lt;!&ndash;                        <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:if="${param.error}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                Invalid username and password.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div th:if="${param.logout}">&ndash;&gt;-->
+<!--&lt;!&ndash;                                You have been logged out.&ndash;&gt;-->
+<!--&lt;!&ndash;                            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <p th:text="${notification}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
 <!--                    </form>-->
 <!--                    &lt;!&ndash;=====FOOTER======&ndash;&gt;-->
 <!--                    <div class="text-center p-t-70 txt2">-->
