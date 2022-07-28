@@ -18986,7 +18986,7 @@ not all {
         content: ""
     }
     .icon-sprite-24 {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     .logo {
@@ -18994,11 +18994,11 @@ not all {
         background-size: 172px auto
     }
     .sl-khu-vuc .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        background: url(../img/sprite%402x.png) -77px -5px no-repeat;
+        background: url(../img/sprite@2x.png) -77px -5px no-repeat;
         background-size: 480px auto
     }
     .icon-flag {
-        background: url(../img/sprite%402x.png) no-repeat;
+        background: url(../img/sprite@2x.png) no-repeat;
         background-size: 480px auto
     }
     .dang-ky a:focus .icon-dky,
@@ -19009,15 +19009,15 @@ not all {
         background-position: -96px 0
     }
     .icon-40-save {
-        background: url(../img/sprite%402x.png) -286px -8px no-repeat;
+        background: url(../img/sprite@2x.png) -286px -8px no-repeat;
         background-size: 480px auto
     }
     .icon-40-heart {
-        background: url(../img/sprite%402x.png) -336px -7px no-repeat;
+        background: url(../img/sprite@2x.png) -336px -7px no-repeat;
         background-size: 480px auto
     }
     .icon-40-oto {
-        background: url(../img/sprite%402x.png) -432px -7px no-repeat;
+        background: url(../img/sprite@2x.png) -432px -7px no-repeat;
         background-size: 480px auto
     }
     .icon-hot-deal,
@@ -19025,7 +19025,7 @@ not all {
     .slider-salon-noi .slick-next:before,
     .slider-salon-noi .slick-prev:before,
     .star {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     .icon-home {
@@ -19064,11 +19064,11 @@ not all {
         background-position: -312px -96px
     }
     .xe-noi-bat .slick-prev:before {
-        background: url(../img/sprite%402x.png) -144px -72px no-repeat;
+        background: url(../img/sprite@2x.png) -144px -72px no-repeat;
         background-size: 480px auto
     }
     .xe-noi-bat .slick-next:before {
-        background: url(../img/sprite%402x.png) -168px -72px no-repeat;
+        background: url(../img/sprite@2x.png) -168px -72px no-repeat;
         background-size: 480px auto
     }
     .btn-close2,
@@ -19079,7 +19079,7 @@ not all {
     .iradio_square-blue,
     .nganh-hang>li>a:before,
     .select2 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     span.btn-close:hover .icon-close {
@@ -19320,7 +19320,7 @@ not all {
         z-index: 9999
     }
     .icon-sprite-24 {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     .logo {
@@ -19328,23 +19328,23 @@ not all {
         background-size: 172px auto
     }
     .sl-khu-vuc .select2-container--default .select2-selection--single .select2-selection__arrow b {
-        background: url(../img/sprite%402x.png) -77px -5px no-repeat;
+        background: url(../img/sprite@2x.png) -77px -5px no-repeat;
         background-size: 480px auto
     }
     .icon-flag {
-        background: url(../img/sprite%402x.png) no-repeat;
+        background: url(../img/sprite@2x.png) no-repeat;
         background-size: 480px auto
     }
     .icon-40-save {
-        background: url(../img/sprite%402x.png) -286px -8px no-repeat;
+        background: url(../img/sprite@2x.png) -286px -8px no-repeat;
         background-size: 480px auto
     }
     .icon-40-heart {
-        background: url(../img/sprite%402x.png) -336px -7px no-repeat;
+        background: url(../img/sprite@2x.png) -336px -7px no-repeat;
         background-size: 480px auto
     }
     .icon-40-oto {
-        background: url(../img/sprite%402x.png) -432px -7px no-repeat;
+        background: url(../img/sprite@2x.png) -432px -7px no-repeat;
         background-size: 480px auto
     }
     .btn-close2,
@@ -19359,7 +19359,7 @@ not all {
     .slider-salon-noi .slick-next:before,
     .slider-salon-noi .slick-prev:before,
     .star {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     .icon-hot-deal {
@@ -19388,7 +19388,7 @@ not all {
         background: #fff
     }
     .nav-mobile .logo {
-        background: url(../img/logo-mb%402x.png) no-repeat;
+        background: url(../img/logo-mb@2x.png) no-repeat;
         background-size: 104px auto;
         width: 104px;
         height: 24px;
@@ -19474,7 +19474,7 @@ not all {
     .modal-menu.modal.modal-menu-right:before,
     .modal-menu.modal:before {
         content: "";
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto;
         background-position: -288px -840px;
         position: absolute;
@@ -19983,11 +19983,11 @@ not all {
         left: 105px
     }
     .xe-noi-bat .slick-next:before {
-        background: url(../img/sprite%402x.png) -288px -888px no-repeat;
+        background: url(../img/sprite@2x.png) -288px -888px no-repeat;
         background-size: 480px auto
     }
     .xe-noi-bat .slick-prev:before {
-        background: url(../img/sprite%402x.png) -264px -888px no-repeat;
+        background: url(../img/sprite@2x.png) -264px -888px no-repeat;
         background-size: 480px auto
     }
     .hang-sx,
@@ -21863,7 +21863,7 @@ not all {
     }
     .slider-gallery-next,
     .slider-gallery-prev {
-        background-image: url(../img/sprite%402x.png);
+        background-image: url(../img/sprite@2x.png);
         background-size: 480px auto
     }
     .slmb {
