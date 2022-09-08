@@ -3,8 +3,10 @@
 
 <div th:replace="~{fragments/web-fragments :: head-web}"></div>
 <body class="bd-auto-items">
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <div th:replace="~{fragments/web-fragments :: header}"></div>
 
 <!-- Body -->
@@ -15,8 +17,9 @@
                 <ul class="list-ql_account nonemb">
                     <li class="li-ql_account"><b>Bán</b></li>
                     <li class="li-ql_account"><a th:href="@{/Web/dang-tin}">Đăng tin bán ô tô </a></li>
-                    <li class="li-ql_account" style="font-weight: bold"><a th:href="@{/Web/danh-sach-bai-dang}">Danh sách tin đã đăng</a></li>
-                    <li class="li-ql_account" ><a href="#">Danh sách người quan tâm</a></li>
+                    <li class="li-ql_account" style="font-weight: bold"><a th:href="@{/Web/danh-sach-bai-dang}">Danh
+                        sách tin đã đăng</a></li>
+                    <li class="li-ql_account"><a href="#">Danh sách người quan tâm</a></li>
 
                     <!--
                     <li class="li-ql_account" "><a href="https://choxe.vn/quan-ly-oto/dang-ban">Xe đang rao bán <span class="txt-num">(0)</span></a></li>
@@ -25,125 +28,143 @@
                     <li class="li-ql_account" ><a href="https://choxe.vn/quan-ly-oto/thay-doi-cho-duyet">Xe thay đổi chờ duyệt <span class="txt-num">(0)</span></a></li>
                     -->
                     <li class="li-ql_account"><b>Mua</b></li>
-<!--                    <li class="li-ql_account"><a href="https://choxe.vn/tin-luu">Tin bán xe đã lưu <span class="txt-num">(0)</span></a></li>-->
-<!--                    <li class="li-ql_account"><a href="https://choxe.vn/danh-sach-yeu-thich">Xe yêu thích <span class="txt-num">(0)</span></a></li>-->
-<!--                    <li class="li-ql_account"><a href="https://choxe.vn/xem-gan-day">Đã xem gần đây <span class="txt-num">(0)</span></a></li>-->
+                    <!--                    <li class="li-ql_account"><a href="https://choxe.vn/tin-luu">Tin bán xe đã lưu <span class="txt-num">(0)</span></a></li>-->
+                    <!--                    <li class="li-ql_account"><a href="https://choxe.vn/danh-sach-yeu-thich">Xe yêu thích <span class="txt-num">(0)</span></a></li>-->
+                    <!--                    <li class="li-ql_account"><a href="https://choxe.vn/xem-gan-day">Đã xem gần đây <span class="txt-num">(0)</span></a></li>-->
                     <li class="li-ql_account"><b>Tài khoản</b></li>
-                    <li class="li-ql_account" ><a href="#">Nâng cấp tài khoản</a></li>
-                </ul>                <div class="flex">
-                <div class="map-link cbreadcrumb" style="padding-top: 10px">
-                    <ul itemscope itemtype="http://schema.org/BreadcrumbList">
-                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                            <a class="" href="https://choxe.vn/" itemprop="item"><span itemprop="name">Chợ xe</span></a>
-                        </li>
-                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                            >                     <a href="https://choxe.vn/https://choxe.vn/quan-ly-oto/cho-duyet" itemprop="item"><span itemprop="name">Xe đang bán</span></a>
-                        </li>
-                    </ul>
-                </div>                    <div class="deal">
-                <div class="title-underline mt25">Danh sách tin đã đăng</div>
-<!--                <div class="btn-group btn-action mt25">-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/dang-ban" class="btn btn-default ">Đang bán <span class="txt-num-tab">(0)</span></a>-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/da-ban" class="btn btn-default ">Đã bán <span class="txt-num-tab">(0)</span></a>-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/cho-duyet" class="btn btn-default active">Đang chờ duyệt <span class="txt-num-tab">(1)</span></a>-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/thay-doi-cho-duyet" class="btn btn-default ">Thay đổi chờ duyệt <span class="txt-num-tab">(0)</span></a>-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/tu-choi" class="btn btn-default ">Từ chối <span class="txt-num-tab">(0)</span></a>-->
-<!--                    <a href="https://choxe.vn/quan-ly-oto/het-han" class="btn btn-default ">Hết hạn <span class="txt-num-tab">(0)</span></a>-->
-<!--                </div>-->
-                <div class="mt20 mb20 list-product-style2">
-                    <table class="table list-news">
-
-                        <tr th:each="item : ${news}">
-                            <td class="row news  items-341228 pos-0">
-                                <div class="news-detail">
-                                    <div class="info-left">
-                                        <a th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}" class="img">
-                                            <img class=""
-                                                 th:src="'data:image/jpg;base64,' + ${item.carNew.picCars[0].name}"
-                                                 width="175" height="118" alt="Xe Cũ "/></a>
-                                        <div class="block-txt-mb">
-                                            <a class="tit-news" th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}">
-                                                <h2 th:text="${item.title}"></h2>
-                                            </a>
-                                            <div class="price visible-xs" th:text="${item.carNew.price}"> </div>
-
-                                            <div class="row" style="margin: 0">
-                                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.state}">
-                                                    <i class="icon-24 icon-sprite-24 icon-status"></i> </div>
-
-                                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.create_car}">
-                                                    <i class="icon-24 icon-sprite-24 icon-calendar2"></i> </div>
-
-                                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gone}">
-                                                    <i class="icon-24 icon-sprite-24 icon-speed2"></i>
-                                                    <span class="hidden-xs"> km</span>
-                                                </div>
-
-                                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gear}">
-                                                    <i class="icon-24 icon-sprite-24 icon-auto2"></i> </div>
-                                            </div>
-
-                                            <div class="city visible-xs" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
-                                            <hr>
-                                            <div class="old-news">Đăng 4 ngày trước</div>
-                                        </div>
-                                        <div class="row list-opt hidden-xs">
-                                            <!--                    <div class="col-xs-3 col-sm-3 p0">-->
-                                            <!--                        <a class="compare" href="-->
-                                            <!--">-->
-                                            <!--                            <i class="icon-sprite-24 icon-compare"></i>-->
-                                            <!--                            So Sánh-->
-                                            <!--                        </a>-->
-                                            <!--                    </div>-->
-
-                                            <div class="col-xs-3 col-sm-5 p0">
-                                                <button class="btn-show-phone-list" onclick="showPhoneNumner(341635, '0945609563')" id="salon_id_341635">
-                                                    Xem số điện thoại
-                                                </button>
-                                            </div>
-
-                                            <div class="col-xs-3 col-sm-3 p0">
-                                                <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor" data-toggle="tooltip" title="Thích loại xe này" data-placement="bottom">
-                                                    <i class="icon-sprite-24 icon-heart"></i> Yêu thích
-                                                </a>
-                                            </div>
-                                            <div class="col-xs-3 col-sm-3 p0">
-                                                <a href="tin-luu.html?auto_id=341635" class="save" data-toggle="tooltip" title="Lưu tin này" data-placement="bottom">
-                                                    <i class="icon-sprite-24 icon-save"></i> Lưu tin
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="price-addr txr hidden-xs">
-                                        <div class="price" th:text="${item.carNew.price}"></div>
-                                        <div class="city" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
-                                    </div>
-
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div><!--end list-product-->
-            </div><!--end main-content-phukien-->
-                <div class="txc page-news style_lineheight mb20">
-                    <div class="txc page-news hidden-xs">
-                        <ul class="pagination m0">
-
-
+                    <li class="li-ql_account"><a href="#">Nâng cấp tài khoản</a></li>
+                </ul>
+                <div class="flex">
+                    <div class="map-link cbreadcrumb" style="padding-top: 10px">
+                        <ul itemscope itemtype="http://schema.org/BreadcrumbList">
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                <a class="" href="https://choxe.vn/" itemprop="item"><span itemprop="name">Chợ xe</span></a>
+                            </li>
+                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                                > <a href="https://choxe.vn/https://choxe.vn/quan-ly-oto/cho-duyet"
+                                     itemprop="item"><span itemprop="name">Xe đang bán</span></a>
+                            </li>
                         </ul>
                     </div>
+                    <div class="deal">
+                        <div class="title-underline mt25">Danh sách tin đã đăng</div>
+                        <!--                <div class="btn-group btn-action mt25">-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/dang-ban" class="btn btn-default ">Đang bán <span class="txt-num-tab">(0)</span></a>-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/da-ban" class="btn btn-default ">Đã bán <span class="txt-num-tab">(0)</span></a>-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/cho-duyet" class="btn btn-default active">Đang chờ duyệt <span class="txt-num-tab">(1)</span></a>-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/thay-doi-cho-duyet" class="btn btn-default ">Thay đổi chờ duyệt <span class="txt-num-tab">(0)</span></a>-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/tu-choi" class="btn btn-default ">Từ chối <span class="txt-num-tab">(0)</span></a>-->
+                        <!--                    <a href="https://choxe.vn/quan-ly-oto/het-han" class="btn btn-default ">Hết hạn <span class="txt-num-tab">(0)</span></a>-->
+                        <!--                </div>-->
+                        <div class="mt20 mb20 list-product-style2">
+                            <table class="table list-news">
 
-                    <!-- Pagination of mobile -->
-                    <div class="visible-xs page-mb">
-                        <div class="sl-page">
-                            <select name="page" id="sl-page">
-                                <option value="https://choxe.vn/quan-ly-oto/cho-duyet?page=1" selected="selected">Trang 1/1</option>
-                            </select>
-                            <i class="icon-sprite-24 icon-down-small"></i>
+                                <tr th:each="item : ${news}">
+                                    <td class="row news  items-341228 pos-0">
+                                        <div class="news-detail">
+                                            <div class="info-left">
+                                                <a th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}" class="img">
+                                                    <img class=""
+                                                         th:src="'data:image/jpg;base64,' + ${item.carNew.picCars[0].name}"
+                                                         width="175" height="118" alt="Xe Cũ "/></a>
+                                                <div class="block-txt-mb">
+                                                    <a class="tit-news"
+                                                       th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}">
+                                                        <h2 th:text="${item.title}"></h2>
+                                                    </a>
+                                                    <div class="price visible-xs" th:text="${item.carNew.price}"></div>
+
+                                                    <div class="row" style="margin: 0">
+                                                        <div class="col-xs-3 col-sm-3 list-char"
+                                                             th:text="${item.carNew.state}">
+                                                            <i class="icon-24 icon-sprite-24 icon-status"></i></div>
+
+                                                        <div class="col-xs-3 col-sm-3 list-char"
+                                                             th:text="${item.carNew.create_car}">
+                                                            <i class="icon-24 icon-sprite-24 icon-calendar2"></i></div>
+
+                                                        <div class="col-xs-3 col-sm-3 list-char"
+                                                             th:text="${item.carNew.gone}">
+                                                            <i class="icon-24 icon-sprite-24 icon-speed2"></i>
+                                                            <span class="hidden-xs"> km</span>
+                                                        </div>
+
+                                                        <div class="col-xs-3 col-sm-3 list-char"
+                                                             th:text="${item.carNew.gear}">
+                                                            <i class="icon-24 icon-sprite-24 icon-auto2"></i></div>
+                                                    </div>
+
+                                                    <div class="city visible-xs" th:text="${item.carNew.city.name}"><i
+                                                            class="icon-24 icon-sprite-24 icon-address"></i></div>
+                                                    <hr>
+                                                    <div class="old-news">Đăng 4 ngày trước</div>
+                                                </div>
+                                                <div class="row list-opt hidden-xs">
+                                                    <!--                    <div class="col-xs-3 col-sm-3 p0">-->
+                                                    <!--                        <a class="compare" href="-->
+                                                    <!--">-->
+                                                    <!--                            <i class="icon-sprite-24 icon-compare"></i>-->
+                                                    <!--                            So Sánh-->
+                                                    <!--                        </a>-->
+                                                    <!--                    </div>-->
+
+                                                    <div class="col-xs-3 col-sm-5 p0">
+                                                        <button class="btn-show-phone-list"
+                                                                onclick="showPhoneNumner(341635, '0945609563')"
+                                                                id="salon_id_341635">
+                                                            Xem số điện thoại
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="col-xs-3 col-sm-3 p0">
+                                                        <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor"
+                                                           data-toggle="tooltip" title="Thích loại xe này"
+                                                           data-placement="bottom">
+                                                            <i class="icon-sprite-24 icon-heart"></i> Yêu thích
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-xs-3 col-sm-3 p0">
+                                                        <a href="tin-luu.html?auto_id=341635" class="save"
+                                                           data-toggle="tooltip" title="Lưu tin này"
+                                                           data-placement="bottom">
+                                                            <i class="icon-sprite-24 icon-save"></i> Lưu tin
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="price-addr txr hidden-xs">
+                                                <div class="price" th:text="${item.carNew.price}"></div>
+                                                <div class="city" th:text="${item.carNew.city.name}"><i
+                                                        class="icon-24 icon-sprite-24 icon-address"></i></div>
+                                            </div>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!--end list-product-->
+                    </div><!--end main-content-phukien-->
+                    <div class="txc page-news style_lineheight mb20">
+                        <div class="txc page-news hidden-xs">
+                            <ul class="pagination m0">
+
+
+                            </ul>
                         </div>
-                    </div>
-                    <!-- End Pagination -->                    </div>
-            </div>
+
+                        <!-- Pagination of mobile -->
+                        <div class="visible-xs page-mb">
+                            <div class="sl-page">
+                                <select name="page" id="sl-page">
+                                    <option value="https://choxe.vn/quan-ly-oto/cho-duyet?page=1" selected="selected">
+                                        Trang 1/1
+                                    </option>
+                                </select>
+                                <i class="icon-sprite-24 icon-down-small"></i>
+                            </div>
+                        </div>
+                        <!-- End Pagination -->                    </div>
+                </div>
             </div>
         </div>
 
@@ -162,6 +183,7 @@
 <script type="text/javascript">
     var bookmark_ids = [];
     var wishlist_ids = [];
+
 </script>
 
 <script src="https://choxe.vn/assets/frontend/js/common.js?v=3"></script>

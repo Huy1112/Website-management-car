@@ -56,24 +56,25 @@
         $(".filename").text("");
       });
     })
-  </script>
+
+    </script>
 </head>
 <body onload="time()" class="app sidebar-mini rtl">
-    <header th:insert="${header} ?: ~{}">
-        <h2>Page 1</h2>
-    </header>
-    <!-- Sidebar menu-->
-    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-    <aside th:insert="${aside} ?: ~{}">
-        <ul>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-        </ul>
-    </aside>
-    <main class="app-content" th:insert="${mainContent} ?: ~{}" >
-        <h1>Page 1</h1>
-        <p>Main content of Page 1</p>
-    </main>
+<header th:insert="${header} ?: ~{}">
+    <h2>Page 1</h2>
+</header>
+<!-- Sidebar menu-->
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside th:insert="${aside} ?: ~{}">
+    <ul>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+    </ul>
+</aside>
+<main class="app-content" th:insert="${mainContent} ?: ~{}">
+    <h1>Page 1</h1>
+    <p>Main content of Page 1</p>
+</main>
 <script src="/js/jsDoc/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
 <script src="/js/jsDoc/popper.min.js"></script>
@@ -89,7 +90,8 @@
 <script type="text/javascript" src="/js/jsDoc/plugins/chart.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="src/jquery.table2excel.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>\
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+\
 <script type="text/javascript" src="/js/jsDoc/plugins/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="/js/jsDoc/plugins/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript">$('#sampleTable').DataTable();</script>
@@ -251,7 +253,8 @@
         reader.readAsDataURL(file);
       }
     });
-  </script>
+
+</script>
 </body>
 
 </html>

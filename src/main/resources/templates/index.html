@@ -4,8 +4,10 @@
 <div th:replace="~{fragments/web-fragments :: head-web}"></div>
 
 <body class="bd-home-index">
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 
 <!-- Header PC-->
 <div class="header header-pc">
@@ -26,7 +28,8 @@
                     <li class="list-menu-top"><a th:href="@{/Web/dang-tin}" class="">Đăng tin bán ô tô</a></li>
 
                     <!--                        <li class="dang-nhap fr ml25"><a class="" href="https://choxe.net/dang-ky">Đăng ký</a></li>-->
-                    <li class="dang-ky fr"><a class="" th:href="@{/login}"><i class="icon-sprite-24 icon-dky"></i>Đăng nhập</a></li>
+                    <li class="dang-ky fr"><a class="" th:href="@{/login}"><i class="icon-sprite-24 icon-dky"></i>Đăng
+                        nhập</a></li>
                 </ul>
             </div>
         </div>
@@ -37,14 +40,15 @@
             <div class="col-xs-5 col-sm-5 col-md-5 p0">
                 <div class="box-search">
                     <form action="https://choxe.net/tim-xe/">
-                        <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm" value="" />
+                        <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm" value=""/>
                         <button class="btn-search"><i class="icon-sprite-24 icon-search"></i></button>
                     </form>
                 </div>
             </div>
             <div class="col-xs-7 col-sm-7 col-md-7 p0 txr">-->
                 <a class="seen-favo" href="tin-luu.html"><i class="icon-40-save"></i> <span>Tin đã lưu</span></a>
-                <a class="seen-favo" href="danh-sach-yeu-thich.html"><i class="icon-40-heart"></i> <span>Xe yêu thích</span></a>
+                <a class="seen-favo" href="danh-sach-yeu-thich.html"><i class="icon-40-heart"></i>
+                    <span>Xe yêu thích</span></a>
                 <a class="seen-favo" href="salon-moi-gioi.html"><i class="icon-40-oto"></i> <span>Dành cho Salon, Môi giới</span></a>
             </div>
         </div>
@@ -195,14 +199,16 @@
                         <li class="list-menu-top w180">
                             <div class="box-search">
                                 <form action="https://choxe.net/tim-xe">
-                                    <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm" value="">
+                                    <input type="text" name="q" class="form-control input-search" placeholder="Tìm kiếm"
+                                           value="">
                                     <button class="btn-search"><i class="icon-sprite-24 icon-search"></i></button>
                                 </form>
                             </div>
                         </li>
                         <li class="list-menu-top fr login-up">
                             <ul class="">
-                                <li class="dang-ky"><a class="" th:href="@{/login}"><i class="icon-sprite-24 icon-dky"></i>Đăng nhập</a></li>
+                                <li class="dang-ky"><a class="" th:href="@{/login}"><i
+                                        class="icon-sprite-24 icon-dky"></i>Đăng nhập</a></li>
                                 <!--                                    <li class="dang-nhap"><a class="" href="https://choxe.net/dang-ky">Đăng ký</a></li>-->
                             </ul>
                         </li>
@@ -231,99 +237,12 @@
             <span class="caret"></span>
         </a>
     </nav>
-
-    <!-- Modal Menu Left -->
-    <!--        <div class="modal left fade modal-menu" id="menu_left" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
-    <!--            <div class="modal-dialog" role="document">-->
-    <!--                <div class="modal-content">-->
-    <!--                    <div class="modal-header">-->
-    <!--                        &lt;!&ndash; <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> &ndash;&gt;-->
-    <!--                        <ul class="list-menu-mb">-->
-    <!--                            <li><a class="" href="#"><i class="icon-sprite-24 icon-home"></i> Trang chủ Chợ xe a</a></li>-->
-    <!--                            &lt;!&ndash;								<li><a class="" href="&ndash;&gt;-->
-    <!--                            &lt;!&ndash;"><i class="icon-sprite-24 icon-oto-small"></i> Muốn mua ô tô</a></li>&ndash;&gt;-->
-    <!--                            <li><a class="" th:href="@{/Web/dang-tin}"><i class="icon-sprite-24 icon-dtin"></i> Đăng tin bán ô tô</a></li>-->
-    <!--                            <li><a class="txt-red" href="https://choxe.net/deal-oto-hot"><i class="icon-sprite-24 icon-hotdeal-red"></i> Deal HOT</a></li>-->
-    <!--                            &lt;!&ndash;<li><a class="" href="https://choxe.net/so-sanh"><i class="icon-sprite-24 icon-ss-small"></i> So sánh xe</a></li>&ndash;&gt;-->
-    <!--                            &lt;!&ndash;								<li><a class="" href="&ndash;&gt;-->
-    <!--                            &lt;!&ndash;"><i class="icon-sprite-24 icon-volang"></i> Học lái xe</a></li>&ndash;&gt;-->
-    <!--                            <li><a class="" href="https://choxe.net/danh-sach-dai-ly"><i class="icon-sprite-24 icon-salon-small"></i> Tìm Salon</a></li>-->
-    <!--                            <li><a class="" href="https://choxe.net/danh-sach-moi-gioi"><i class="icon-sprite-24 icon-moi-gioi"></i> Tìm Môi giới</a></li>-->
-    <!--                            &lt;!&ndash;								<li><a class="" href="&ndash;&gt;-->
-    <!--                            &lt;!&ndash;"><i class="icon-sprite-24 icon-tso-small"></i> Thông số kỹ thật</a></li>&ndash;&gt;-->
-    <!--                            &lt;!&ndash;								<li><a class="" href="&ndash;&gt;-->
-    <!--                            &lt;!&ndash;"><i class="icon-sprite-24 icon-help-small"></i> Hưỡng dẫn mua xe</a></li>&ndash;&gt;-->
-    <!--                        </ul>-->
-    <!--                    </div>-->
-
-    <!--                    <div class="modal-header">-->
-
-    <!--                        <ul class="list-menu-mb">-->
-    <!--                            <li><a class="" href="https://choxe.net/tin-luu"><i class="icon-sprite-24 icon-save-small"></i> Tin bán xe đã lưu <span class="txt-num"></span></a></li>-->
-    <!--                            <li><a class="" href="https://choxe.net/danh-sach-yeu-thich"><i class="icon-sprite-24 icon-heart-small"></i> Xe yêu thích <span class="txt-num"></span></a></li>-->
-    <!--                            <li><a class="" href="https://choxe.net/xem-gan-day"><i class="icon-sprite-24 icon-seen-small"></i> Đã xem gần đây <span class="txt-num"></span></a></li>-->
-    <!--                        </ul>-->
-    <!--                    </div>-->
-
-    <!--                    <div class="md-footer">-->
-    <!--                        <a class="" href="https://choxe.net/salon-moi-gioi"><i class="icon-sprite-24 icon-salon-blue"></i> Dành cho Salon, Môi giới</a>-->
-    <!--                    </div>-->
-
-    <!--                </div>-->
-    <!--                &lt;!&ndash; modal-content &ndash;&gt;-->
-    <!--            </div>-->
-    <!--            &lt;!&ndash; modal-dialog &ndash;&gt;-->
-    <!--        </div>-->
-    <!--        &lt;!&ndash; End Modal menu left &ndash;&gt;-->
-
-    <!-- Modal Menu Right -->
-    <div class="modal right fade modal-menu modal-menu-right" id="menu_right" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="row m0">
-                    <div class="col-xs-6 p0">
-                        <a class="a-dky" href="#">
-                            <i class="icon-sprite-24 icon-dky"></i> Đăng ký
-                        </a>
-                    </div>
-                    <div class="col-xs-6 p0">
-                        <a class="a-dnhap" th:href="@{/login}">
-                            Đăng nhập
-                        </a>
-                    </div>
-                </div>
-
-                <div class="modal-header">
-                    <ul class="list-menu-mb">
-                        <li><a class="" href="https://choxe.net/tai-khoan">Quản lý Tài khoản</a></li>
-                        <li><a class="" href="https://choxe.net/nang-cap-tai-khoan">Nâng cấp tài khoản</a></li>
-                    </ul>
-                </div>
-
-                <div class="modal-header">
-                    <ul class="list-menu-mb">
-                        <li><a class="" href="https://choxe.net/thong-bao">Thông báo <span class="txt-red"></span></a></li>
-                        <li><a class="" href="https://choxe.net/dang-tin">Đăng tin bán ô tô <span class="txt-num"></span></a></li>
-                        <li><a class="" href="https://choxe.net/quan-ly-oto/dang-ban">Xe đang rao bán <span class="txt-num"></span></a></li>
-                        <li><a class="" href="https://choxe.net/quan-ly-oto/da-ban">Xe đã bán <span class="txt-num"></span></a></li>
-                        <li><a class="" href="https://choxe.net/quan-ly-oto/cho-duyet">Xe chờ duyệt <span class="txt-num"></span></a></li>
-                    </ul>
-                </div>
-
-
-            </div>
-            <!-- modal-content -->
-        </div>
-        <!-- modal-dialog -->
-    </div>
-    <!-- End Modal Menu Right -->
-
+    <div th:replace="~{fragments/web-fragments :: modals}"></div>
 </div>
 <!-- End Header mobile -->
 
 
-
-<div class="main-content bg-light-blue"  >
+<div class="main-content bg-light-blue">
     <div class="container">
         <div class="row m0">
             <!-- Column Left -->
@@ -357,7 +276,8 @@
 <script type="text/javascript ">
         var bookmark_ids = [];
         var wishlist_ids = [];
-    </script>
+
+</script>
 <script src="/assets/frontend/js/common30f4.js?v=3"></script>
 <script src="/assets/frontend/js/js_mobile3860.js?v=1"></script>
 <script src="/assets/frontend/js/jquery.mask.min.js"></script>

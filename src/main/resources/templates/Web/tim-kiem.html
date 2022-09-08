@@ -1,408 +1,437 @@
-
 <!DOCTYPE html>
 <html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
-	
+
 <!-- Mirrored from choxe.net/tim-kiem by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Mar 2022 15:24:24 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
 <div th:replace="~{fragments/web-fragments :: head-web}"></div>
 
-	<body class="bd-search-index">
-		        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-				<div th:replace="~{fragments/web-fragments :: header}"></div>
+<body class="bd-search-index">
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div th:replace="~{fragments/web-fragments :: header}"></div>
 
 <!-- Body -->
 <div class="main-content">
-	<div class="container">
-		<div class="row m0 p15mb bg-10-mb sl-mb sl-arrow-mb form-mb">
-			<div class="col-left hidden-xs">
-				<!-- Box link Mua/Bán -->
-<div class="box-left hidden-xs">
-    <ul class="list-tit">
-		<li class="tit-mua-ban">Bán
-            <ul class="list-link">
-                <li><a class="" th:href="@{/Web/dang-tin}">Đăng tin bán ô tô</a></li>
-                <li><a class="" th:href="@{/Web/danh-sach-bai-dang}">Xe đang rao bán</a></li>
-                <li><a class="" href="#">Xe đã bán</a></li>
-				<li><a class="" href="#">Xe chờ duyệt </a></li>
-				            </ul>
-        </li>
-<!--        <li class="tit-mua-ban">Mua-->
-<!--            <ul class="list-link">-->
-<!--&lt;!&ndash;                <li><a class="" href="tin-luu.html">Tin bán xe đã lưu</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a class="" href="xe-moi.html">Mua Ô tô mới</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a class="" href="xe-cu.html">Mua Xe cũ</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;				                <li><a class="" href="danh-sach-dai-ly.html">Tìm kiếm đại lý</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a class="" href="danh-sach-yeu-thich.html">Xe yêu thích</a></li>&ndash;&gt;-->
-<!--&lt;!&ndash;                <li><a class="" href="dang-nhap/index75b9.html">Đã xem gần đây</a></li>&ndash;&gt;-->
-<!--            </ul>-->
-<!--        </li>        -->
-    </ul>
+    <div class="container">
+        <div class="row m0 p15mb bg-10-mb sl-mb sl-arrow-mb form-mb">
+            <div class="col-left hidden-xs">
+                <!-- Box link Mua/Bán -->
+                <div class="box-left hidden-xs">
+                    <ul class="list-tit">
+                        <li class="tit-mua-ban">Bán
+                            <ul class="list-link">
+                                <li><a class="" th:href="@{/Web/dang-tin}">Đăng tin bán ô tô</a></li>
+                                <li><a class="" th:href="@{/Web/danh-sach-bai-dang}">Xe đang rao bán</a></li>
+                                <li><a class="" href="#">Xe đã bán</a></li>
+                                <li><a class="" href="#">Xe chờ duyệt </a></li>
+                            </ul>
+                        </li>
+                        <!--        <li class="tit-mua-ban">Mua-->
+                        <!--            <ul class="list-link">-->
+                        <!--&lt;!&ndash;                <li><a class="" href="tin-luu.html">Tin bán xe đã lưu</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;                <li><a class="" href="xe-moi.html">Mua Ô tô mới</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;                <li><a class="" href="xe-cu.html">Mua Xe cũ</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;				                <li><a class="" href="danh-sach-dai-ly.html">Tìm kiếm đại lý</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;                <li><a class="" href="danh-sach-yeu-thich.html">Xe yêu thích</a></li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;                <li><a class="" href="dang-nhap/index75b9.html">Đã xem gần đây</a></li>&ndash;&gt;-->
+                        <!--            </ul>-->
+                        <!--        </li>        -->
+                    </ul>
+                </div>
+                <!-- End Box link Mua/Bán -->
+
+            </div>
+            <!-- End Column Left -->
+
+            <!-- Column Right -->
+            <div class="col-right pl30 check-big form-44">
+                <form id="searh-advance-form" name="searh-advance-form" method="post" th:action="@{/xe/search}"
+                      th:object="${search}" enctype="multipart/form-data">
+                    <div class="map-link hidden-xs">
+                        <a class="" href="index.html">Trang chủ Chợ xe</a> &gt;
+                        <a class="" href="#">Tìm kiếm nâng cao</a>
+                    </div>
+
+                    <div class="title-underline mt25 mt10mb">Tìm kiếm nâng cao</div>
+
+                    <div class="font24 mt40 font20mb mt20mb">Tình trạng xe</div>
+                    <div class="row m0 mt15">
+                        <label class="lbinput mr35 font16 w115 fl">
+                            <input type="checkbox" class="icheck" name="status[]" th:field="*{old}" th:value="Cũ"/>
+                            <span>Xe cũ</span>
+                        </label>
+
+                        <label class="lbinput font16 w115 fl">
+                            <input type="checkbox" class="icheck" name="status[]" th:field="*{neww}" th:value="Mới"/>
+                            <span>Xe mới</span>
+                        </label>
+                    </div>
+
+                    <div class="font24 mt40 hidden-xs">Địa điểm bán xe</div>
+
+                    <div class="dia-diem-bxe row m0 sl-42 mt10 hidden-xs">
+                        <div class="col-xs-7 pl0 ">
+                            <select class="select2 form-control" id="sl-tinh-thanh06" th:field="*{city}">
+                                <option th:each="item : ${provinces}" th:value="${item.code}" th:text="${item.name}"
+                                        name="state"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="sl-42 mt10">
+                        <div class="row mt40 hidden-xs">
+                            <div class="col-xs-4 col-sm-4 ">
+                                <div class="font24 ">Hãng xe</div>
+                            </div>
+                            <div class="col-xs-4 col-sm-4 ">
+                                <div class="font24">Model</div>
+                            </div>
+                        </div>
+                        <div class="font20 mt20 visible-xs">Hãng sản xuất & model</div>
+                        <div class="row mt10" id="sl-xe-op">
+                            <div class="col-xs-12 col-sm-4 ">
+                                <select class="select2 form-control sl-hang-xe" id="sl-hang-sx" name="make[]"
+                                        th:field="*{brandd}">
+                                    <option th:each="brand : ${brands}" th:value="${brand.id}"
+                                            th:text="${brand.name}"></option>
+                                </select>
+                            </div>
+                            <!--				CHO XU LY DUOC JS -->
+                            <!--								JS CO THE DOC DUOC CAC MODEL DUA THEO TUNG BRAND-->
+                            <!--								<div class="col-xs-12 col-sm-4 mt15mb">-->
+                            <!--									<select class="select2 form-control sl-model" id="sl-model" name="model[]">-->
+                            <!--										<option value="">Chọn model</option>-->
+                            <!--									</select>-->
+                            <!--								</div>-->
+
+                        </div>
+                        <div class="row m0">
+                            <div class="col-xs-12 col-sm-7 p0">
+                                <div class="font24 mt30 font20mb mt20mb">Giá bán</div>
+                                <div class="row m0 mt10">
+                                    <div class="col-xs-6 col-sm-6 pl35 pr35 relative pr8mb">
+                                        <div class="txt-abs font16 txt-75 mt10">Từ</div>
+                                        <div class="sl-42">
+                                            <select class="select2 form-control" id="sl-from-gia1" name="price_from"
+                                                    th:field="*{pricefrom}">
+                                                <option value=100000000>100 triệu</option>
+                                                <option value=200000000>200 triệu</option>
+                                                <option value=300000000>300 triệu</option>
+                                                <option value=400000000>400 triệu</option>
+                                                <option value=500000000>500 triệu</option>
+                                                <option value=600000000>600 triệu</option>
+                                                <option value=700000000>700 triệu</option>
+                                                <option value=800000000>800 triệu</option>
+                                                <option value=1000000000>1 tỷ</option>
+                                                <option value=1200000000>1.2 tỷ</option>
+                                                <option value=1400000000>1.4 tỷ</option>
+                                                <option value=1600000000>1.6 tỷ</option>
+                                                <option value=2000000000>2 tỷ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-6 pl35 pr35 relative pr0mb pl43mb">
+                                        <div class="txt-abs font16 txt-75 mt10">đến</div>
+                                        <div class="sl-42">
+                                            <select class="select2 form-control" id="sl-from-gia" name="price_to"
+                                                    th:field="*{priceto}">
+                                                <option value=100000000>100 triệu</option>
+                                                <option value=200000000>200 triệu</option>
+                                                <option value=300000000>300 triệu</option>
+                                                <option value=400000000>400 triệu</option>
+                                                <option value=500000000>500 triệu</option>
+                                                <option value=600000000>600 triệu</option>
+                                                <option value=700000000>700 triệu</option>
+                                                <option value=800000000>800 triệu</option>
+                                                <option value=1000000000>1 tỷ</option>
+                                                <option value=1200000000>1.2 tỷ</option>
+                                                <option value=1400000000>1.4 tỷ</option>
+                                                <option value=1600000000>1.6 tỷ</option>
+                                                <option value=2000000000>2 tỷ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m0 loai-xe-mb">
+                            <div class="font24 mt30 mt20mb font20mb">Loại xe</div>
+                            <div class="row box-loai-xe mt10">
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-2"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{hatchback}" th:value="hatchback"/>
+                                            Hatchback </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-1"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{sedan}" th:value="sedan"/>
+                                            Sedan </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-5"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{coupe}" th:value="coupe"/>
+                                            Coupe </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-8"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]" th:field="*{mpv}"
+                                                   th:value="mpv"/>
+                                            MPV </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-4"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]" th:field="*{suv}"
+                                                   th:value="suv"/>
+                                            SUV </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-6"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{pickup}" th:value="pick-up"/>
+                                            Xe Bán tải </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-9"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{truck}" th:value="truck"/>
+                                            Xe tải </label>
+                                    </div>
+                                </div>
+                                <div class="box-sl-xe">
+                                    <div class="bor-hover">
+                                        <label class="lbinput check-xe">
+                                            <i class="icon-xe icon-xe-6"></i>
+                                            <input type="checkbox" class="icheck" name="body_style[]"
+                                                   th:field="*{vanminivan}" th:value="van-minivan"/>
+                                            Van/Minivan </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m0">
+                            <div class="col-xs-12 col-sm-7 p0">
+                                <div class="font24 mt30 font20mb mt20mb">Năm sản xuất</div>
+                                <div class="row m0 mt10">
+                                    <div class="col-xs-6 col-sm-6 pl35 pr35 relative pr8mb">
+                                        <div class="txt-abs font16 txt-75 mt10">Từ</div>
+                                        <div class="sl-42">
+                                            <select class="select2 form-control" id="sl-from-nam06" name="year_from"
+                                                    th:field="*{yearfrom}">
+                                                <option value=2022>2022</option>
+                                                <option value=2021>2021</option>
+                                                <option value=2020>2020</option>
+                                                <option value=2019>2019</option>
+                                                <option value=2018>2018</option>
+                                                <option value=2017>2017</option>
+                                                <option value=2016>2016</option>
+                                                <option value=2015>2015</option>
+                                                <option value=2014>2014</option>
+                                                <option value=2013>2013</option>
+                                                <option value=2012>2012</option>
+                                                <option value=2011>2011</option>
+                                                <option value=2010>2010</option>
+                                                <option value=2009>2009</option>
+                                                <option value=2008>2008</option>
+                                                <option value=2007>2007</option>
+                                                <option value=2006>2006</option>
+                                                <option value=2005>2005</option>
+                                                <option value=2004>2004</option>
+                                                <option value=2003>2003</option>
+                                                <option value=2002>2002</option>
+                                                <option value=2001>2001</option>
+                                                <option value=2000>2000</option>
+                                                <option value=1999>1999</option>
+                                                <option value=1998>1998</option>
+                                                <option value=1997>1997</option>
+                                                <option value=1996>1996</option>
+                                                <option value=1995>1995</option>
+                                                <option value=1994>1994</option>
+                                                <option value=1993>1993</option>
+                                                <option value=1992>1992</option>
+                                                <option value=1991>1991</option>
+                                                <option value=1990>1990</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-sm-6 pl35 pr35 relative pr0mb pl43mb">
+                                        <div class="txt-abs font16 txt-75 mt10">đến</div>
+                                        <div class="sl-42">
+                                            <select class="select2 form-control" id="sl-to-nam06" name="year_to"
+                                                    th:field="*{yearto}">
+                                                <option value=2022>2022</option>
+                                                <option value=2021>2021</option>
+                                                <option value=2020>2020</option>
+                                                <option value=2019>2019</option>
+                                                <option value=2018>2018</option>
+                                                <option value=2017>2017</option>
+                                                <option value=2016>2016</option>
+                                                <option value=2015>2015</option>
+                                                <option value=2014>2014</option>
+                                                <option value=2013>2013</option>
+                                                <option value=2012>2012</option>
+                                                <option value=2011>2011</option>
+                                                <option value=2010>2010</option>
+                                                <option value=2009>2009</option>
+                                                <option value=2008>2008</option>
+                                                <option value=2007>2007</option>
+                                                <option value=2006>2006</option>
+                                                <option value=2005>2005</option>
+                                                <option value=2004>2004</option>
+                                                <option value=2003>2003</option>
+                                                <option value=2002>2002</option>
+                                                <option value=2001>2001</option>
+                                                <option value=2000>2000</option>
+                                                <option value=1999>1999</option>
+                                                <option value=1998>1998</option>
+                                                <option value=1997>1997</option>
+                                                <option value=1996>1996</option>
+                                                <option value=1995>1995</option>
+                                                <option value=1994>1994</option>
+                                                <option value=1993>1993</option>
+                                                <option value=1992>1992</option>
+                                                <option value=1991>1991</option>
+                                                <option value=1990>1990</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--						<div class="row m0">-->
+                        <!--							<div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">-->
+                        <!--								<div class="font24 mt30 font20mb mt20mb">Từ khóa</div>-->
+                        <!--								<input type="text" name="q" class="form-control mt10" placeholder="Vd: Toyota, Honda, Mazda...">-->
+                        <!--							</div>-->
+                        <!--						</div>-->
+                        <div class="row m0 lb-50-mb">
+                            <div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">
+                                <div class="font24 mt30 mb15 font20mb mt20mb">Hộp số</div>
+                                <label class="lbinput font16 fl mr35">
+                                    <input type="checkbox" name="transmission[]" class="" th:field="*{manual}"
+                                           th:value="manual"> <span>Số sàn</span>
+                                </label>
+                                <label class="lbinput font16 fl mr35">
+                                    <input type="checkbox" name="transmission[]" class="" th:field="*{auto}"
+                                           th:value="auto"> <span>Số tự động</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m0 lb-50-mb">
+                        <div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">
+                            <div class="font24 mt30 mb15 font20mb mt20mb">Nhiên liệu</div>
+                            <label class="lbinput font16 w95 fl">
+                                <input type="checkbox" name="fuel[]" class="icheck" value="gasoline"
+                                       th:field="*{gasoline}" th:value="gasoline"> <span>Xăng</span>
+                            </label>
+                            <label class="lbinput font16 w95 fl">
+                                <input type="checkbox" name="fuel[]" class="icheck" value="oil" th:field="*{oil}"
+                                       th:value="oil"> <span>Dầu</span>
+                            </label>
+                            <label class="lbinput font16 w95 fl">
+                                <input type="checkbox" name="fuel[]" class="icheck" value="hybrid" th:field="*{hybrid}"
+                                       th:value="hybrid"> <span>Điện</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row m0 visible-xs">
+                        <div class="col-xs-12 col-sm-12 p0 pr35">
+                            <div class="font24 mt30 mb15 font20mb mt20mb">Xuất xứ</div>
+                            <label class="lbinput mr35 font16 fl">
+                                <input type="checkbox" name="" checked="true" class="icheck" th:field="*{importt}"
+                                       th:value="import"> <span>Nhập khẩu</span>
+                            </label>
+                            <label class="lbinput font16 fl mr35">
+                                <input type="checkbox" name="" class="icheck" th:field="*{country}" th:value="country">
+                                <span>Sản xuất trong nước</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="txr mt30 mt15mb mb10 btn-mb mb25mb">
+                        <button type="submit" class="btn btn-orange-58 w195"><i
+                                class="icon-sprite-24 icon-search-white"></i> Tìm kiếm
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!-- End Column Right -->
+    </div>
+
 </div>
-<!-- End Box link Mua/Bán -->
 
-			</div>
-			<!-- End Column Left -->
-
-			<!-- Column Right -->
-			<div class="col-right pl30 check-big form-44">
-				<form id="searh-advance-form" name="searh-advance-form" method="post" th:action="@{/xe/search}" th:object="${search}"  enctype="multipart/form-data">
-					<div class="map-link hidden-xs">
-						<a class="" href="index.html">Trang chủ Chợ xe</a>  &gt;
-						<a class="" href="#">Tìm kiếm nâng cao</a>
-					</div>
-
-					<div class="title-underline mt25 mt10mb">Tìm kiếm nâng cao</div>
-
-					<div class="font24 mt40 font20mb mt20mb">Tình trạng xe</div>
-					<div class="row m0 mt15" >
-						<label class="lbinput mr35 font16 w115 fl">
-							<input type="checkbox" class="icheck" name="status[]" th:field="*{old}" th:value="Cũ"   /> <span>Xe cũ</span>
-						</label>
-
-						<label class="lbinput font16 w115 fl">
-							<input type="checkbox" class="icheck" name="status[]" th:field="*{neww}" th:value="Mới"  /> <span>Xe mới</span>
-						</label>
-					</div>
-
-					<div class="font24 mt40 hidden-xs">Địa điểm bán xe</div>
-
-					<div class="dia-diem-bxe row m0 sl-42 mt10 hidden-xs">
-						<div class="col-xs-7 pl0 ">
-							<select class="select2 form-control" id="sl-tinh-thanh06"  th:field="*{city}">
-								<option  th:each="item : ${provinces}" th:value="${item.code}" th:text="${item.name}" name="state"></option>
-							</select>
-						</div>
-					</div>
-
-					<div class="sl-42 mt10">
-							<div class="row mt40 hidden-xs">
-								<div class="col-xs-4 col-sm-4 ">
-									<div class="font24 ">Hãng xe</div>
-								</div>
-								<div class="col-xs-4 col-sm-4 ">
-									<div class="font24">Model</div>
-								</div>
-							</div>
-							<div class="font20 mt20 visible-xs">Hãng sản xuất & model</div>
-							<div class="row mt10" id="sl-xe-op">
-								<div class="col-xs-12 col-sm-4 ">
-									<select class="select2 form-control sl-hang-xe" id="sl-hang-sx" name="make[]"  th:field="*{brandd}">
-										<option th:each="brand : ${brands}" th:value="${brand.id}" th:text="${brand.name}"></option>
-									</select>
-								</div>
-<!--				CHO XU LY DUOC JS -->
-<!--								JS CO THE DOC DUOC CAC MODEL DUA THEO TUNG BRAND-->
-<!--								<div class="col-xs-12 col-sm-4 mt15mb">-->
-<!--									<select class="select2 form-control sl-model" id="sl-model" name="model[]">-->
-<!--										<option value="">Chọn model</option>-->
-<!--									</select>-->
-<!--								</div>-->
-
-							</div>
-						<div class="row m0">
-							<div class="col-xs-12 col-sm-7 p0">
-								<div class="font24 mt30 font20mb mt20mb">Giá bán</div>
-								<div class="row m0 mt10">
-									<div class="col-xs-6 col-sm-6 pl35 pr35 relative pr8mb">
-										<div class="txt-abs font16 txt-75 mt10">Từ</div>
-										<div class="sl-42">
-											<select class="select2 form-control" id="sl-from-gia1" name="price_from" th:field="*{pricefrom}">
-												<option value=100000000>100 triệu</option>
-												<option value=200000000>200 triệu</option>
-												<option value=300000000>300 triệu</option>
-												<option value=400000000>400 triệu</option>
-												<option value=500000000>500 triệu</option>
-												<option value=600000000>600 triệu</option>
-												<option value=700000000>700 triệu</option>
-												<option value=800000000>800 triệu</option>
-												<option value=1000000000>1 tỷ </option>
-												<option value=1200000000>1.2 tỷ </option>
-												<option value=1400000000>1.4 tỷ </option>
-												<option value=1600000000>1.6 tỷ </option>
-												<option value=2000000000>2 tỷ </option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-xs-6 col-sm-6 pl35 pr35 relative pr0mb pl43mb">
-										<div class="txt-abs font16 txt-75 mt10">đến</div>
-										<div class="sl-42">
-											<select class="select2 form-control" id="sl-from-gia" name="price_to" th:field="*{priceto}">
-												<option value=100000000>100 triệu</option>
-												<option value=200000000>200 triệu</option>
-												<option value=300000000>300 triệu</option>
-												<option value=400000000>400 triệu</option>
-												<option value=500000000>500 triệu</option>
-												<option value=600000000>600 triệu</option>
-												<option value=700000000>700 triệu</option>
-												<option value=800000000>800 triệu</option>
-												<option value=1000000000>1 tỷ </option>
-												<option value=1200000000>1.2 tỷ </option>
-												<option value=1400000000>1.4 tỷ </option>
-												<option value=1600000000>1.6 tỷ </option>
-												<option value=2000000000>2 tỷ </option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row m0 loai-xe-mb">
-							<div class="font24 mt30 mt20mb font20mb">Loại xe</div>
-							<div class="row box-loai-xe mt10">
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-2"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{hatchback}" th:value="hatchback"/>
-												Hatchback										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-1"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{sedan}" th:value="sedan"/>
-												Sedan										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-5"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{coupe}" th:value="coupe"/>
-												Coupe										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-8"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{mpv}" th:value="mpv"/>
-												MPV										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-4"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{suv}" th:value="suv"/>
-												SUV										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-6"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{pickup}" th:value="pick-up"/>
-												Xe Bán tải										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-9"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{truck}" th:value="truck"/>
-												Xe tải										</label>
-										</div>
-									</div>
-									<div class="box-sl-xe">
-										<div class="bor-hover">
-											<label class="lbinput check-xe">
-												<i class="icon-xe icon-xe-6"></i>
-												<input type="checkbox" class="icheck" name="body_style[]" th:field="*{vanminivan}" th:value="van-minivan"/>
-												Van/Minivan										</label>
-										</div>
-									</div>
-							</div>
-						</div>
-
-						<div class="row m0">
-							<div class="col-xs-12 col-sm-7 p0">
-								<div class="font24 mt30 font20mb mt20mb">Năm sản xuất</div>
-								<div class="row m0 mt10">
-									<div class="col-xs-6 col-sm-6 pl35 pr35 relative pr8mb">
-										<div class="txt-abs font16 txt-75 mt10">Từ</div>
-										<div class="sl-42">
-											<select class="select2 form-control" id="sl-from-nam06" name="year_from" th:field="*{yearfrom}">
-												<option value=2022>2022</option>
-												<option value=2021>2021</option>
-												<option value=2020>2020</option>
-												<option value=2019>2019</option>
-												<option value=2018>2018</option>
-												<option value=2017>2017</option>
-												<option value=2016>2016</option>
-												<option value=2015>2015</option>
-												<option value=2014>2014</option>
-												<option value=2013>2013</option>
-												<option value=2012>2012</option>
-												<option value=2011>2011</option>
-												<option value=2010>2010</option>
-												<option value=2009>2009</option>
-												<option value=2008>2008</option>
-												<option value=2007>2007</option>
-												<option value=2006>2006</option>
-												<option value=2005>2005</option>
-												<option value=2004>2004</option>
-												<option value=2003>2003</option>
-												<option value=2002>2002</option>
-												<option value=2001>2001</option>
-												<option value=2000>2000</option>
-												<option value=1999>1999</option>
-												<option value=1998>1998</option>
-												<option value=1997>1997</option>
-												<option value=1996>1996</option>
-												<option value=1995>1995</option>
-												<option value=1994>1994</option>
-												<option value=1993>1993</option>
-												<option value=1992>1992</option>
-												<option value=1991>1991</option>
-												<option value=1990>1990</option>
-											</select>
-										</div>
-									</div>
-
-									<div class="col-xs-6 col-sm-6 pl35 pr35 relative pr0mb pl43mb">
-										<div class="txt-abs font16 txt-75 mt10">đến</div>
-										<div class="sl-42">
-											<select class="select2 form-control" id="sl-to-nam06" name="year_to" th:field="*{yearto}">
-												<option value=2022>2022</option>
-												<option value=2021>2021</option>
-												<option value=2020>2020</option>
-												<option value=2019>2019</option>
-												<option value=2018>2018</option>
-												<option value=2017>2017</option>
-												<option value=2016>2016</option>
-												<option value=2015>2015</option>
-												<option value=2014>2014</option>
-												<option value=2013>2013</option>
-												<option value=2012>2012</option>
-												<option value=2011>2011</option>
-												<option value=2010>2010</option>
-												<option value=2009>2009</option>
-												<option value=2008>2008</option>
-												<option value=2007>2007</option>
-												<option value=2006>2006</option>
-												<option value=2005>2005</option>
-												<option value=2004>2004</option>
-												<option value=2003>2003</option>
-												<option value=2002>2002</option>
-												<option value=2001>2001</option>
-												<option value=2000>2000</option>
-												<option value=1999>1999</option>
-												<option value=1998>1998</option>
-												<option value=1997>1997</option>
-												<option value=1996>1996</option>
-												<option value=1995>1995</option>
-												<option value=1994>1994</option>
-												<option value=1993>1993</option>
-												<option value=1992>1992</option>
-												<option value=1991>1991</option>
-												<option value=1990>1990</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-<!--						<div class="row m0">-->
-<!--							<div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">-->
-<!--								<div class="font24 mt30 font20mb mt20mb">Từ khóa</div>-->
-<!--								<input type="text" name="q" class="form-control mt10" placeholder="Vd: Toyota, Honda, Mazda...">-->
-<!--							</div>-->
-<!--						</div>-->
-						<div class="row m0 lb-50-mb">
-							<div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">
-								<div class="font24 mt30 mb15 font20mb mt20mb">Hộp số</div>
-									<label class="lbinput font16 fl mr35">
-										<input type="checkbox" name="transmission[]" class="" th:field="*{manual}" th:value="manual"> <span>Số sàn</span>
-									</label>
-									<label class="lbinput font16 fl mr35">
-										<input type="checkbox" name="transmission[]" class="" th:field="*{auto}" th:value="auto"> <span>Số tự động</span>
-									</label>
-							</div>
-							</div>
-						</div>
-						<div class="row m0 lb-50-mb">
-							<div class="col-xs-12 col-sm-7 p0 pr35 pr0mb">
-								<div class="font24 mt30 mb15 font20mb mt20mb">Nhiên liệu</div>
-																<label class="lbinput font16 w95 fl">
-										<input type="checkbox" name="fuel[]" class="icheck" value="gasoline" th:field="*{gasoline}" th:value="gasoline"> <span>Xăng</span>
-									</label>
-																<label class="lbinput font16 w95 fl">
-										<input type="checkbox" name="fuel[]" class="icheck" value="oil" th:field="*{oil}" th:value="oil"> <span>Dầu</span>
-									</label>
-																<label class="lbinput font16 w95 fl">
-										<input type="checkbox" name="fuel[]" class="icheck" value="hybrid" th:field="*{hybrid}" th:value="hybrid"> <span>Điện</span>
-									</label>
-							</div>
-						</div>
-
-						<div class="row m0 visible-xs">
-							<div class="col-xs-12 col-sm-12 p0 pr35">
-								<div class="font24 mt30 mb15 font20mb mt20mb">Xuất xứ</div>
-								<label class="lbinput mr35 font16 fl">
-									<input type="checkbox" name="" checked="true" class="icheck" th:field="*{importt}" th:value="import"> <span>Nhập khẩu</span>
-								</label>
-								<label class="lbinput font16 fl mr35">
-									<input type="checkbox" name="" class="icheck" th:field="*{country}" th:value="country"> <span>Sản xuất trong nước</span>
-								</label>
-							</div>
-						</div>
-
-						<div class="txr mt30 mt15mb mb10 btn-mb mb25mb">
-							<button type="submit" class="btn btn-orange-58 w195" ><i class="icon-sprite-24 icon-search-white"></i> Tìm kiếm</button>
-						</div>
-
-				</form>
-				</div>
-			</div>
-			<!-- End Column Right -->
-		</div>
-
-	</div>
-
-	<!-- Slider Salon nổi bật -->
-    <!-- Slider Salon nổi bật -->
+<!-- Slider Salon nổi bật -->
+<!-- Slider Salon nổi bật -->
 <div class="slider-salon hidden-xs">
     <div class="container">
         <div class="title-white">NGƯỜI BÁN Ô TÔ NỔI BẬT</div>
         <div class="relative">
             <div class="slider-salon-noi slider mt15">
-                            </div>
+            </div>
             <div class="bg-blur"></div>
         </div>
     </div>
 </div>
-<!-- End Slider Salon nổi bật -->	<!-- End Slider Salon nổi bật -->
+<!-- End Slider Salon nổi bật -->    <!-- End Slider Salon nổi bật -->
 
 </div>
 <!-- End Body -->
-				<div th:replace="~{fragments/web-fragments :: footer}"></div>
+<div th:replace="~{fragments/web-fragments :: footer}"></div>
 
 <div id="btn-top">
     <i class="icon-sprite-24 icon-to-top"></i>
 </div>
 
-				<!--    CSS-->
-				<link rel="stylesheet " type="text/css " href="/assets/frontend/css/choxef500.css?v=13">
-				<script type="text/javascript ">
+<!--    CSS-->
+<link rel="stylesheet " type="text/css " href="/assets/frontend/css/choxef500.css?v=13">
+<script type="text/javascript ">
         				var bookmark_ids = [];
         				var wishlist_ids = [];
-    			</script>
 
-				<script src="/assets/frontend/js/common30f4.js?v=3"></script>
-				<script src="/assets/frontend/js/js_mobile3860.js?v=1"></script>
-				<script src="/assets/frontend/js/jquery.mask.min.js"></script>
-				<script src="/assets/frontend/js/sortable3860.js?v=1"></script>
-				<script src="/assets/frontend/js/choxe0e34.js?v=33"></script>
-				<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=51vkdv3kfo80drfju5t1s7u9eae67dqqytn7k1mdleidgi2p"></script>
+</script>
+
+<script src="/assets/frontend/js/common30f4.js?v=3"></script>
+<script src="/assets/frontend/js/js_mobile3860.js?v=1"></script>
+<script src="/assets/frontend/js/jquery.mask.min.js"></script>
+<script src="/assets/frontend/js/sortable3860.js?v=1"></script>
+<script src="/assets/frontend/js/choxe0e34.js?v=33"></script>
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=51vkdv3kfo80drfju5t1s7u9eae67dqqytn7k1mdleidgi2p"></script>
 
 
-
-	</body>
+</body>
 
 <!-- Mirrored from choxe.net/tim-kiem by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Mar 2022 15:24:24 GMT -->
 </html>
@@ -507,4 +536,5 @@
 			$('.list-filter').show();
 		}
 	})
+
 </script>

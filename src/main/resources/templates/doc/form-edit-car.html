@@ -20,7 +20,7 @@
         <div class="form-group col-md-6">
             <label class="control-label">ID xe</label>
             <!--              th:value="${userEdit.name}"-->
-            <input class="form-control" type="text" th:field="*{id}" required  disabled>
+            <input class="form-control" type="text" th:field="*{id}" required disabled>
         </div>
         <div class="form-group col-md-6">
             <label class="control-label">tên</label>
@@ -92,18 +92,18 @@
         </div>
         <div class="form-group col-md-12">
             <label for="image" class="control-label">Hình ảnh xe</label>
-            <img id="image" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar}" />
+            <img id="image" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar}"/>
         </div>
         <div class="form-group col-md-12">
             <label for="image1" class="control-label">Hình ảnh xe</label>
-            <img id="image1" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar1}" />
+            <img id="image1" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar1}"/>
         </div>
         <div class="form-group col-md-12">
             <label for="image2" class="control-label">Hình ảnh xe</label>
-            <img id="image2" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar2}" />
+            <img id="image2" style="width:400px;height:350px" th:src="'data:image/png;base64,' + ${piccar2}"/>
         </div>
-        <div  class="form-group col-md-12">
-        <a class="btn btn-cancel" th:href="@{/doc/table-data-oder}">Quay laị</a>
+        <div class="form-group col-md-12">
+            <a class="btn btn-cancel" th:href="@{/doc/table-data-oder}">Quay laị</a>
         </div>
     </form>
 </main>

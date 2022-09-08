@@ -1,22 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="" xmlns:th="http://www.w3.org/1999/xhtml">
-	
+
 <!-- Mirrored from choxe.net/dang-tin by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Mar 2022 14:47:58 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
 
 <div th:replace="~{fragments/web-fragments :: head-web}"></div>
-	<body >
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<div th:replace="~{fragments/web-fragments :: header}"></div>
+<body>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P234VKS"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<div th:replace="~{fragments/web-fragments :: header}"></div>
 <!-- Body -->
 <div class="main-content bg-grey pt0 row m0 bg_white">
     <div class="baner07 relative baner_mb">
         <div class="container relative z10">
             <div class="row m0">
                 <div class="content-baner07">
-<!--                    <a class="link-phukien textfff hidden-xs" href="https://choxe.net/dang-tin-phu-kien">Bán phụ kiện <i class=" icon-sprite-24 icon-nextphukien"></i></a>-->
+                    <!--                    <a class="link-phukien textfff hidden-xs" href="https://choxe.net/dang-tin-phu-kien">Bán phụ kiện <i class=" icon-sprite-24 icon-nextphukien"></i></a>-->
                     <div class="tittle-baner07 textfff text-center">Đăng tin bán Ô tô</div>
                     <div class="col-xs-4 col-sm-4 col-md-4 hidden-xs">
                         <i class="icon-sprite-24 icon-sell"></i>
@@ -51,1173 +53,1191 @@
                     </ul>
                     <div class="title-style2 text-center visible-xs">1. Thông tin xe</div>
                     <div class="item-contentbanxe">
-						<form method="post" action="https://choxe.net/dang-tin" enctype="multipart/form-data" class="validate-form">
-							<div class="row">
+                        <form method="post" action="https://choxe.net/dang-tin" enctype="multipart/form-data"
+                              class="validate-form">
+                            <div class="row">
                                 <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="info-dki-email p0 banxe-vali">
-										<div class="font14 text2b4560 mb25">Tình trạng xe</div>
-										<div class="groupradio">
-											<label for="otocu" class="check-dnhap font16 check-satus">
-												<input class="icheck" type="radio" id="otocu" name="status" checked="true" value="old" />
-												<span>Xe ô tô cũ</span>
-											</label>
-											<label for="otomoi" class="check-dnhap font16 check-satus">
-												<input type="radio"  id="otomoi" name="status" value="new" />
-												<span>Xe ô tô mới</span>
-											</label>
-										</div><!--end groupradio-->
-									</div>
-								</div><!--end col-->
+                                    <div class="info-dki-email p0 banxe-vali">
+                                        <div class="font14 text2b4560 mb25">Tình trạng xe</div>
+                                        <div class="groupradio">
+                                            <label for="otocu" class="check-dnhap font16 check-satus">
+                                                <input class="icheck" type="radio" id="otocu" name="status"
+                                                       checked="true" value="old"/>
+                                                <span>Xe ô tô cũ</span>
+                                            </label>
+                                            <label for="otomoi" class="check-dnhap font16 check-satus">
+                                                <input type="radio" id="otomoi" name="status" value="new"/>
+                                                <span>Xe ô tô mới</span>
+                                            </label>
+                                        </div><!--end groupradio-->
+                                    </div>
+                                </div><!--end col-->
                                 <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="info-dki-email p0 banxe-vali">
-										<div class="font14 text2b4560 mb10">Số Km đã đi</div>
-										<input type="text" class="form-control input-banxe nhapso-vali recolor89" placeholder="Nhập số" name="odo" value="" />
-										<p class="text-red mb0 style2_lh hidden error_submit"></p>
-									</div>
-								</div><!--end col-->
+                                    <div class="info-dki-email p0 banxe-vali">
+                                        <div class="font14 text2b4560 mb10">Số Km đã đi</div>
+                                        <input type="text" class="form-control input-banxe nhapso-vali recolor89"
+                                               placeholder="Nhập số" name="odo" value=""/>
+                                        <p class="text-red mb0 style2_lh hidden error_submit"></p>
+                                    </div>
+                                </div><!--end col-->
                                 <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="sl-filter xe-dki banxe m0 banxe-vali">
-										<div class="font14 text2b4560 mb10">Muốn bán tại tình/thành</div>
-										<select class="form-control bantinh-vali" id="bantaitinh" name="state">
-											<option value="">Chọn tỉnh thành</option>
-																							<option  value="1">Hà Nội</option>
-																							<option  value="2">Hồ Chí Minh</option>
-																							<option  value="4">Đà Nẵng</option>
-																							<option  value="6">An Giang</option>
-																							<option  value="26">Bà Rịa Vũng Tàu</option>
-																							<option  value="27">Bạc Liêu</option>
-																							<option  value="25">Bắc Cạn</option>
-																							<option  value="19">Bắc Giang</option>
-																							<option  value="16">Bắc Ninh</option>
-																							<option  value="28">Bến Tre</option>
-																							<option  value="29">Biên Hòa</option>
-																							<option  value="31">Bình Dương</option>
-																							<option  value="30">Bình Định</option>
-																							<option  value="32">Bình Phước</option>
-																							<option  value="33">Bình Thuận</option>
-																							<option  value="34">Cà Mau</option>
-																							<option  value="35">Cao Bằng</option>
-																							<option  value="7">Cần Thơ</option>
-																							<option  value="37">Đắc Lắc</option>
-																							<option  value="71">Đắk Nông</option>
-																							<option  value="39">ĐBSCL</option>
-																							<option  value="38">Điện Biên</option>
-																							<option  value="40">Đồng Nai</option>
-																							<option  value="41">Đồng Tháp</option>
-																							<option  value="42">Gia Lai</option>
-																							<option  value="43">Hà Giang</option>
-																							<option  value="44">Hà Nam</option>
-																							<option  value="45">Hà Tĩnh</option>
-																							<option  value="21">Hải Dương</option>
-																							<option  value="9">Hải Phòng</option>
-																							<option  value="20">Hòa Bình</option>
-																							<option  value="5">Thừa Thiên Huế</option>
-																							<option  value="22">Hưng Yên</option>
-																							<option  value="65">Kiên Giang</option>
-																							<option  value="47">Kon Tum</option>
-																							<option  value="46">Khánh Hòa</option>
-																							<option  value="48">Lai Châu</option>
-																							<option  value="8">Lạng Sơn</option>
-																							<option  value="12">Lào Cai</option>
-																							<option  value="49">Lâm Đồng</option>
-																							<option  value="50">Long An</option>
-																							<option  value="51">Nam Định</option>
-																							<option  value="15">Ninh Bình</option>
-																							<option  value="52">Ninh Thuận</option>
-																							<option  value="13">Nghệ An</option>
-																							<option  value="53">Phú Thọ</option>
-																							<option  value="54">Phú Yên</option>
-																							<option  value="55">Quảng Bình</option>
-																							<option  value="56">Quảng Nam</option>
-																							<option  value="10">Quảng Ninh</option>
-																							<option  value="14">Quảng Trị</option>
-																							<option  value="58">Sóc Trăng</option>
-																							<option  value="59">Sơn La</option>
-																							<option  value="60">Tây Ninh</option>
-																							<option  value="63">Tiền Giang</option>
-																							<option  value="11">Tuyên Quang</option>
-																							<option  value="23">Thái Bình</option>
-																							<option  value="61">Thái Nguyên</option>
-																							<option  value="69">Thanh Hóa</option>
-																							<option  value="57">Quảng Ngãi</option>
-																							<option  value="64">Trà Vinh</option>
-																							<option  value="66">Vĩnh Long</option>
-																							<option  value="67">Vĩnh Phúc</option>
-																							<option  value="18">Yên Bái</option>
-																						
-										</select>
-										<p class="text-red mt10 mb0 font12 hidden error_submit"></p>
-									</div>
-								</div><!--end col-->
-							</div><!--end row-->
-							<div class="row box__banxe">
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Hãng sản xuất</div>
-											<select class="form-control hangsxbx-vali" id="hangsx-banxe" name="make">
-                                                <option value="">Chọn hãng sản xuất</option>
-																									<option  value="742">Toyota</option>
-																									<option  value="361">Hyundai</option>
-																									<option  value="443">KIA</option>
-																									<option  value="488">Mazda</option>
-																									<option  value="72">BMW</option>
-																									<option  value="122">Chevrolet</option>
-																									<option  value="193">Daewoo</option>
-																									<option  value="313">Honda</option>
-																									<option  value="260">Ford</option>
-																									<option  value="1049">MG</option>
-																									<option  value="471">Land Rover</option>
-																									<option  value="1429">Vinfast</option>
-																									<option  value="476">Lexus</option>
-																									<option  value="522">Mercedes-Benz</option>
-																									<option  value="553">Mitsubishi</option>
-																									<option  value="588">Nissan</option>
-																									<option  value="721">Suzuki</option>
-																									<option  value="14">Acura</option>
-																									<option  value="34">Audi</option>
-																									<option  value="1">Alfa Romeo</option>
-																									<option  value="27">Aston Martin</option>
-																									<option  value="887">Buick</option>
-																									<option  value="88">BYD</option>
-																									<option  value="62">Bentley</option>
-																									<option  value="94">Cadillac</option>
-																									<option  value="111">Chery</option>
-																									<option  value="1367">CMC</option>
-																									<option  value="171">Chrysler</option>
-																									<option  value="948">Dodge</option>
-																									<option  value="409">Daihatsu</option>
-																									<option  value="1334">DongFeng</option>
-																									<option  value="217">Ferrari</option>
-																									<option  value="233">Fiat</option>
-																									<option  value="357">Hummer</option>
-																									<option  value="1310">Hino</option>
-																									<option  value="1316">HOWO</option>
-																									<option  value="999">Haima</option>
-																									<option  value="390">Infiniti</option>
-																									<option  value="399">Isuzu</option>
-																									<option  value="1006">Geely</option>
-																									<option  value="669">Lamborghini</option>
-																									<option  value="962">Lincoln</option>
-																									<option  value="895">Luxgen</option>
-																									<option  value="1029">Maserati</option>
-																									<option  value="485">Maybach</option>
-																									<option  value="548">MINI</option>
-																									<option  value="423">Jaguar</option>
-																									<option  value="435">Jeep</option>
-																									<option  value="914">Opel</option>
-																									<option  value="648">Peugeot</option>
-																									<option  value="679">Porsche</option>
-																									<option  value="1015">Renault</option>
-																									<option  value="688">Rolls-Royce</option>
-																									<option  value="903">Samsung</option>
-																									<option  value="830">Scion</option>
-																									<option  value="835">Smart</option>
-																									<option  value="693">SsangYong</option>
-																									<option  value="703">Subaru</option>
-																									<option  value="1271">Tesla</option>
-																									<option  value="911">Tobe</option>
-																									<option  value="840">Volkswagen</option>
-																									<option  value="1277">Volvo</option>
-																									<option  value="1322">Sinotruck</option>
-																									<option  value="1328">CNHTC</option>
-																									<option  value="1339">Shacman</option>
-																									<option  value="1345">Chenglong</option>
-																									<option  value="1351">THACO</option>
-																									<option  value="1370">Baic</option>
-																									<option  value="1389">Citroen</option>
-																									<option  value="1399">Zoyte</option>
-																									<option  value="1428">Teraco</option>
-																									<option  value="1411">Faw</option>
-																									<option  value="1010">Hãng Khác</option>
-																									<option  value="1419">Đầu Kéo Mỹ</option>
-																									<option  value="1421">DongBen</option>
-																									<option  value="1422">Vinaxuki</option>
-																									<option  value="1423">JAC</option>
-																									<option  value="1424">Samco</option>
-																									<option  value="1425">CAMC</option>
-																									<option  value="1426">TMT</option>
-																									<option  value="1427">FUSO</option>
-																							</select>
-											<p class="text-red mt10 mb0 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Model</div>
-											<select class="form-control modelbx-vali" id="model-banxe" name="model">
-                                                <option value="">Chọn model</option>
-																									<option  value="127">Aveo</option>
-																									<option  value="912">Mcar</option>
-																									<option  value="1152">Macan</option>
-																									<option  value="1207">EX</option>
-																									<option  value="1272">Model 3</option>
-																									<option  value="1273">Model S</option>
-																									<option  value="1274">Model X</option>
-																									<option  value="1276">Xe con</option>
-																									<option  value="1292">206</option>
-																									<option  value="1311">300 Series</option>
-																									<option  value="1368">Z7</option>
-																									<option  value="1377">A5</option>
-																									<option  value="1412">CC</option>
-																									<option  value="1414">BJ40</option>
-																									<option  value="1420">international</option>
-																									<option  value="1437">Xe tải</option>
-																									<option  value="1438">Z8</option>
-																									<option  value="1439">HR - V</option>
-																									<option  value="1440">Xe tải</option>
-																									<option  value="1441">Xe du lịch</option>
-																									<option  value="1442">Oranto</option>
-																									<option  value="1443">Celerio</option>
-																									<option  value="1444">Xe tải</option>
-																									<option  value="1445">Xe ben</option>
-																									<option  value="1446">IZ49</option>
-																									<option  value="1447">Element</option>
-																									<option  value="1448">H150</option>
-																									<option  value="1449">Xe tải</option>
-																									<option  value="1450">FI</option>
-																									<option  value="1451">F6</option>
-																									<option  value="1452">IZ65</option>
-																									<option  value="1453">Porter</option>
-																									<option  value="1454">IZ65</option>
-																									<option  value="1455">Porter</option>
-																									<option  value="1456">Xpander</option>
-																									<option  value="1457">Bongo</option>
-																									<option  value="1458">Xe khách</option>
-																									<option  value="1460">Xe ben</option>
-																									<option  value="1461">Mighty</option>
-																									<option  value="1462">Terra</option>
-																									<option  value="1463">Kona</option>
-																									<option  value="1464">FVM</option>
-																									<option  value="1465">100</option>
-																									<option  value="1466">250</option>
-																									<option  value="1473">HC</option>
-																									<option  value="1474">Click</option>
-																									<option  value="1475">F-450</option>
-																									<option  value="1476">Cullinan</option>
-																									<option  value="1477">X7</option>
-																									<option  value="1478">Traveller</option>
-																									<option  value="1479">190</option>
-																									<option  value="1480">Brio</option>
-																									<option  value="1481">CX-8</option>
-																									<option  value="1482">Retona Cruiser</option>
-																									<option  value="1483">Passport</option>
-																									<option  value="1484">Grunder</option>
-																									<option  value="1485">Solati</option>
-																									<option  value="1486">Soluto</option>
-																									<option  value="1487">Tourneo</option>
-																									<option  value="1488">XL7</option>
-																									<option  value="1489">T5</option>
-																									<option  value="1490">M3</option>
-																									<option  value="1491">President</option>
-																									<option  value="1492">HS</option>
-																									<option  value="1493">LM</option>
-																									<option  value="2">145</option>
-																									<option  value="28">DB7</option>
-																									<option  value="63">Arnage</option>
-																									<option  value="73">1</option>
-																									<option  value="89">F0</option>
-																									<option  value="117">QQ</option>
-																									<option  value="131">Captiva</option>
-																									<option  value="235">500</option>
-																									<option  value="218">360</option>
-																									<option  value="314">Accord</option>
-																									<option  value="1075">EcoSport</option>
-																									<option  value="1065">Xe du lịch</option>
-																									<option  value="1093">Ghibli</option>
-																									<option  value="425">E-Type</option>
-																									<option  value="371">Getz</option>
-																									<option  value="404">D-Max</option>
-																									<option  value="358">H1</option>
-																									<option  value="486">57</option>
-																									<option  value="472">Defender</option>
-																									<option  value="489">2</option>
-																									<option  value="549">Clubman</option>
-																									<option  value="453">K3</option>
-																									<option  value="1089">Aventado</option>
-																									<option  value="526">A</option>
-																									<option  value="437">Commander</option>
-																									<option  value="392">FX</option>
-																									<option  value="590">350Z</option>
-																									<option  value="880">Innova</option>
-																									<option  value="722">Aerio</option>
-																									<option  value="694">Actyon</option>
-																									<option  value="1124">Drophead</option>
-																									<option  value="680">911</option>
-																									<option  value="1096">Adam</option>
-																									<option  value="908">Citivan</option>
-																									<option  value="904">SM3</option>
-																									<option  value="836">City</option>
-																									<option  value="897">CEO</option>
-																									<option  value="831">TC</option>
-																									<option  value="890">Century</option>
-																									<option  value="1105">208</option>
-																									<option  value="951">Challenger</option>
-																									<option  value="971">A1</option>
-																									<option  value="1000">2</option>
-																									<option  value="993">CT </option>
-																									<option  value="1007">Emgrand</option>
-																									<option  value="1058">MG 350</option>
-																									<option  value="1113">Captur</option>
-																									<option  value="1132">Beetle</option>
-																									<option  value="1157">Attrage</option>
-																									<option  value="1158">ILX</option>
-																									<option  value="1163">BRZ</option>
-																									<option  value="1179">Arcadia</option>
-																									<option  value="1231">Allante</option>
-																									<option  value="1390">AX</option>
-																									<option  value="1246">200</option>
-																									<option  value="1278">S60</option>
-																									<option  value="1291">KMC</option>
-																									<option  value="1313">700 Series</option>
-																									<option  value="1317">Ben</option>
-																									<option  value="1323">Ben</option>
-																									<option  value="1329">Ben</option>
-																									<option  value="1335">Ben</option>
-																									<option  value="1340">Ben</option>
-																									<option  value="1346">Ben</option>
-																									<option  value="1353">AUMARK</option>
-																									<option  value="1374">A315</option>
-																									<option  value="1406">Dmai</option>
-																									<option  value="1432">Xe tải</option>
-																									<option  value="1470">Lux</option>
-																									<option  value="3">146</option>
-																									<option  value="18">Intergra</option>
-																									<option  value="39">A2</option>
-																									<option  value="64">Azure</option>
-																									<option  value="90">F3</option>
-																									<option  value="107">DB9</option>
-																									<option  value="1070">2</option>
-																									<option  value="1073">458</option>
-																									<option  value="236">Albea</option>
-																									<option  value="319">Civic</option>
-																									<option  value="1092">MKS</option>
-																									<option  value="422">Terios</option>
-																									<option  value="428">S-Type</option>
-																									<option  value="374">i10</option>
-																									<option  value="359">H2</option>
-																									<option  value="527">B</option>
-																									<option  value="487">62</option>
-																									<option  value="473">Discovery</option>
-																									<option  value="490">3</option>
-																									<option  value="477">ES</option>
-																									<option  value="438">Compass</option>
-																									<option  value="550">Cooper</option>
-																									<option  value="393">G</option>
-																									<option  value="591">350Z Roadster</option>
-																									<option  value="875">Morning</option>
-																									<option  value="706">Forester</option>
-																									<option  value="723">Alto</option>
-																									<option  value="695">Chairman</option>
-																									<option  value="883">Everest</option>
-																									<option  value="683">Boxster</option>
-																									<option  value="910">Cruze</option>
-																									<option  value="755">Camry</option>
-																									<option  value="1104">Agila</option>
-																									<option  value="670">Diablo</option>
-																									<option  value="850">Golf</option>
-																									<option  value="906">SM5</option>
-																									<option  value="838">Fortwo</option>
-																									<option  value="896">M7</option>
-																									<option  value="832">XA</option>
-																									<option  value="889">Excelle</option>
-																									<option  value="1106">2008</option>
-																									<option  value="934">Riich</option>
-																									<option  value="939">Ghost</option>
-																									<option  value="952">Charger</option>
-																									<option  value="1001">3</option>
-																									<option  value="1011">Xe tải</option>
-																									<option  value="1008">Shanghai Englon</option>
-																									<option  value="1059">MG 550</option>
-																									<option  value="1032">Grancabrio</option>
-																									<option  value="1016">Clio</option>
-																									<option  value="1141">Hi-Lander</option>
-																									<option  value="1153">Canter Fuso</option>
-																									<option  value="1180">Aranos</option>
-																									<option  value="1230">ATS</option>
-																									<option  value="1256">300M</option>
-																									<option  value="1279">S80</option>
-																									<option  value="1391">BX</option>
-																									<option  value="1312"> 500 Series</option>
-																									<option  value="1318">Thùng</option>
-																									<option  value="1324">Thùng</option>
-																									<option  value="1330">Thùng</option>
-																									<option  value="1341">Thùng</option>
-																									<option  value="1347">Thùng</option>
-																									<option  value="1354">FORLAND</option>
-																									<option  value="1365">Tải</option>
-																									<option  value="1382">B90W</option>
-																									<option  value="1408">E30 EV</option>
-																									<option  value="1433">Xe tải nhỏ</option>
-																									<option  value="1471">Fadil</option>
-																									<option  value="4">147</option>
-																									<option  value="19">MDX</option>
-																									<option  value="40">A3</option>
-																									<option  value="74">3</option>
-																									<option  value="92">F6</option>
-																									<option  value="97">CTS</option>
-																									<option  value="108">DBS</option>
-																									<option  value="135">Colorado</option>
-																									<option  value="243">Doblo</option>
-																									<option  value="172">300C</option>
-																									<option  value="1066">Xe chuyên dụng</option>
-																									<option  value="269">Escape</option>
-																									<option  value="318">City</option>
-																									<option  value="429">XF</option>
-																									<option  value="360">H3</option>
-																									<option  value="380">Santa FE</option>
-																									<option  value="396">M</option>
-																									<option  value="528">C</option>
-																									<option  value="446">Carens</option>
-																									<option  value="491">6</option>
-																									<option  value="436">Cherokee</option>
-																									<option  value="478">GS</option>
-																									<option  value="551">John Cooper</option>
-																									<option  value="559">Colt</option>
-																									<option  value="707">Impreza</option>
-																									<option  value="772">Fortuner</option>
-																									<option  value="690">Park Ward</option>
-																									<option  value="671">Gallardo</option>
-																									<option  value="685">Cayenne</option>
-																									<option  value="1098">Ampera</option>
-																									<option  value="697">Korando</option>
-																									<option  value="851">Jetta</option>
-																									<option  value="907">SM7</option>
-																									<option  value="837">Forfour</option>
-																									<option  value="888">Lacrosse</option>
-																									<option  value="932">XB</option>
-																									<option  value="1107">301</option>
-																									<option  value="938">APV</option>
-																									<option  value="942">370Z</option>
-																									<option  value="965">MKT</option>
-																									<option  value="950">Caravan</option>
-																									<option  value="1002">7</option>
-																									<option  value="1060">MG 750</option>
-																									<option  value="1031">Granturismo</option>
-																									<option  value="1116">Duster</option>
-																									<option  value="1136">Trooper</option>
-																									<option  value="1178">Brougham</option>
-																									<option  value="1392">C1</option>
-																									<option  value="1270">Feroza</option>
-																									<option  value="1280">S90</option>
-																									<option  value="1287">488</option>
-																									<option  value="1290">Bentayga</option>
-																									<option  value="1314">Chuyên Dụng</option>
-																									<option  value="1319">Đầu Kéo</option>
-																									<option  value="1327">Đầu kéo</option>
-																									<option  value="1331">Đầu kéo</option>
-																									<option  value="1336">Thùng</option>
-																									<option  value="1342">Đầu kéo</option>
-																									<option  value="1348">Đầu kéo</option>
-																									<option  value="1352">FOTON AUMAN</option>
-																									<option  value="1385">Baw</option>
-																									<option  value="1387">S3</option>
-																									<option  value="1407">SR7</option>
-																									<option  value="1472">Klara</option>
-																									<option  value="5">155</option>
-																									<option  value="21">RDX</option>
-																									<option  value="41">A4</option>
-																									<option  value="32">Vanquish</option>
-																									<option  value="67">Continental Flying Spur</option>
-																									<option  value="93">Flyer</option>
-																									<option  value="99">DTS</option>
-																									<option  value="147">Lacetti</option>
-																									<option  value="1071">4</option>
-																									<option  value="277">Fiesta</option>
-																									<option  value="251">Punto</option>
-																									<option  value="221">599 GTB Fiorano</option>
-																									<option  value="322">CR-V</option>
-																									<option  value="1079">Q50</option>
-																									<option  value="430">XJ</option>
-																									<option  value="362">Accent</option>
-																									<option  value="1090">Huracan</option>
-																									<option  value="479">GX</option>
-																									<option  value="474">Freelander</option>
-																									<option  value="501">BT-50</option>
-																									<option  value="529">CL</option>
-																									<option  value="552">One</option>
-																									<option  value="564">Eclipse</option>
-																									<option  value="596">Altima</option>
-																									<option  value="874">Forte</option>
-																									<option  value="709">Legacy</option>
-																									<option  value="698">Kyron</option>
-																									<option  value="691">Phantom</option>
-																									<option  value="686">Cayman</option>
-																									<option  value="1103">Antara</option>
-																									<option  value="877">Vios</option>
-																									<option  value="856">New Beetle</option>
-																									<option  value="839">Roadster</option>
-																									<option  value="933">XD</option>
-																									<option  value="961">Journey</option>
-																									<option  value="966">MKX</option>
-																									<option  value="1003">Freema</option>
-																									<option  value="991">QM5</option>
-																									<option  value="1030">Quattroporte</option>
-																									<option  value="1055">MG3</option>
-																									<option  value="1115">Espace</option>
-																									<option  value="1130">Materia</option>
-																									<option  value="1393">C2</option>
-																									<option  value="1182">Damas</option>
-																									<option  value="1205">S5</option>
-																									<option  value="1209">307</option>
-																									<option  value="1221">Baleno</option>
-																									<option  value="1228">Lasabre</option>
-																									<option  value="1388">Khác</option>
-																									<option  value="1265">Grand Voyager</option>
-																									<option  value="1281">XC60</option>
-																									<option  value="1294">MU-X</option>
-																									<option  value="1320">Chuyên Dụng</option>
-																									<option  value="1325">Chuyên dụng</option>
-																									<option  value="1332">Chuyên dụng</option>
-																									<option  value="1337">Chuyên dụng</option>
-																									<option  value="1343">Chuyên dụng</option>
-																									<option  value="1349">Chuyên dụng</option>
-																									<option  value="1362">FRONTIER</option>
-																									<option  value="1366">CJ5</option>
-																									<option  value="1379">BJ100</option>
-																									<option  value="1405">X7</option>
-																									<option  value="6">156</option>
-																									<option  value="22">RL</option>
-																									<option  value="42">A5</option>
-																									<option  value="68">Continental GT</option>
-																									<option  value="75">5</option>
-																									<option  value="101">Escalade</option>
-																									<option  value="109">Vantage</option>
-																									<option  value="254">Siena</option>
-																									<option  value="222">612 Scaglietti</option>
-																									<option  value="278">Focus</option>
-																									<option  value="340">Odyssey</option>
-																									<option  value="1091">MKZ</option>
-																									<option  value="367">Elantra</option>
-																									<option  value="433">XK</option>
-																									<option  value="440">Liberty</option>
-																									<option  value="449">Cerato</option>
-																									<option  value="1080">Q60</option>
-																									<option  value="567">Galant</option>
-																									<option  value="777">Highlander</option>
-																									<option  value="1123">Wraith</option>
-																									<option  value="600">Bluebird</option>
-																									<option  value="699">Musso</option>
-																									<option  value="778">Hilux</option>
-																									<option  value="684">Carrera GT</option>
-																									<option  value="672">Murcielago</option>
-																									<option  value="1095">Paceman</option>
-																									<option  value="657">308</option>
-																									<option  value="858">Passat</option>
-																									<option  value="898">SUV</option>
-																									<option  value="891">Rendezvous</option>
-																									<option  value="917">Astra</option>
-																									<option  value="960">HS</option>
-																									<option  value="958">Viper</option>
-																									<option  value="992">Orlando</option>
-																									<option  value="1009">CX-5</option>
-																									<option  value="1056">MG5</option>
-																									<option  value="1018">Fluence</option>
-																									<option  value="1134">CLA</option>
-																									<option  value="1140">Carry</option>
-																									<option  value="1394">C3</option>
-																									<option  value="1155">Fstar</option>
-																									<option  value="1166">LR2</option>
-																									<option  value="1168">Corolla Altis</option>
-																									<option  value="1181">Cielo</option>
-																									<option  value="1232">FR-S</option>
-																									<option  value="1233">Levorg</option>
-																									<option  value="1259">LeBaron</option>
-																									<option  value="1275">Charade</option>
-																									<option  value="1282">XC70</option>
-																									<option  value="1321">Khác</option>
-																									<option  value="1326">Khác</option>
-																									<option  value="1333">Khác</option>
-																									<option  value="1338">Khác</option>
-																									<option  value="1344">khác</option>
-																									<option  value="1350">Khác</option>
-																									<option  value="1359">HYUNDAI</option>
-																									<option  value="1386">BJ20</option>
-																									<option  value="1404">Z100</option>
-																									<option  value="1425">N-series</option>
-																									<option  value="7">159</option>
-																									<option  value="43">A6</option>
-																									<option  value="76">6</option>
-																									<option  value="104">SRX</option>
-																									<option  value="110">Virage</option>
-																									<option  value="160">Spark</option>
-																									<option  value="196">Chairman</option>
-																									<option  value="256">Tempra</option>
-																									<option  value="1082">Q70</option>
-																									<option  value="364">Avante</option>
-																									<option  value="530">CLC</option>
-																									<option  value="480">IS</option>
-																									<option  value="505">CX-9</option>
-																									<option  value="441">Patriot</option>
-																									<option  value="434">X-Type</option>
-																									<option  value="463">Rio</option>
-																									<option  value="568">Grandis</option>
-																									<option  value="601">Cedric</option>
-																									<option  value="700">Rexton</option>
-																									<option  value="710">Libero</option>
-																									<option  value="687">Panamera</option>
-																									<option  value="673">Reventon</option>
-																									<option  value="1097">Cascada</option>
-																									<option  value="1125">County</option>
-																									<option  value="862">Polo</option>
-																									<option  value="893">ZDX</option>
-																									<option  value="892">Skylark</option>
-																									<option  value="913">Continental Supersports</option>
-																									<option  value="1108">3008</option>
-																									<option  value="936">Laser</option>
-																									<option  value="967">Navigator</option>
-																									<option  value="1062">California</option>
-																									<option  value="1057">MG6</option>
-																									<option  value="1019">Koleos</option>
-																									<option  value="1146">M3</option>
-																									<option  value="1395">CX</option>
-																									<option  value="1167">LR4</option>
-																									<option  value="1203">U6</option>
-																									<option  value="1224">Creta</option>
-																									<option  value="1255">Stratus</option>
-																									<option  value="1283">XC90</option>
-																									<option  value="1315">Ciaz</option>
-																									<option  value="1358">OLLIN</option>
-																									<option  value="1363">BUS</option>
-																									<option  value="1380">C50E</option>
-																									<option  value="1402">Z300</option>
-																									<option  value="1426">Q-series</option>
-																									<option  value="1429">JAZZ</option>
-																									<option  value="1467">Rush</option>
-																									<option  value="8">164</option>
-																									<option  value="77">7</option>
-																									<option  value="105">STS</option>
-																									<option  value="224">Enzo</option>
-																									<option  value="1083">QX50</option>
-																									<option  value="288">Mondeo</option>
-																									<option  value="370">Genesis</option>
-																									<option  value="531">CLK</option>
-																									<option  value="1094">MX-5</option>
-																									<option  value="475">Range Rover</option>
-																									<option  value="1088">Rondo</option>
-																									<option  value="481">LS</option>
-																									<option  value="1087">Renecade</option>
-																									<option  value="602">Cefiro</option>
-																									<option  value="884">Jolie</option>
-																									<option  value="711">Outback</option>
-																									<option  value="783">Prado</option>
-																									<option  value="701">Rexton II</option>
-																									<option  value="865">Scirocco</option>
-																									<option  value="901">Gentra</option>
-																									<option  value="918">Corsa</option>
-																									<option  value="945">CR-Z</option>
-																									<option  value="972">Mulsanne</option>
-																									<option  value="1033">A7</option>
-																									<option  value="1050">MGF</option>
-																									<option  value="1064">408</option>
-																									<option  value="1139">Limousine</option>
-																									<option  value="1147">M5</option>
-																									<option  value="1396">DS3</option>
-																									<option  value="1159">Ertiga</option>
-																									<option  value="1204">U7</option>
-																									<option  value="1220">XE</option>
-																									<option  value="1235">Kwid</option>
-																									<option  value="1258">Jeep Cherokee</option>
-																									<option  value="1261">Precision</option>
-																									<option  value="1284">V60</option>
-																									<option  value="1355">TOWNER</option>
-																									<option  value="1381">C60F</option>
-																									<option  value="1401">Z500</option>
-																									<option  value="9">166</option>
-																									<option  value="44">A8</option>
-																									<option  value="65">Brooklands</option>
-																									<option  value="79">M3</option>
-																									<option  value="1074">F12berlinetta</option>
-																									<option  value="185">PT Cruiser</option>
-																									<option  value="202">Korando</option>
-																									<option  value="292">Ranger</option>
-																									<option  value="1084">QX60</option>
-																									<option  value="327">Fit</option>
-																									<option  value="373">H-1 Starex</option>
-																									<option  value="482">LX</option>
-																									<option  value="514">Premacy</option>
-																									<option  value="532">CLS</option>
-																									<option  value="456">Optima</option>
-																									<option  value="442">Wrangle</option>
-																									<option  value="604">Cube</option>
-																									<option  value="719">Tribeca</option>
-																									<option  value="730">Grand Vitara</option>
-																									<option  value="878">Vivant</option>
-																									<option  value="1110">4008</option>
-																									<option  value="867">Tiguan</option>
-																									<option  value="921">Insignia</option>
-																									<option  value="1051">TF</option>
-																									<option  value="1028">Range Rover Evoque</option>
-																									<option  value="1020">Laguna</option>
-																									<option  value="1144">M8</option>
-																									<option  value="1397">XM</option>
-																									<option  value="1161">F-Type</option>
-																									<option  value="1174">TL</option>
-																									<option  value="1175">Stavic</option>
-																									<option  value="1211">L300</option>
-																									<option  value="1238">XT5</option>
-																									<option  value="1285">V90</option>
-																									<option  value="1360">Chuyên dụng</option>
-																									<option  value="1383">Concept 900</option>
-																									<option  value="1400">Z700</option>
-																									<option  value="1415">Town Car</option>
-																									<option  value="1468">Wigo</option>
-																									<option  value="10">Breza</option>
-																									<option  value="1072">M4</option>
-																									<option  value="228">F430</option>
-																									<option  value="1085">QX70</option>
-																									<option  value="298">Transit</option>
-																									<option  value="330">Insight</option>
-																									<option  value="533">E</option>
-																									<option  value="508">5</option>
-																									<option  value="574">Lancer</option>
-																									<option  value="609">GT-R</option>
-																									<option  value="734">Samurai</option>
-																									<option  value="1099">Meriva</option>
-																									<option  value="1120">Latitude</option>
-																									<option  value="868">Touareg</option>
-																									<option  value="828">Yaris</option>
-																									<option  value="1052">ZR</option>
-																									<option  value="1137">505</option>
-																									<option  value="1154">S5</option>
-																									<option  value="1162">WRX</option>
-																									<option  value="1165">Jeep A2</option>
-																									<option  value="1169">Sedona</option>
-																									<option  value="1173">NX</option>
-																									<option  value="1185">Kalos</option>
-																									<option  value="1193">Astro</option>
-																									<option  value="1223">F-Pace</option>
-																									<option  value="1251">Q2</option>
-																									<option  value="1295">Tivoli</option>
-																									<option  value="1308">Range Rover Sport</option>
-																									<option  value="1361">Khác</option>
-																									<option  value="1375">D60</option>
-																									<option  value="1398">ZX</option>
-																									<option  value="1410">T300</option>
-																									<option  value="11">GT</option>
-																									<option  value="1067">Q3</option>
-																									<option  value="80">M5</option>
-																									<option  value="204">Lacetti</option>
-																									<option  value="332">Integra</option>
-																									<option  value="375">i20</option>
-																									<option  value="493">323</option>
-																									<option  value="483">RX</option>
-																									<option  value="534">G</option>
-																									<option  value="467">Soul</option>
-																									<option  value="579">Mirage</option>
-																									<option  value="738">Vitara</option>
-																									<option  value="1111">508</option>
-																									<option  value="1102">Mokka</option>
-																									<option  value="1121">Logan</option>
-																									<option  value="804">RAV4</option>
-																									<option  value="847">Eos</option>
-																									<option  value="973">Juke</option>
-																									<option  value="1053">ZS</option>
-																									<option  value="1086">QX80</option>
-																									<option  value="1129">XV</option>
-																									<option  value="1143">S7</option>
-																									<option  value="1197">Caprice</option>
-																									<option  value="1376">D80</option>
-																									<option  value="1409">T700</option>
-																									<option  value="12">GTV</option>
-																									<option  value="48">Q5</option>
-																									<option  value="81">M6</option>
-																									<option  value="205">Lanos</option>
-																									<option  value="270">Escort</option>
-																									<option  value="333">Jazz</option>
-																									<option  value="382">Sonata</option>
-																									<option  value="494">626</option>
-																									<option  value="466">Sorento</option>
-																									<option  value="582">Outlander</option>
-																									<option  value="736">Swift</option>
-																									<option  value="1112">5008</option>
-																									<option  value="879">Zace</option>
-																									<option  value="894">Livina</option>
-																									<option  value="925">Vectra</option>
-																									<option  value="1054">ZT</option>
-																									<option  value="1023">Megane</option>
-																									<option  value="1171">GT S</option>
-																									<option  value="1195">Beretta</option>
-																									<option  value="1226">RC</option>
-																									<option  value="1286">V70</option>
-																									<option  value="1309">Vento</option>
-																									<option  value="1373">H3F</option>
-																									<option  value="1403">T600</option>
-																									<option  value="13">Mito</option>
-																									<option  value="49">Q7</option>
-																									<option  value="272">Expedition</option>
-																									<option  value="344">Pilot</option>
-																									<option  value="535">GL</option>
-																									<option  value="469">Sportage</option>
-																									<option  value="484">SC</option>
-																									<option  value="583">Pajero</option>
-																									<option  value="615">Maxima</option>
-																									<option  value="739">Wagon R</option>
-																									<option  value="743">4Runner</option>
-																									<option  value="1101">Zafira</option>
-																									<option  value="959">X1</option>
-																									<option  value="1118">Scala</option>
-																									<option  value="1138">605</option>
-																									<option  value="1160">CX-3</option>
-																									<option  value="1176">Leganza</option>
-																									<option  value="1198">Cavalier</option>
-																									<option  value="1378">S3</option>
-																									<option  value="1423">New Sharan</option>
-																									<option  value="82">X3</option>
-																									<option  value="51">R8</option>
-																									<option  value="273">Explorer</option>
-																									<option  value="504">CX-7</option>
-																									<option  value="386">Tucson</option>
-																									<option  value="584">Pajero Sport</option>
-																									<option  value="616">Maxima QX</option>
-																									<option  value="793">86</option>
-																									<option  value="1119">Scenic</option>
-																									<option  value="1128">K9</option>
-																									<option  value="1034">Spider</option>
-																									<option  value="1156">GLA</option>
-																									<option  value="1186">Labo</option>
-																									<option  value="1199">Chevyvan</option>
-																									<option  value="1227">StepWGN</option>
-																									<option  value="1250">607</option>
-																									<option  value="1260">LC</option>
-																									<option  value="1372">X25</option>
-																									<option  value="1427">Phaeton</option>
-																									<option  value="1459">X2</option>
-																									<option  value="60">TT</option>
-																									<option  value="1069">X4</option>
-																									<option  value="274">F-150</option>
-																									<option  value="372">Azera</option>
-																									<option  value="517">RX-8</option>
-																									<option  value="571">Triton</option>
-																									<option  value="617">Micra</option>
-																									<option  value="1122">Symbol</option>
-																									<option  value="944">Alphard</option>
-																									<option  value="1027">Cadenza</option>
-																									<option  value="1187">Lublin</option>
-																									<option  value="1200">Corsica</option>
-																									<option  value="1215">GLC</option>
-																									<option  value="1263">Mobilio</option>
-																									<option  value="1264">Boxer</option>
-																									<option  value="1384">X55</option>
-																									<option  value="83">X5</option>
-																									<option  value="129">Camaro</option>
-																									<option  value="208">Magnus</option>
-																									<option  value="275">F-250</option>
-																									<option  value="447">Carnival</option>
-																									<option  value="572">Veryca</option>
-																									<option  value="619">Murano</option>
-																									<option  value="748">Auris</option>
-																									<option  value="1005">Eon</option>
-																									<option  value="1109">RCZ</option>
-																									<option  value="1216">GLE</option>
-																									<option  value="1225">Sandero</option>
-																									<option  value="1244">BR-V</option>
-																									<option  value="1249">Koeru</option>
-																									<option  value="1371">X424</option>
-																									<option  value="84">X6</option>
-																									<option  value="139">Corvette</option>
-																									<option  value="209">Matiz</option>
-																									<option  value="276">F-350</option>
-																									<option  value="536">GLK</option>
-																									<option  value="620">Navara</option>
-																									<option  value="749">Avalon</option>
-																									<option  value="876">Zinger</option>
-																									<option  value="886">Equus</option>
-																									<option  value="940">CD5</option>
-																									<option  value="1117">Talisman</option>
-																									<option  value="1269">107</option>
-																									<option  value="1289">929</option>
-																									<option  value="1413">X65</option>
-																									<option  value="281">Fusion</option>
-																									<option  value="210">Musso</option>
-																									<option  value="369">Galloper</option>
-																									<option  value="448">Ceed</option>
-																									<option  value="750">Avensis</option>
-																									<option  value="909">Gentra</option>
-																									<option  value="1114">Twingo</option>
-																									<option  value="1212">NV350</option>
-																									<option  value="1217">GLS</option>
-																									<option  value="1234">Concept</option>
-																									<option  value="1268">406</option>
-																									<option  value="86">Z4</option>
-																									<option  value="148">Lanos</option>
-																									<option  value="1126">K5</option>
-																									<option  value="212">Nubira</option>
-																									<option  value="368">i30</option>
-																									<option  value="622">Pathfinder</option>
-																									<option  value="751">Aygo</option>
-																									<option  value="1135">Flex</option>
-																									<option  value="1172">Maybach S600</option>
-																									<option  value="150">Malibu</option>
-																									<option  value="1127">K7</option>
-																									<option  value="285">KA</option>
-																									<option  value="1078">i40</option>
-																									<option  value="761">Corolla</option>
-																									<option  value="623">Patrol</option>
-																									<option  value="1183">Espero</option>
-																									<option  value="1206">MB</option>
-																									<option  value="1213">i8</option>
-																									<option  value="286">Kuga</option>
-																									<option  value="377">Matrix</option>
-																									<option  value="537">ML</option>
-																									<option  value="758">Celica</option>
-																									<option  value="624">Pickup</option>
-																									<option  value="1164">KX3</option>
-																									<option  value="1184">Istana</option>
-																									<option  value="1214">Suburban</option>
-																									<option  value="163">Tahoe</option>
-																									<option  value="289">Mustang</option>
-																									<option  value="538">R</option>
-																									<option  value="383">Terracan</option>
-																									<option  value="454">Magentis</option>
-																									<option  value="782">Land Cruiser</option>
-																									<option  value="937">Pixo</option>
-																									<option  value="1192">Tico</option>
-																									<option  value="296">Taurus</option>
-																									<option  value="455">Opirus</option>
-																									<option  value="384">Tiburon</option>
-																									<option  value="539">S</option>
-																									<option  value="628">Qashqai</option>
-																									<option  value="762">Corona</option>
-																									<option  value="1170">Winstom</option>
-																									<option  value="1229">Trailblazer</option>
-																									<option  value="1469">Avanza</option>
-																									<option  value="540">SL</option>
-																									<option  value="457">Picanto</option>
-																									<option  value="765">Crown</option>
-																									<option  value="629">Quest</option>
-																									<option  value="905">Tuscani</option>
-																									<option  value="1188">Prince</option>
-																									<option  value="1254">Edge</option>
-																									<option  value="1364">Trax</option>
-																									<option  value="266">Cougar</option>
-																									<option  value="541">SLK</option>
-																									<option  value="460">Pride</option>
-																									<option  value="385">Trajet</option>
-																									<option  value="771">FJ Cruiser</option>
-																									<option  value="885">Rogue</option>
-																									<option  value="1189">Racer</option>
-																									<option  value="1202">Express</option>
-																									<option  value="1077">C-Max</option>
-																									<option  value="542">SLR</option>
-																									<option  value="776">HiAce</option>
-																									<option  value="632">Sentra</option>
-																									<option  value="970">Veloster</option>
-																									<option  value="1014">Ray</option>
-																									<option  value="1190">Rexton</option>
-																									<option  value="1201">Explorer</option>
-																									<option  value="468">Spectra</option>
-																									<option  value="873">Veracruz</option>
-																									<option  value="637">Sunny</option>
-																									<option  value="1004">iQ</option>
-																									<option  value="1191">Rezzo</option>
-																									<option  value="1210">Prizm</option>
-																									<option  value="1245">SLS</option>
-																									<option  value="543">Sprinter</option>
-																									<option  value="388">Verna</option>
-																									<option  value="788">Matrix</option>
-																									<option  value="639">Teana</option>
-																									<option  value="1177">Evanda</option>
-																									<option  value="1262">Venture</option>
-																									<option  value="1266">Lotze</option>
-																									<option  value="389">XG</option>
-																									<option  value="798">Previa</option>
-																									<option  value="640">Terrano</option>
-																									<option  value="1194">Avanlanche</option>
-																									<option  value="1218">V-Class</option>
-																									<option  value="1431">K</option>
-																									<option  value="1434">Đầu kéo</option>
-																									<option  value="641">Tiida</option>
-																									<option  value="799">Prius</option>
-																									<option  value="1267">Atoz</option>
-																									<option  value="1424">impala</option>
-																									<option  value="1435">Xe tải</option>
-																									<option  value="646">X-Trail</option>
-																									<option  value="807">Sequoia</option>
-																									<option  value="1416">HD</option>
-																									<option  value="1430">Trailblazer</option>
-																									<option  value="1436">Xe ben</option>
-																									<option  value="809">Sienna</option>
-																									<option  value="1252">Kicks</option>
-																									<option  value="1422">Xe du lịch</option>
-																									<option  value="814">Supra</option>
-																									<option  value="815">Tacoma</option>
-																									<option  value="829">Venza</option>
-																									<option  value="1248">Verso</option>
-																									<option  value="820">Vista</option>
-																									<option  value="827">Wish</option>
-																									<option  value="1253">Cresseda</option>
-																							</select>
-											<p class="text-red mt13 mb0 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="info-dki-email p0 banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Giá Bán</div>
-                                            <input type="text" name="sub_model" class="form-control input-banxe nhapso-vali recolor89" placeholder="Nhập giá bán" value="" />
-																						<p class="text-red mt13 mb0 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-							</div><!--end row-->
-							<div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Hộp số</div>
-											<select class="form-control hoso-vali" id="hopso-banxe" name="transmission">
-                                                <option value="">Chọn hộp số</option>
-																									<option  value="manual">Số sàn</option>
-																									<option  value="auto">Số tự động</option>
-																							</select>
-											<p class="text-red mb0 mt13 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Nhiên liệu</div>
-											<select class="form-control nhienlieu-vali" id="nhienlieu-banxe" name="fuel">
-												<option value="">Chọn nhiên liệu</option>
-																									<option  value="gasoline">Xăng</option>
-																									<option  value="oil">Dầu</option>
-																									<option  value="hybrid">Hỗn hợp</option>
-																							</select>
-											<p class="text-red mb0 mt13 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-								<div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Xuất xứ</div>
-											<select class="form-control xuatxu-vali" id="xuatxu-banxe" name="country">
-												<option value="">Chọn xuất xứ</option>
-												<option  value="1">Trong nước</option>
-												<option  value="2">Nhập khẩu</option>
-											</select>
-											<p class="text-red mt13 mb0 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-							</div><!--end row-->
-							<div class="row">
-                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Dòng xe</div>
-											<select class="form-control dongxebx-vali" id="dongxe-banxe" name="body_style">
-                                                <option value="">Chọn loại xe</option>
-																									<option  value="10">Hatchback</option>
-																									<option  value="8">Sedan</option>
-																									<option  value="3">Coupe</option>
-																									<option  value="9">MPV</option>
-																									<option  value="4">SUV</option>
-																									<option  value="6">Xe Bán tải</option>
-																									<option  value="20">Xe tải</option>
-																									<option  value="21">Van/Minivan</option>
-																									<option  value="1">Mobilhome</option>
-																							</select>
-											<p class="text-red mb0 mt13 font12  hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-								<div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="">
-										<div class="sl-filter xe-dki banxe m0 banxe-vali">
-											<div class="font14 text2b4560 mb10">Năm sản xuất</div>
-											<select class="form-control namsxbx-vali" id="namsx-banxe" name="year">
-												<option value="">Chọn năm sản xuất</option>
-												<option  value="2020">2020</option>
-												<option  value="2022">2022</option>
-												<option  value="2021">2021</option>
-												<option  value="2019">2019</option>
-												<option  value="2018">2018</option>
-												<option  value="2017">2017</option>
-												<option  value="2016">2016</option>
-												<option  value="2015">2015</option>
-												<option  value="2014">2014</option>
-												<option  value="2013">2013</option>
-												<option  value="2012">2012</option>
-												<option  value="2011">2011</option>
-												<option  value="2010">2010</option>
-												<option  value="2009">2009</option>
-												<option  value="2008">2008</option>
-												<option  value="2007">2007</option>
-												<option  value="2006">2006</option>
-												<option  value="2005">2005</option>
-												<option  value="2004">2004</option>
-												<option  value="2003">2003</option>
-												<option  value="2002">2002</option>
-												<option  value="2001">2001</option>
-												<option  value="2000">2000</option>
-												<option  value="1999">1999</option>
-												<option  value="1998">1998</option>
-												<option  value="1997">1997</option>
-												<option  value="1996">1996</option>
-												<option  value="1995">1995</option>
-												<option  value="1994">1994</option>
-												<option  value="1993">1993</option>
-												<option  value="1992">1992</option>
-												<option  value="1991">1991</option>
-												<option  value="1990">1990</option>
-											</select>
-											<p class="text-red mt13 mb0 font12 hidden error_submit"></p>
-										</div>
-									</div>
-								</div><!--end col-->
-							</div><!--end row-->
-							<!-- Nav tabs -->
-							<ul class="listbuoc-banxe list-inline hidden-xs">
-								<li class="font18 fw700 active p0"><a class="text89" href="#">1. Thông tin chi tiết bài đăng</a></li>
-							</ul>
-							<div class="row m0">
+                                    <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                        <div class="font14 text2b4560 mb10">Muốn bán tại tình/thành</div>
+                                        <select class="form-control bantinh-vali" id="bantaitinh" name="state">
+                                            <option value="">Chọn tỉnh thành</option>
+                                            <option value="1">Hà Nội</option>
+                                            <option value="2">Hồ Chí Minh</option>
+                                            <option value="4">Đà Nẵng</option>
+                                            <option value="6">An Giang</option>
+                                            <option value="26">Bà Rịa Vũng Tàu</option>
+                                            <option value="27">Bạc Liêu</option>
+                                            <option value="25">Bắc Cạn</option>
+                                            <option value="19">Bắc Giang</option>
+                                            <option value="16">Bắc Ninh</option>
+                                            <option value="28">Bến Tre</option>
+                                            <option value="29">Biên Hòa</option>
+                                            <option value="31">Bình Dương</option>
+                                            <option value="30">Bình Định</option>
+                                            <option value="32">Bình Phước</option>
+                                            <option value="33">Bình Thuận</option>
+                                            <option value="34">Cà Mau</option>
+                                            <option value="35">Cao Bằng</option>
+                                            <option value="7">Cần Thơ</option>
+                                            <option value="37">Đắc Lắc</option>
+                                            <option value="71">Đắk Nông</option>
+                                            <option value="39">ĐBSCL</option>
+                                            <option value="38">Điện Biên</option>
+                                            <option value="40">Đồng Nai</option>
+                                            <option value="41">Đồng Tháp</option>
+                                            <option value="42">Gia Lai</option>
+                                            <option value="43">Hà Giang</option>
+                                            <option value="44">Hà Nam</option>
+                                            <option value="45">Hà Tĩnh</option>
+                                            <option value="21">Hải Dương</option>
+                                            <option value="9">Hải Phòng</option>
+                                            <option value="20">Hòa Bình</option>
+                                            <option value="5">Thừa Thiên Huế</option>
+                                            <option value="22">Hưng Yên</option>
+                                            <option value="65">Kiên Giang</option>
+                                            <option value="47">Kon Tum</option>
+                                            <option value="46">Khánh Hòa</option>
+                                            <option value="48">Lai Châu</option>
+                                            <option value="8">Lạng Sơn</option>
+                                            <option value="12">Lào Cai</option>
+                                            <option value="49">Lâm Đồng</option>
+                                            <option value="50">Long An</option>
+                                            <option value="51">Nam Định</option>
+                                            <option value="15">Ninh Bình</option>
+                                            <option value="52">Ninh Thuận</option>
+                                            <option value="13">Nghệ An</option>
+                                            <option value="53">Phú Thọ</option>
+                                            <option value="54">Phú Yên</option>
+                                            <option value="55">Quảng Bình</option>
+                                            <option value="56">Quảng Nam</option>
+                                            <option value="10">Quảng Ninh</option>
+                                            <option value="14">Quảng Trị</option>
+                                            <option value="58">Sóc Trăng</option>
+                                            <option value="59">Sơn La</option>
+                                            <option value="60">Tây Ninh</option>
+                                            <option value="63">Tiền Giang</option>
+                                            <option value="11">Tuyên Quang</option>
+                                            <option value="23">Thái Bình</option>
+                                            <option value="61">Thái Nguyên</option>
+                                            <option value="69">Thanh Hóa</option>
+                                            <option value="57">Quảng Ngãi</option>
+                                            <option value="64">Trà Vinh</option>
+                                            <option value="66">Vĩnh Long</option>
+                                            <option value="67">Vĩnh Phúc</option>
+                                            <option value="18">Yên Bái</option>
 
-								<div class="item-contentbanxe">
-									<div class="anhxe">
-										<div class="fw700 mb5 font16mb">Hình ảnh <strong style="color: #f00;">(tối thiểu 5 hình, kích thước đề nghị 720x480)</strong> </div>
-										<div class="row15">
-											<output id="result">
-											</output>
-											<div class="col-xs-12 col-sm-3 col-md-3 hidden-xs ">
-												<div class="item-anhbx">
-													<div class="content-anh m0">
-														<label class="chon-anh font24 p0 m0" for="chon-gallery"><i class="icon-sprite-24 icon-camerabx"></i><span class="text-chonanh">Thêm ảnh</span></label>
-														<input type="file" multiple="multiple" name="files[]" class=" file-hidden" id="chon-gallery" />
-													</div>
-												</div><!--end item-anhbx-->
-											</div><!--end col-->
-											<div class="col-xs-12 visible-xs pmb0">
-												<div class="content-anh choose_img_mb visible-xs">
-													<label class="chon-anh font14mb fw700" for="chon-gallery"><i class="icon-sprite-24 icon-mayanh"></i>THÊM ẢNH</label>
-												</div>
-											</div>
-										</div><!--end row-->
-									</div><!--end anhxe-->
-									<div class="motachitiet">
-										<div class="title-underline font24">Mô tả chi tiết</div>
-										<textarea class="form-control text-motachitiet recolor75 font16mb" placeholder="Nhập thông tin mô tả chi tiết xe, tính năng, khuyến mại, phụ kiện đi kèm..." name="description"></textarea>
-									</div><!--end motachitiet-->
-								</div>
-								<!--end item-contentbanxe-->
-								<div class="row">
-								<div class="col-xs-12 col-sm-4 col-md-4 mb37">
-									<div class="info-dki-email p0 banxe-vali">
-										<div class="font14 text2b4560 mb10">Tựa Đề Bài Đăng</div>
-										<input type="text" class="form-control input-banxe nhapso-vali recolor89" placeholder="Nhập tên" name="odo" value="" />
-										<p class="text-red mb0 style2_lh hidden error_submit"></p>
-									</div>
-								</div><!--end col-->
-								</div>
-							</div>
-							<!--end Row-->
-							<button type="submit" class="btn-tieptuc font18 fw700 btn-nextbanxe" id="btn-nextbanxe">Đăng Tin</button>
-						</form>
+                                        </select>
+                                        <p class="text-red mt10 mb0 font12 hidden error_submit"></p>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                            <div class="row box__banxe">
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Hãng sản xuất</div>
+                                            <select class="form-control hangsxbx-vali" id="hangsx-banxe" name="make">
+                                                <option value="">Chọn hãng sản xuất</option>
+                                                <option value="742">Toyota</option>
+                                                <option value="361">Hyundai</option>
+                                                <option value="443">KIA</option>
+                                                <option value="488">Mazda</option>
+                                                <option value="72">BMW</option>
+                                                <option value="122">Chevrolet</option>
+                                                <option value="193">Daewoo</option>
+                                                <option value="313">Honda</option>
+                                                <option value="260">Ford</option>
+                                                <option value="1049">MG</option>
+                                                <option value="471">Land Rover</option>
+                                                <option value="1429">Vinfast</option>
+                                                <option value="476">Lexus</option>
+                                                <option value="522">Mercedes-Benz</option>
+                                                <option value="553">Mitsubishi</option>
+                                                <option value="588">Nissan</option>
+                                                <option value="721">Suzuki</option>
+                                                <option value="14">Acura</option>
+                                                <option value="34">Audi</option>
+                                                <option value="1">Alfa Romeo</option>
+                                                <option value="27">Aston Martin</option>
+                                                <option value="887">Buick</option>
+                                                <option value="88">BYD</option>
+                                                <option value="62">Bentley</option>
+                                                <option value="94">Cadillac</option>
+                                                <option value="111">Chery</option>
+                                                <option value="1367">CMC</option>
+                                                <option value="171">Chrysler</option>
+                                                <option value="948">Dodge</option>
+                                                <option value="409">Daihatsu</option>
+                                                <option value="1334">DongFeng</option>
+                                                <option value="217">Ferrari</option>
+                                                <option value="233">Fiat</option>
+                                                <option value="357">Hummer</option>
+                                                <option value="1310">Hino</option>
+                                                <option value="1316">HOWO</option>
+                                                <option value="999">Haima</option>
+                                                <option value="390">Infiniti</option>
+                                                <option value="399">Isuzu</option>
+                                                <option value="1006">Geely</option>
+                                                <option value="669">Lamborghini</option>
+                                                <option value="962">Lincoln</option>
+                                                <option value="895">Luxgen</option>
+                                                <option value="1029">Maserati</option>
+                                                <option value="485">Maybach</option>
+                                                <option value="548">MINI</option>
+                                                <option value="423">Jaguar</option>
+                                                <option value="435">Jeep</option>
+                                                <option value="914">Opel</option>
+                                                <option value="648">Peugeot</option>
+                                                <option value="679">Porsche</option>
+                                                <option value="1015">Renault</option>
+                                                <option value="688">Rolls-Royce</option>
+                                                <option value="903">Samsung</option>
+                                                <option value="830">Scion</option>
+                                                <option value="835">Smart</option>
+                                                <option value="693">SsangYong</option>
+                                                <option value="703">Subaru</option>
+                                                <option value="1271">Tesla</option>
+                                                <option value="911">Tobe</option>
+                                                <option value="840">Volkswagen</option>
+                                                <option value="1277">Volvo</option>
+                                                <option value="1322">Sinotruck</option>
+                                                <option value="1328">CNHTC</option>
+                                                <option value="1339">Shacman</option>
+                                                <option value="1345">Chenglong</option>
+                                                <option value="1351">THACO</option>
+                                                <option value="1370">Baic</option>
+                                                <option value="1389">Citroen</option>
+                                                <option value="1399">Zoyte</option>
+                                                <option value="1428">Teraco</option>
+                                                <option value="1411">Faw</option>
+                                                <option value="1010">Hãng Khác</option>
+                                                <option value="1419">Đầu Kéo Mỹ</option>
+                                                <option value="1421">DongBen</option>
+                                                <option value="1422">Vinaxuki</option>
+                                                <option value="1423">JAC</option>
+                                                <option value="1424">Samco</option>
+                                                <option value="1425">CAMC</option>
+                                                <option value="1426">TMT</option>
+                                                <option value="1427">FUSO</option>
+                                            </select>
+                                            <p class="text-red mt10 mb0 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Model</div>
+                                            <select class="form-control modelbx-vali" id="model-banxe" name="model">
+                                                <option value="">Chọn model</option>
+                                                <option value="127">Aveo</option>
+                                                <option value="912">Mcar</option>
+                                                <option value="1152">Macan</option>
+                                                <option value="1207">EX</option>
+                                                <option value="1272">Model 3</option>
+                                                <option value="1273">Model S</option>
+                                                <option value="1274">Model X</option>
+                                                <option value="1276">Xe con</option>
+                                                <option value="1292">206</option>
+                                                <option value="1311">300 Series</option>
+                                                <option value="1368">Z7</option>
+                                                <option value="1377">A5</option>
+                                                <option value="1412">CC</option>
+                                                <option value="1414">BJ40</option>
+                                                <option value="1420">international</option>
+                                                <option value="1437">Xe tải</option>
+                                                <option value="1438">Z8</option>
+                                                <option value="1439">HR - V</option>
+                                                <option value="1440">Xe tải</option>
+                                                <option value="1441">Xe du lịch</option>
+                                                <option value="1442">Oranto</option>
+                                                <option value="1443">Celerio</option>
+                                                <option value="1444">Xe tải</option>
+                                                <option value="1445">Xe ben</option>
+                                                <option value="1446">IZ49</option>
+                                                <option value="1447">Element</option>
+                                                <option value="1448">H150</option>
+                                                <option value="1449">Xe tải</option>
+                                                <option value="1450">FI</option>
+                                                <option value="1451">F6</option>
+                                                <option value="1452">IZ65</option>
+                                                <option value="1453">Porter</option>
+                                                <option value="1454">IZ65</option>
+                                                <option value="1455">Porter</option>
+                                                <option value="1456">Xpander</option>
+                                                <option value="1457">Bongo</option>
+                                                <option value="1458">Xe khách</option>
+                                                <option value="1460">Xe ben</option>
+                                                <option value="1461">Mighty</option>
+                                                <option value="1462">Terra</option>
+                                                <option value="1463">Kona</option>
+                                                <option value="1464">FVM</option>
+                                                <option value="1465">100</option>
+                                                <option value="1466">250</option>
+                                                <option value="1473">HC</option>
+                                                <option value="1474">Click</option>
+                                                <option value="1475">F-450</option>
+                                                <option value="1476">Cullinan</option>
+                                                <option value="1477">X7</option>
+                                                <option value="1478">Traveller</option>
+                                                <option value="1479">190</option>
+                                                <option value="1480">Brio</option>
+                                                <option value="1481">CX-8</option>
+                                                <option value="1482">Retona Cruiser</option>
+                                                <option value="1483">Passport</option>
+                                                <option value="1484">Grunder</option>
+                                                <option value="1485">Solati</option>
+                                                <option value="1486">Soluto</option>
+                                                <option value="1487">Tourneo</option>
+                                                <option value="1488">XL7</option>
+                                                <option value="1489">T5</option>
+                                                <option value="1490">M3</option>
+                                                <option value="1491">President</option>
+                                                <option value="1492">HS</option>
+                                                <option value="1493">LM</option>
+                                                <option value="2">145</option>
+                                                <option value="28">DB7</option>
+                                                <option value="63">Arnage</option>
+                                                <option value="73">1</option>
+                                                <option value="89">F0</option>
+                                                <option value="117">QQ</option>
+                                                <option value="131">Captiva</option>
+                                                <option value="235">500</option>
+                                                <option value="218">360</option>
+                                                <option value="314">Accord</option>
+                                                <option value="1075">EcoSport</option>
+                                                <option value="1065">Xe du lịch</option>
+                                                <option value="1093">Ghibli</option>
+                                                <option value="425">E-Type</option>
+                                                <option value="371">Getz</option>
+                                                <option value="404">D-Max</option>
+                                                <option value="358">H1</option>
+                                                <option value="486">57</option>
+                                                <option value="472">Defender</option>
+                                                <option value="489">2</option>
+                                                <option value="549">Clubman</option>
+                                                <option value="453">K3</option>
+                                                <option value="1089">Aventado</option>
+                                                <option value="526">A</option>
+                                                <option value="437">Commander</option>
+                                                <option value="392">FX</option>
+                                                <option value="590">350Z</option>
+                                                <option value="880">Innova</option>
+                                                <option value="722">Aerio</option>
+                                                <option value="694">Actyon</option>
+                                                <option value="1124">Drophead</option>
+                                                <option value="680">911</option>
+                                                <option value="1096">Adam</option>
+                                                <option value="908">Citivan</option>
+                                                <option value="904">SM3</option>
+                                                <option value="836">City</option>
+                                                <option value="897">CEO</option>
+                                                <option value="831">TC</option>
+                                                <option value="890">Century</option>
+                                                <option value="1105">208</option>
+                                                <option value="951">Challenger</option>
+                                                <option value="971">A1</option>
+                                                <option value="1000">2</option>
+                                                <option value="993">CT</option>
+                                                <option value="1007">Emgrand</option>
+                                                <option value="1058">MG 350</option>
+                                                <option value="1113">Captur</option>
+                                                <option value="1132">Beetle</option>
+                                                <option value="1157">Attrage</option>
+                                                <option value="1158">ILX</option>
+                                                <option value="1163">BRZ</option>
+                                                <option value="1179">Arcadia</option>
+                                                <option value="1231">Allante</option>
+                                                <option value="1390">AX</option>
+                                                <option value="1246">200</option>
+                                                <option value="1278">S60</option>
+                                                <option value="1291">KMC</option>
+                                                <option value="1313">700 Series</option>
+                                                <option value="1317">Ben</option>
+                                                <option value="1323">Ben</option>
+                                                <option value="1329">Ben</option>
+                                                <option value="1335">Ben</option>
+                                                <option value="1340">Ben</option>
+                                                <option value="1346">Ben</option>
+                                                <option value="1353">AUMARK</option>
+                                                <option value="1374">A315</option>
+                                                <option value="1406">Dmai</option>
+                                                <option value="1432">Xe tải</option>
+                                                <option value="1470">Lux</option>
+                                                <option value="3">146</option>
+                                                <option value="18">Intergra</option>
+                                                <option value="39">A2</option>
+                                                <option value="64">Azure</option>
+                                                <option value="90">F3</option>
+                                                <option value="107">DB9</option>
+                                                <option value="1070">2</option>
+                                                <option value="1073">458</option>
+                                                <option value="236">Albea</option>
+                                                <option value="319">Civic</option>
+                                                <option value="1092">MKS</option>
+                                                <option value="422">Terios</option>
+                                                <option value="428">S-Type</option>
+                                                <option value="374">i10</option>
+                                                <option value="359">H2</option>
+                                                <option value="527">B</option>
+                                                <option value="487">62</option>
+                                                <option value="473">Discovery</option>
+                                                <option value="490">3</option>
+                                                <option value="477">ES</option>
+                                                <option value="438">Compass</option>
+                                                <option value="550">Cooper</option>
+                                                <option value="393">G</option>
+                                                <option value="591">350Z Roadster</option>
+                                                <option value="875">Morning</option>
+                                                <option value="706">Forester</option>
+                                                <option value="723">Alto</option>
+                                                <option value="695">Chairman</option>
+                                                <option value="883">Everest</option>
+                                                <option value="683">Boxster</option>
+                                                <option value="910">Cruze</option>
+                                                <option value="755">Camry</option>
+                                                <option value="1104">Agila</option>
+                                                <option value="670">Diablo</option>
+                                                <option value="850">Golf</option>
+                                                <option value="906">SM5</option>
+                                                <option value="838">Fortwo</option>
+                                                <option value="896">M7</option>
+                                                <option value="832">XA</option>
+                                                <option value="889">Excelle</option>
+                                                <option value="1106">2008</option>
+                                                <option value="934">Riich</option>
+                                                <option value="939">Ghost</option>
+                                                <option value="952">Charger</option>
+                                                <option value="1001">3</option>
+                                                <option value="1011">Xe tải</option>
+                                                <option value="1008">Shanghai Englon</option>
+                                                <option value="1059">MG 550</option>
+                                                <option value="1032">Grancabrio</option>
+                                                <option value="1016">Clio</option>
+                                                <option value="1141">Hi-Lander</option>
+                                                <option value="1153">Canter Fuso</option>
+                                                <option value="1180">Aranos</option>
+                                                <option value="1230">ATS</option>
+                                                <option value="1256">300M</option>
+                                                <option value="1279">S80</option>
+                                                <option value="1391">BX</option>
+                                                <option value="1312"> 500 Series</option>
+                                                <option value="1318">Thùng</option>
+                                                <option value="1324">Thùng</option>
+                                                <option value="1330">Thùng</option>
+                                                <option value="1341">Thùng</option>
+                                                <option value="1347">Thùng</option>
+                                                <option value="1354">FORLAND</option>
+                                                <option value="1365">Tải</option>
+                                                <option value="1382">B90W</option>
+                                                <option value="1408">E30 EV</option>
+                                                <option value="1433">Xe tải nhỏ</option>
+                                                <option value="1471">Fadil</option>
+                                                <option value="4">147</option>
+                                                <option value="19">MDX</option>
+                                                <option value="40">A3</option>
+                                                <option value="74">3</option>
+                                                <option value="92">F6</option>
+                                                <option value="97">CTS</option>
+                                                <option value="108">DBS</option>
+                                                <option value="135">Colorado</option>
+                                                <option value="243">Doblo</option>
+                                                <option value="172">300C</option>
+                                                <option value="1066">Xe chuyên dụng</option>
+                                                <option value="269">Escape</option>
+                                                <option value="318">City</option>
+                                                <option value="429">XF</option>
+                                                <option value="360">H3</option>
+                                                <option value="380">Santa FE</option>
+                                                <option value="396">M</option>
+                                                <option value="528">C</option>
+                                                <option value="446">Carens</option>
+                                                <option value="491">6</option>
+                                                <option value="436">Cherokee</option>
+                                                <option value="478">GS</option>
+                                                <option value="551">John Cooper</option>
+                                                <option value="559">Colt</option>
+                                                <option value="707">Impreza</option>
+                                                <option value="772">Fortuner</option>
+                                                <option value="690">Park Ward</option>
+                                                <option value="671">Gallardo</option>
+                                                <option value="685">Cayenne</option>
+                                                <option value="1098">Ampera</option>
+                                                <option value="697">Korando</option>
+                                                <option value="851">Jetta</option>
+                                                <option value="907">SM7</option>
+                                                <option value="837">Forfour</option>
+                                                <option value="888">Lacrosse</option>
+                                                <option value="932">XB</option>
+                                                <option value="1107">301</option>
+                                                <option value="938">APV</option>
+                                                <option value="942">370Z</option>
+                                                <option value="965">MKT</option>
+                                                <option value="950">Caravan</option>
+                                                <option value="1002">7</option>
+                                                <option value="1060">MG 750</option>
+                                                <option value="1031">Granturismo</option>
+                                                <option value="1116">Duster</option>
+                                                <option value="1136">Trooper</option>
+                                                <option value="1178">Brougham</option>
+                                                <option value="1392">C1</option>
+                                                <option value="1270">Feroza</option>
+                                                <option value="1280">S90</option>
+                                                <option value="1287">488</option>
+                                                <option value="1290">Bentayga</option>
+                                                <option value="1314">Chuyên Dụng</option>
+                                                <option value="1319">Đầu Kéo</option>
+                                                <option value="1327">Đầu kéo</option>
+                                                <option value="1331">Đầu kéo</option>
+                                                <option value="1336">Thùng</option>
+                                                <option value="1342">Đầu kéo</option>
+                                                <option value="1348">Đầu kéo</option>
+                                                <option value="1352">FOTON AUMAN</option>
+                                                <option value="1385">Baw</option>
+                                                <option value="1387">S3</option>
+                                                <option value="1407">SR7</option>
+                                                <option value="1472">Klara</option>
+                                                <option value="5">155</option>
+                                                <option value="21">RDX</option>
+                                                <option value="41">A4</option>
+                                                <option value="32">Vanquish</option>
+                                                <option value="67">Continental Flying Spur</option>
+                                                <option value="93">Flyer</option>
+                                                <option value="99">DTS</option>
+                                                <option value="147">Lacetti</option>
+                                                <option value="1071">4</option>
+                                                <option value="277">Fiesta</option>
+                                                <option value="251">Punto</option>
+                                                <option value="221">599 GTB Fiorano</option>
+                                                <option value="322">CR-V</option>
+                                                <option value="1079">Q50</option>
+                                                <option value="430">XJ</option>
+                                                <option value="362">Accent</option>
+                                                <option value="1090">Huracan</option>
+                                                <option value="479">GX</option>
+                                                <option value="474">Freelander</option>
+                                                <option value="501">BT-50</option>
+                                                <option value="529">CL</option>
+                                                <option value="552">One</option>
+                                                <option value="564">Eclipse</option>
+                                                <option value="596">Altima</option>
+                                                <option value="874">Forte</option>
+                                                <option value="709">Legacy</option>
+                                                <option value="698">Kyron</option>
+                                                <option value="691">Phantom</option>
+                                                <option value="686">Cayman</option>
+                                                <option value="1103">Antara</option>
+                                                <option value="877">Vios</option>
+                                                <option value="856">New Beetle</option>
+                                                <option value="839">Roadster</option>
+                                                <option value="933">XD</option>
+                                                <option value="961">Journey</option>
+                                                <option value="966">MKX</option>
+                                                <option value="1003">Freema</option>
+                                                <option value="991">QM5</option>
+                                                <option value="1030">Quattroporte</option>
+                                                <option value="1055">MG3</option>
+                                                <option value="1115">Espace</option>
+                                                <option value="1130">Materia</option>
+                                                <option value="1393">C2</option>
+                                                <option value="1182">Damas</option>
+                                                <option value="1205">S5</option>
+                                                <option value="1209">307</option>
+                                                <option value="1221">Baleno</option>
+                                                <option value="1228">Lasabre</option>
+                                                <option value="1388">Khác</option>
+                                                <option value="1265">Grand Voyager</option>
+                                                <option value="1281">XC60</option>
+                                                <option value="1294">MU-X</option>
+                                                <option value="1320">Chuyên Dụng</option>
+                                                <option value="1325">Chuyên dụng</option>
+                                                <option value="1332">Chuyên dụng</option>
+                                                <option value="1337">Chuyên dụng</option>
+                                                <option value="1343">Chuyên dụng</option>
+                                                <option value="1349">Chuyên dụng</option>
+                                                <option value="1362">FRONTIER</option>
+                                                <option value="1366">CJ5</option>
+                                                <option value="1379">BJ100</option>
+                                                <option value="1405">X7</option>
+                                                <option value="6">156</option>
+                                                <option value="22">RL</option>
+                                                <option value="42">A5</option>
+                                                <option value="68">Continental GT</option>
+                                                <option value="75">5</option>
+                                                <option value="101">Escalade</option>
+                                                <option value="109">Vantage</option>
+                                                <option value="254">Siena</option>
+                                                <option value="222">612 Scaglietti</option>
+                                                <option value="278">Focus</option>
+                                                <option value="340">Odyssey</option>
+                                                <option value="1091">MKZ</option>
+                                                <option value="367">Elantra</option>
+                                                <option value="433">XK</option>
+                                                <option value="440">Liberty</option>
+                                                <option value="449">Cerato</option>
+                                                <option value="1080">Q60</option>
+                                                <option value="567">Galant</option>
+                                                <option value="777">Highlander</option>
+                                                <option value="1123">Wraith</option>
+                                                <option value="600">Bluebird</option>
+                                                <option value="699">Musso</option>
+                                                <option value="778">Hilux</option>
+                                                <option value="684">Carrera GT</option>
+                                                <option value="672">Murcielago</option>
+                                                <option value="1095">Paceman</option>
+                                                <option value="657">308</option>
+                                                <option value="858">Passat</option>
+                                                <option value="898">SUV</option>
+                                                <option value="891">Rendezvous</option>
+                                                <option value="917">Astra</option>
+                                                <option value="960">HS</option>
+                                                <option value="958">Viper</option>
+                                                <option value="992">Orlando</option>
+                                                <option value="1009">CX-5</option>
+                                                <option value="1056">MG5</option>
+                                                <option value="1018">Fluence</option>
+                                                <option value="1134">CLA</option>
+                                                <option value="1140">Carry</option>
+                                                <option value="1394">C3</option>
+                                                <option value="1155">Fstar</option>
+                                                <option value="1166">LR2</option>
+                                                <option value="1168">Corolla Altis</option>
+                                                <option value="1181">Cielo</option>
+                                                <option value="1232">FR-S</option>
+                                                <option value="1233">Levorg</option>
+                                                <option value="1259">LeBaron</option>
+                                                <option value="1275">Charade</option>
+                                                <option value="1282">XC70</option>
+                                                <option value="1321">Khác</option>
+                                                <option value="1326">Khác</option>
+                                                <option value="1333">Khác</option>
+                                                <option value="1338">Khác</option>
+                                                <option value="1344">khác</option>
+                                                <option value="1350">Khác</option>
+                                                <option value="1359">HYUNDAI</option>
+                                                <option value="1386">BJ20</option>
+                                                <option value="1404">Z100</option>
+                                                <option value="1425">N-series</option>
+                                                <option value="7">159</option>
+                                                <option value="43">A6</option>
+                                                <option value="76">6</option>
+                                                <option value="104">SRX</option>
+                                                <option value="110">Virage</option>
+                                                <option value="160">Spark</option>
+                                                <option value="196">Chairman</option>
+                                                <option value="256">Tempra</option>
+                                                <option value="1082">Q70</option>
+                                                <option value="364">Avante</option>
+                                                <option value="530">CLC</option>
+                                                <option value="480">IS</option>
+                                                <option value="505">CX-9</option>
+                                                <option value="441">Patriot</option>
+                                                <option value="434">X-Type</option>
+                                                <option value="463">Rio</option>
+                                                <option value="568">Grandis</option>
+                                                <option value="601">Cedric</option>
+                                                <option value="700">Rexton</option>
+                                                <option value="710">Libero</option>
+                                                <option value="687">Panamera</option>
+                                                <option value="673">Reventon</option>
+                                                <option value="1097">Cascada</option>
+                                                <option value="1125">County</option>
+                                                <option value="862">Polo</option>
+                                                <option value="893">ZDX</option>
+                                                <option value="892">Skylark</option>
+                                                <option value="913">Continental Supersports</option>
+                                                <option value="1108">3008</option>
+                                                <option value="936">Laser</option>
+                                                <option value="967">Navigator</option>
+                                                <option value="1062">California</option>
+                                                <option value="1057">MG6</option>
+                                                <option value="1019">Koleos</option>
+                                                <option value="1146">M3</option>
+                                                <option value="1395">CX</option>
+                                                <option value="1167">LR4</option>
+                                                <option value="1203">U6</option>
+                                                <option value="1224">Creta</option>
+                                                <option value="1255">Stratus</option>
+                                                <option value="1283">XC90</option>
+                                                <option value="1315">Ciaz</option>
+                                                <option value="1358">OLLIN</option>
+                                                <option value="1363">BUS</option>
+                                                <option value="1380">C50E</option>
+                                                <option value="1402">Z300</option>
+                                                <option value="1426">Q-series</option>
+                                                <option value="1429">JAZZ</option>
+                                                <option value="1467">Rush</option>
+                                                <option value="8">164</option>
+                                                <option value="77">7</option>
+                                                <option value="105">STS</option>
+                                                <option value="224">Enzo</option>
+                                                <option value="1083">QX50</option>
+                                                <option value="288">Mondeo</option>
+                                                <option value="370">Genesis</option>
+                                                <option value="531">CLK</option>
+                                                <option value="1094">MX-5</option>
+                                                <option value="475">Range Rover</option>
+                                                <option value="1088">Rondo</option>
+                                                <option value="481">LS</option>
+                                                <option value="1087">Renecade</option>
+                                                <option value="602">Cefiro</option>
+                                                <option value="884">Jolie</option>
+                                                <option value="711">Outback</option>
+                                                <option value="783">Prado</option>
+                                                <option value="701">Rexton II</option>
+                                                <option value="865">Scirocco</option>
+                                                <option value="901">Gentra</option>
+                                                <option value="918">Corsa</option>
+                                                <option value="945">CR-Z</option>
+                                                <option value="972">Mulsanne</option>
+                                                <option value="1033">A7</option>
+                                                <option value="1050">MGF</option>
+                                                <option value="1064">408</option>
+                                                <option value="1139">Limousine</option>
+                                                <option value="1147">M5</option>
+                                                <option value="1396">DS3</option>
+                                                <option value="1159">Ertiga</option>
+                                                <option value="1204">U7</option>
+                                                <option value="1220">XE</option>
+                                                <option value="1235">Kwid</option>
+                                                <option value="1258">Jeep Cherokee</option>
+                                                <option value="1261">Precision</option>
+                                                <option value="1284">V60</option>
+                                                <option value="1355">TOWNER</option>
+                                                <option value="1381">C60F</option>
+                                                <option value="1401">Z500</option>
+                                                <option value="9">166</option>
+                                                <option value="44">A8</option>
+                                                <option value="65">Brooklands</option>
+                                                <option value="79">M3</option>
+                                                <option value="1074">F12berlinetta</option>
+                                                <option value="185">PT Cruiser</option>
+                                                <option value="202">Korando</option>
+                                                <option value="292">Ranger</option>
+                                                <option value="1084">QX60</option>
+                                                <option value="327">Fit</option>
+                                                <option value="373">H-1 Starex</option>
+                                                <option value="482">LX</option>
+                                                <option value="514">Premacy</option>
+                                                <option value="532">CLS</option>
+                                                <option value="456">Optima</option>
+                                                <option value="442">Wrangle</option>
+                                                <option value="604">Cube</option>
+                                                <option value="719">Tribeca</option>
+                                                <option value="730">Grand Vitara</option>
+                                                <option value="878">Vivant</option>
+                                                <option value="1110">4008</option>
+                                                <option value="867">Tiguan</option>
+                                                <option value="921">Insignia</option>
+                                                <option value="1051">TF</option>
+                                                <option value="1028">Range Rover Evoque</option>
+                                                <option value="1020">Laguna</option>
+                                                <option value="1144">M8</option>
+                                                <option value="1397">XM</option>
+                                                <option value="1161">F-Type</option>
+                                                <option value="1174">TL</option>
+                                                <option value="1175">Stavic</option>
+                                                <option value="1211">L300</option>
+                                                <option value="1238">XT5</option>
+                                                <option value="1285">V90</option>
+                                                <option value="1360">Chuyên dụng</option>
+                                                <option value="1383">Concept 900</option>
+                                                <option value="1400">Z700</option>
+                                                <option value="1415">Town Car</option>
+                                                <option value="1468">Wigo</option>
+                                                <option value="10">Breza</option>
+                                                <option value="1072">M4</option>
+                                                <option value="228">F430</option>
+                                                <option value="1085">QX70</option>
+                                                <option value="298">Transit</option>
+                                                <option value="330">Insight</option>
+                                                <option value="533">E</option>
+                                                <option value="508">5</option>
+                                                <option value="574">Lancer</option>
+                                                <option value="609">GT-R</option>
+                                                <option value="734">Samurai</option>
+                                                <option value="1099">Meriva</option>
+                                                <option value="1120">Latitude</option>
+                                                <option value="868">Touareg</option>
+                                                <option value="828">Yaris</option>
+                                                <option value="1052">ZR</option>
+                                                <option value="1137">505</option>
+                                                <option value="1154">S5</option>
+                                                <option value="1162">WRX</option>
+                                                <option value="1165">Jeep A2</option>
+                                                <option value="1169">Sedona</option>
+                                                <option value="1173">NX</option>
+                                                <option value="1185">Kalos</option>
+                                                <option value="1193">Astro</option>
+                                                <option value="1223">F-Pace</option>
+                                                <option value="1251">Q2</option>
+                                                <option value="1295">Tivoli</option>
+                                                <option value="1308">Range Rover Sport</option>
+                                                <option value="1361">Khác</option>
+                                                <option value="1375">D60</option>
+                                                <option value="1398">ZX</option>
+                                                <option value="1410">T300</option>
+                                                <option value="11">GT</option>
+                                                <option value="1067">Q3</option>
+                                                <option value="80">M5</option>
+                                                <option value="204">Lacetti</option>
+                                                <option value="332">Integra</option>
+                                                <option value="375">i20</option>
+                                                <option value="493">323</option>
+                                                <option value="483">RX</option>
+                                                <option value="534">G</option>
+                                                <option value="467">Soul</option>
+                                                <option value="579">Mirage</option>
+                                                <option value="738">Vitara</option>
+                                                <option value="1111">508</option>
+                                                <option value="1102">Mokka</option>
+                                                <option value="1121">Logan</option>
+                                                <option value="804">RAV4</option>
+                                                <option value="847">Eos</option>
+                                                <option value="973">Juke</option>
+                                                <option value="1053">ZS</option>
+                                                <option value="1086">QX80</option>
+                                                <option value="1129">XV</option>
+                                                <option value="1143">S7</option>
+                                                <option value="1197">Caprice</option>
+                                                <option value="1376">D80</option>
+                                                <option value="1409">T700</option>
+                                                <option value="12">GTV</option>
+                                                <option value="48">Q5</option>
+                                                <option value="81">M6</option>
+                                                <option value="205">Lanos</option>
+                                                <option value="270">Escort</option>
+                                                <option value="333">Jazz</option>
+                                                <option value="382">Sonata</option>
+                                                <option value="494">626</option>
+                                                <option value="466">Sorento</option>
+                                                <option value="582">Outlander</option>
+                                                <option value="736">Swift</option>
+                                                <option value="1112">5008</option>
+                                                <option value="879">Zace</option>
+                                                <option value="894">Livina</option>
+                                                <option value="925">Vectra</option>
+                                                <option value="1054">ZT</option>
+                                                <option value="1023">Megane</option>
+                                                <option value="1171">GT S</option>
+                                                <option value="1195">Beretta</option>
+                                                <option value="1226">RC</option>
+                                                <option value="1286">V70</option>
+                                                <option value="1309">Vento</option>
+                                                <option value="1373">H3F</option>
+                                                <option value="1403">T600</option>
+                                                <option value="13">Mito</option>
+                                                <option value="49">Q7</option>
+                                                <option value="272">Expedition</option>
+                                                <option value="344">Pilot</option>
+                                                <option value="535">GL</option>
+                                                <option value="469">Sportage</option>
+                                                <option value="484">SC</option>
+                                                <option value="583">Pajero</option>
+                                                <option value="615">Maxima</option>
+                                                <option value="739">Wagon R</option>
+                                                <option value="743">4Runner</option>
+                                                <option value="1101">Zafira</option>
+                                                <option value="959">X1</option>
+                                                <option value="1118">Scala</option>
+                                                <option value="1138">605</option>
+                                                <option value="1160">CX-3</option>
+                                                <option value="1176">Leganza</option>
+                                                <option value="1198">Cavalier</option>
+                                                <option value="1378">S3</option>
+                                                <option value="1423">New Sharan</option>
+                                                <option value="82">X3</option>
+                                                <option value="51">R8</option>
+                                                <option value="273">Explorer</option>
+                                                <option value="504">CX-7</option>
+                                                <option value="386">Tucson</option>
+                                                <option value="584">Pajero Sport</option>
+                                                <option value="616">Maxima QX</option>
+                                                <option value="793">86</option>
+                                                <option value="1119">Scenic</option>
+                                                <option value="1128">K9</option>
+                                                <option value="1034">Spider</option>
+                                                <option value="1156">GLA</option>
+                                                <option value="1186">Labo</option>
+                                                <option value="1199">Chevyvan</option>
+                                                <option value="1227">StepWGN</option>
+                                                <option value="1250">607</option>
+                                                <option value="1260">LC</option>
+                                                <option value="1372">X25</option>
+                                                <option value="1427">Phaeton</option>
+                                                <option value="1459">X2</option>
+                                                <option value="60">TT</option>
+                                                <option value="1069">X4</option>
+                                                <option value="274">F-150</option>
+                                                <option value="372">Azera</option>
+                                                <option value="517">RX-8</option>
+                                                <option value="571">Triton</option>
+                                                <option value="617">Micra</option>
+                                                <option value="1122">Symbol</option>
+                                                <option value="944">Alphard</option>
+                                                <option value="1027">Cadenza</option>
+                                                <option value="1187">Lublin</option>
+                                                <option value="1200">Corsica</option>
+                                                <option value="1215">GLC</option>
+                                                <option value="1263">Mobilio</option>
+                                                <option value="1264">Boxer</option>
+                                                <option value="1384">X55</option>
+                                                <option value="83">X5</option>
+                                                <option value="129">Camaro</option>
+                                                <option value="208">Magnus</option>
+                                                <option value="275">F-250</option>
+                                                <option value="447">Carnival</option>
+                                                <option value="572">Veryca</option>
+                                                <option value="619">Murano</option>
+                                                <option value="748">Auris</option>
+                                                <option value="1005">Eon</option>
+                                                <option value="1109">RCZ</option>
+                                                <option value="1216">GLE</option>
+                                                <option value="1225">Sandero</option>
+                                                <option value="1244">BR-V</option>
+                                                <option value="1249">Koeru</option>
+                                                <option value="1371">X424</option>
+                                                <option value="84">X6</option>
+                                                <option value="139">Corvette</option>
+                                                <option value="209">Matiz</option>
+                                                <option value="276">F-350</option>
+                                                <option value="536">GLK</option>
+                                                <option value="620">Navara</option>
+                                                <option value="749">Avalon</option>
+                                                <option value="876">Zinger</option>
+                                                <option value="886">Equus</option>
+                                                <option value="940">CD5</option>
+                                                <option value="1117">Talisman</option>
+                                                <option value="1269">107</option>
+                                                <option value="1289">929</option>
+                                                <option value="1413">X65</option>
+                                                <option value="281">Fusion</option>
+                                                <option value="210">Musso</option>
+                                                <option value="369">Galloper</option>
+                                                <option value="448">Ceed</option>
+                                                <option value="750">Avensis</option>
+                                                <option value="909">Gentra</option>
+                                                <option value="1114">Twingo</option>
+                                                <option value="1212">NV350</option>
+                                                <option value="1217">GLS</option>
+                                                <option value="1234">Concept</option>
+                                                <option value="1268">406</option>
+                                                <option value="86">Z4</option>
+                                                <option value="148">Lanos</option>
+                                                <option value="1126">K5</option>
+                                                <option value="212">Nubira</option>
+                                                <option value="368">i30</option>
+                                                <option value="622">Pathfinder</option>
+                                                <option value="751">Aygo</option>
+                                                <option value="1135">Flex</option>
+                                                <option value="1172">Maybach S600</option>
+                                                <option value="150">Malibu</option>
+                                                <option value="1127">K7</option>
+                                                <option value="285">KA</option>
+                                                <option value="1078">i40</option>
+                                                <option value="761">Corolla</option>
+                                                <option value="623">Patrol</option>
+                                                <option value="1183">Espero</option>
+                                                <option value="1206">MB</option>
+                                                <option value="1213">i8</option>
+                                                <option value="286">Kuga</option>
+                                                <option value="377">Matrix</option>
+                                                <option value="537">ML</option>
+                                                <option value="758">Celica</option>
+                                                <option value="624">Pickup</option>
+                                                <option value="1164">KX3</option>
+                                                <option value="1184">Istana</option>
+                                                <option value="1214">Suburban</option>
+                                                <option value="163">Tahoe</option>
+                                                <option value="289">Mustang</option>
+                                                <option value="538">R</option>
+                                                <option value="383">Terracan</option>
+                                                <option value="454">Magentis</option>
+                                                <option value="782">Land Cruiser</option>
+                                                <option value="937">Pixo</option>
+                                                <option value="1192">Tico</option>
+                                                <option value="296">Taurus</option>
+                                                <option value="455">Opirus</option>
+                                                <option value="384">Tiburon</option>
+                                                <option value="539">S</option>
+                                                <option value="628">Qashqai</option>
+                                                <option value="762">Corona</option>
+                                                <option value="1170">Winstom</option>
+                                                <option value="1229">Trailblazer</option>
+                                                <option value="1469">Avanza</option>
+                                                <option value="540">SL</option>
+                                                <option value="457">Picanto</option>
+                                                <option value="765">Crown</option>
+                                                <option value="629">Quest</option>
+                                                <option value="905">Tuscani</option>
+                                                <option value="1188">Prince</option>
+                                                <option value="1254">Edge</option>
+                                                <option value="1364">Trax</option>
+                                                <option value="266">Cougar</option>
+                                                <option value="541">SLK</option>
+                                                <option value="460">Pride</option>
+                                                <option value="385">Trajet</option>
+                                                <option value="771">FJ Cruiser</option>
+                                                <option value="885">Rogue</option>
+                                                <option value="1189">Racer</option>
+                                                <option value="1202">Express</option>
+                                                <option value="1077">C-Max</option>
+                                                <option value="542">SLR</option>
+                                                <option value="776">HiAce</option>
+                                                <option value="632">Sentra</option>
+                                                <option value="970">Veloster</option>
+                                                <option value="1014">Ray</option>
+                                                <option value="1190">Rexton</option>
+                                                <option value="1201">Explorer</option>
+                                                <option value="468">Spectra</option>
+                                                <option value="873">Veracruz</option>
+                                                <option value="637">Sunny</option>
+                                                <option value="1004">iQ</option>
+                                                <option value="1191">Rezzo</option>
+                                                <option value="1210">Prizm</option>
+                                                <option value="1245">SLS</option>
+                                                <option value="543">Sprinter</option>
+                                                <option value="388">Verna</option>
+                                                <option value="788">Matrix</option>
+                                                <option value="639">Teana</option>
+                                                <option value="1177">Evanda</option>
+                                                <option value="1262">Venture</option>
+                                                <option value="1266">Lotze</option>
+                                                <option value="389">XG</option>
+                                                <option value="798">Previa</option>
+                                                <option value="640">Terrano</option>
+                                                <option value="1194">Avanlanche</option>
+                                                <option value="1218">V-Class</option>
+                                                <option value="1431">K</option>
+                                                <option value="1434">Đầu kéo</option>
+                                                <option value="641">Tiida</option>
+                                                <option value="799">Prius</option>
+                                                <option value="1267">Atoz</option>
+                                                <option value="1424">impala</option>
+                                                <option value="1435">Xe tải</option>
+                                                <option value="646">X-Trail</option>
+                                                <option value="807">Sequoia</option>
+                                                <option value="1416">HD</option>
+                                                <option value="1430">Trailblazer</option>
+                                                <option value="1436">Xe ben</option>
+                                                <option value="809">Sienna</option>
+                                                <option value="1252">Kicks</option>
+                                                <option value="1422">Xe du lịch</option>
+                                                <option value="814">Supra</option>
+                                                <option value="815">Tacoma</option>
+                                                <option value="829">Venza</option>
+                                                <option value="1248">Verso</option>
+                                                <option value="820">Vista</option>
+                                                <option value="827">Wish</option>
+                                                <option value="1253">Cresseda</option>
+                                            </select>
+                                            <p class="text-red mt13 mb0 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="info-dki-email p0 banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Giá Bán</div>
+                                            <input type="text" name="sub_model"
+                                                   class="form-control input-banxe nhapso-vali recolor89"
+                                                   placeholder="Nhập giá bán" value=""/>
+                                            <p class="text-red mt13 mb0 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Hộp số</div>
+                                            <select class="form-control hoso-vali" id="hopso-banxe" name="transmission">
+                                                <option value="">Chọn hộp số</option>
+                                                <option value="manual">Số sàn</option>
+                                                <option value="auto">Số tự động</option>
+                                            </select>
+                                            <p class="text-red mb0 mt13 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Nhiên liệu</div>
+                                            <select class="form-control nhienlieu-vali" id="nhienlieu-banxe"
+                                                    name="fuel">
+                                                <option value="">Chọn nhiên liệu</option>
+                                                <option value="gasoline">Xăng</option>
+                                                <option value="oil">Dầu</option>
+                                                <option value="hybrid">Hỗn hợp</option>
+                                            </select>
+                                            <p class="text-red mb0 mt13 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Xuất xứ</div>
+                                            <select class="form-control xuatxu-vali" id="xuatxu-banxe" name="country">
+                                                <option value="">Chọn xuất xứ</option>
+                                                <option value="1">Trong nước</option>
+                                                <option value="2">Nhập khẩu</option>
+                                            </select>
+                                            <p class="text-red mt13 mb0 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Dòng xe</div>
+                                            <select class="form-control dongxebx-vali" id="dongxe-banxe"
+                                                    name="body_style">
+                                                <option value="">Chọn loại xe</option>
+                                                <option value="10">Hatchback</option>
+                                                <option value="8">Sedan</option>
+                                                <option value="3">Coupe</option>
+                                                <option value="9">MPV</option>
+                                                <option value="4">SUV</option>
+                                                <option value="6">Xe Bán tải</option>
+                                                <option value="20">Xe tải</option>
+                                                <option value="21">Van/Minivan</option>
+                                                <option value="1">Mobilhome</option>
+                                            </select>
+                                            <p class="text-red mb0 mt13 font12  hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                    <div class="">
+                                        <div class="sl-filter xe-dki banxe m0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Năm sản xuất</div>
+                                            <select class="form-control namsxbx-vali" id="namsx-banxe" name="year">
+                                                <option value="">Chọn năm sản xuất</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2022">2022</option>
+                                                <option value="2021">2021</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                                <option value="1999">1999</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1995">1995</option>
+                                                <option value="1994">1994</option>
+                                                <option value="1993">1993</option>
+                                                <option value="1992">1992</option>
+                                                <option value="1991">1991</option>
+                                                <option value="1990">1990</option>
+                                            </select>
+                                            <p class="text-red mt13 mb0 font12 hidden error_submit"></p>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                            <!-- Nav tabs -->
+                            <ul class="listbuoc-banxe list-inline hidden-xs">
+                                <li class="font18 fw700 active p0"><a class="text89" href="#">1. Thông tin chi tiết bài
+                                    đăng</a></li>
+                            </ul>
+                            <div class="row m0">
+
+                                <div class="item-contentbanxe">
+                                    <div class="anhxe">
+                                        <div class="fw700 mb5 font16mb">Hình ảnh <strong style="color: #f00;">(tối thiểu
+                                            5 hình, kích thước đề nghị 720x480)</strong></div>
+                                        <div class="row15">
+                                            <output id="result">
+                                            </output>
+                                            <div class="col-xs-12 col-sm-3 col-md-3 hidden-xs ">
+                                                <div class="item-anhbx">
+                                                    <div class="content-anh m0">
+                                                        <label class="chon-anh font24 p0 m0" for="chon-gallery"><i
+                                                                class="icon-sprite-24 icon-camerabx"></i><span
+                                                                class="text-chonanh">Thêm ảnh</span></label>
+                                                        <input type="file" multiple="multiple" name="files[]"
+                                                               class=" file-hidden" id="chon-gallery"/>
+                                                    </div>
+                                                </div><!--end item-anhbx-->
+                                            </div><!--end col-->
+                                            <div class="col-xs-12 visible-xs pmb0">
+                                                <div class="content-anh choose_img_mb visible-xs">
+                                                    <label class="chon-anh font14mb fw700" for="chon-gallery"><i
+                                                            class="icon-sprite-24 icon-mayanh"></i>THÊM ẢNH</label>
+                                                </div>
+                                            </div>
+                                        </div><!--end row-->
+                                    </div><!--end anhxe-->
+                                    <div class="motachitiet">
+                                        <div class="title-underline font24">Mô tả chi tiết</div>
+                                        <textarea class="form-control text-motachitiet recolor75 font16mb"
+                                                  placeholder="Nhập thông tin mô tả chi tiết xe, tính năng, khuyến mại, phụ kiện đi kèm..."
+                                                  name="description"></textarea>
+                                    </div><!--end motachitiet-->
+                                </div>
+                                <!--end item-contentbanxe-->
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-4 col-md-4 mb37">
+                                        <div class="info-dki-email p0 banxe-vali">
+                                            <div class="font14 text2b4560 mb10">Tựa Đề Bài Đăng</div>
+                                            <input type="text" class="form-control input-banxe nhapso-vali recolor89"
+                                                   placeholder="Nhập tên" name="odo" value=""/>
+                                            <p class="text-red mb0 style2_lh hidden error_submit"></p>
+                                        </div>
+                                    </div><!--end col-->
+                                </div>
+                            </div>
+                            <!--end Row-->
+                            <button type="submit" class="btn-tieptuc font18 fw700 btn-nextbanxe" id="btn-nextbanxe">Đăng
+                                Tin
+                            </button>
+                        </form>
                     </div><!--end item-contentbanxe-->
                 </div><!--end info-banxe-->
             </div>
@@ -1239,7 +1259,8 @@
                 </div>
             </div>
             <div class="visible-xs mt10 mb10">
-                <a class="btn btn-blue2-48" href="salon-moi-gioi.html"><i class="icon-sprite-24 icon-xe-white"></i> Dành cho Salon, Môi giới</a>
+                <a class="btn btn-blue2-48" href="salon-moi-gioi.html"><i class="icon-sprite-24 icon-xe-white"></i> Dành
+                    cho Salon, Môi giới</a>
                 <div class="btn-kvuc row m0">
                     <div class="col-xs-6 p0">
                         <a class="btn-mien-nam" href="index.html">Miền Nam</a>
@@ -1250,13 +1271,16 @@
                 </div>
             </div>
             <div class="col-xs-4 col-sm-4 p0 txr div-2nd">
-				<div class="list-ft">
+                <div class="list-ft">
                     <a class="font16" href="gioi-thieu.html">Giới thiệu</a> <span class="m5">|</span>
                     <a class="font16" href="thoa-thuan-su-dung.html">Quy chế hoạt động</a> <span class="m5">|</span>
-                    <a class="font16" href="https://docs.google.com/document/d/1G-rPJC7DZJQMLSZ_RecYl1Wkub_Mk43Q0_5rd5fGq9s/edit#" target="_blank">Báo giá</a>
+                    <a class="font16"
+                       href="https://docs.google.com/document/d/1G-rPJC7DZJQMLSZ_RecYl1Wkub_Mk43Q0_5rd5fGq9s/edit#"
+                       target="_blank">Báo giá</a>
                 </div>
-								                    <div class="hotline mt10"> Hotline: <a href="tel:091.144.2883"><span class="bold txt-orange font24"> 091.144.2883</span></a></div>
-				            </div>
+                <div class="hotline mt10"> Hotline: <a href="tel:091.144.2883"><span class="bold txt-orange font24"> 091.144.2883</span></a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -1273,6 +1297,7 @@
 <script type="text/javascript">
     var bookmark_ids = [];
     var wishlist_ids = [];
+
 </script>
 
 <script src="/assets/frontend/js/common30f4.js?v=3"></script>

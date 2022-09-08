@@ -5,7 +5,7 @@
 <body class="bd-home-index">
 <div th:replace="~{fragments/web-fragments :: header}"></div>
 
-<img src="https://choxe.net/tracking/pixel?object_id=341176&object_type=auto&action=view" alt="" />
+<img src="https://choxe.net/tracking/pixel?object_id=341176&object_type=auto&action=view" alt=""/>
 
 <!-- Body -->
 <div class="main-content bg-light-blue">
@@ -13,85 +13,100 @@
 
         <div class="row m0 des-xe">
 
-<!--        <form th:action="@{/Web/chi-tiet-bai-dang}" th:object="item" method="get">-->
+            <!--        <form th:action="@{/Web/chi-tiet-bai-dang}" th:object="item" method="get">-->
             <div class="map-link cbreadcrumb" style="padding-top: 10px">
                 <ul itemscope itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                         <a class="" href="https://choxe.net/" itemprop="item"><span itemprop="name">Chợ xe</span></a>
                     </li>
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                        >                     <a href="https://choxe.net/xe-cu" itemprop="item"><span itemprop="name">Xe cũ</span></a>
+                        > <a href="https://choxe.net/xe-cu" itemprop="item"><span itemprop="name">Xe cũ</span></a>
                     </li>
-                    >                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a href="https://choxe.net/xe-cu/dong-nai" itemprop="item"><span itemprop="name">Đồng Nai</span></a>
-                </li>
-                    >                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a href="https://choxe.net/xe-cu/toyota" itemprop="item"><span itemprop="name">Toyota</span></a>
-                </li>
-                    >                            <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                    <a href="https://choxe.net/xe-cu/toyota/wigo" itemprop="item"><span itemprop="name">Wigo</span></a>
-                </li>
+                    >
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="https://choxe.net/xe-cu/dong-nai" itemprop="item"><span itemprop="name">Đồng Nai</span></a>
+                    </li>
+                    >
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="https://choxe.net/xe-cu/toyota" itemprop="item"><span itemprop="name">Toyota</span></a>
+                    </li>
+                    >
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a href="https://choxe.net/xe-cu/toyota/wigo" itemprop="item"><span itemprop="name">Wigo</span></a>
+                    </li>
                 </ul>
             </div>
             <h1 class="title-detail" th:text="${item.title}"></h1>
             <div class="visible-xs price font20" th:text="${item.carNew.price}"></div>
             <div class="row m0 div-mt-mb">
                 <div class="col-xs-12 col-sm-4 p0">
-<!--                    <div class="list-opt list-opt-detail">-->
-<!--                        &lt;!&ndash;-->
-<!--                        <a class="compare" href="https://choxe.net/so-sanh?auto_id=341176">-->
-<!--                            <i class="icon-sprite-24 icon-compare"></i>-->
-<!--                            So Sánh-->
-<!--                        </a>-->
-<!--                        &ndash;&gt;-->
-<!--                        <a class="favor " href="https://choxe.net/tao-danh-sach-yeu-thich?auto_id=341176">-->
-<!--                            <i class="icon-sprite-24 icon-heart"></i>-->
-<!--                            Yêu thích-->
-<!--                        </a>-->
+                    <!--                    <div class="list-opt list-opt-detail">-->
+                    <!--                        &lt;!&ndash;-->
+                    <!--                        <a class="compare" href="https://choxe.net/so-sanh?auto_id=341176">-->
+                    <!--                            <i class="icon-sprite-24 icon-compare"></i>-->
+                    <!--                            So Sánh-->
+                    <!--                        </a>-->
+                    <!--                        &ndash;&gt;-->
+                    <!--                        <a class="favor " href="https://choxe.net/tao-danh-sach-yeu-thich?auto_id=341176">-->
+                    <!--                            <i class="icon-sprite-24 icon-heart"></i>-->
+                    <!--                            Yêu thích-->
+                    <!--                        </a>-->
 
-<!--                        <a class="save " href="https://choxe.net/tao-tin-luu?auto_id=341176">-->
-<!--                            <i class="icon-sprite-24 icon-save"></i>-->
-<!--                            Lưu tin-->
-<!--                        </a>-->
-<!--                    </div>-->
+                    <!--                        <a class="save " href="https://choxe.net/tao-tin-luu?auto_id=341176">-->
+                    <!--                            <i class="icon-sprite-24 icon-save"></i>-->
+                    <!--                            Lưu tin-->
+                    <!--                        </a>-->
+                    <!--                    </div>-->
                 </div>
 
                 <div class="col-xs-12 col-sm-8 p0 txr txlmb">
                     <div class="map-link mt10">
-<!--                        CAN LAM THEM THUOC TINH NGAY TAO DON HANG DE THEM VAO SPAN DUOI-->
-                        <span><span class="hidden-xs">Đăng</span > 2 tuần trước</span> |
+                        <!--                        CAN LAM THEM THUOC TINH NGAY TAO DON HANG DE THEM VAO SPAN DUOI-->
+                        <span><span class="hidden-xs">Đăng</span> 2 tuần trước</span> |
                         <span>ID<span class="hidden-xs" th:text="${item.id}"> bán xe</span> </span>
                     </div>
                 </div>
             </div>
 
             <div class="row m0 hidden-xs">
-                <div class="detail-xe"><i class="icon-sprite-24 icon-status"></i> Tình trạng: <b th:text="${item.carNew.state}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-km"></i> Km đã đi: <b th:text="${item.carNew.gone}">  km</b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-hop-so"></i> Hộp số: <b th:text="${item.carNew.gear}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-nhien-lieu"></i> Nhiên liệu: <b th:text="${item.carNew.fuel}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-ng-ban"></i> Người bán: <b th:text="${item.user.name}"></b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-dong-xe"></i> Dòng xe: <b th:text="${item.carNew.form}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-nam-sx"></i> Năm sản xuất: <b th:text="${item.carNew.create_car}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-dan-dong"></i> Hãng: <b th:text="${item.carNew.brand.name}"></b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-mau-xe"></i> Thành phố: <b th:text="${item.carNew.city.name}"> </b></div>
-                <div class="detail-xe"><i class="icon-sprite-24 icon-xuat-xu"></i> Xuất xứ: <b th:text="${item.carNew.nation}"></b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-status"></i> Tình trạng: <b
+                        th:text="${item.carNew.state}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-km"></i> Km đã đi: <b
+                        th:text="${item.carNew.gone}"> km</b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-hop-so"></i> Hộp số: <b
+                        th:text="${item.carNew.gear}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-nhien-lieu"></i> Nhiên liệu: <b
+                        th:text="${item.carNew.fuel}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-ng-ban"></i> Người bán: <b
+                        th:text="${item.user.name}"></b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-dong-xe"></i> Dòng xe: <b
+                        th:text="${item.carNew.form}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-nam-sx"></i> Năm sản xuất: <b
+                        th:text="${item.carNew.create_car}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-dan-dong"></i> Hãng: <b
+                        th:text="${item.carNew.brand.name}"></b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-mau-xe"></i> Thành phố: <b
+                        th:text="${item.carNew.city.name}"> </b></div>
+                <div class="detail-xe"><i class="icon-sprite-24 icon-xuat-xu"></i> Xuất xứ: <b
+                        th:text="${item.carNew.nation}"></b></div>
             </div>
 
-<!--        </form>-->
+            <!--        </form>-->
         </div>
 
         <div class="row m0 mt30">
             <div class="col-right pr30" id='col-left'>
                 <div class="relamb bg-slider-mb bg-white-mb">
                     <div class="slider-small-gallery" id="slider-small-gallery">
-                        <div class="item-slider"  th:each="pic : ${item.carNew.picCars}">
-                            <img th:src="'data:image/png;base64,' + ${pic.name}" alt="Xe Cũ Toyota Wigo 2018 2018 341176 thumb 1">
+                        <div class="item-slider" th:each="pic : ${item.carNew.picCars}">
+                            <img th:src="'data:image/png;base64,' + ${pic.name}"
+                                 alt="Xe Cũ Toyota Wigo 2018 2018 341176 thumb 1">
                         </div>
                     </div>
-                    <div class="slider-big-gallery" id="slider-big-gallery" >
+                    <div class="slider-big-gallery" id="slider-big-gallery">
                         <div class="item-slider" th:each="pic : ${item.carNew.picCars}">
-                            <img th:src="'data:image/png;base64,' + ${pic.name}" alt="Xe Cũ Toyota Wigo 2018 2018 341176 1">
+                            <img th:src="'data:image/png;base64,' + ${pic.name}"
+                                 alt="Xe Cũ Toyota Wigo 2018 2018 341176 1">
                         </div>
                     </div>
                 </div>
@@ -99,20 +114,33 @@
 
                 <div class="row m0 visible-xs mt0 p15mb bg-white-mb">
                     <div class="mb-call-button visible-xs">
-                        <a class="btn btn-orange-48 visible-xs call-button" href="tel: 0337610104" data-object-id="341176" data-object-type="auto" onclick="ga(ga_tracker_name + '.send', 'event', 'Tin', 'Xem thông tin liên hệ', '341176'); dataLayer.push({'event':'Button_GoiDien'});"><i class="icon-sprite-24 icon-phone-white"></i> GỌI  0337610104</a>
+                        <a class="btn btn-orange-48 visible-xs call-button" href="tel: 0337610104"
+                           data-object-id="341176" data-object-type="auto"
+                           onclick="ga(ga_tracker_name + '.send', 'event', 'Tin', 'Xem thông tin liên hệ', '341176'); dataLayer.push({'event':'Button_GoiDien'});"><i
+                                class="icon-sprite-24 icon-phone-white"></i> GỌI 0337610104</a>
                     </div>
 
                     <div class="row m0">
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-status"></i> Tình trạng: <b th:text="${item.carNew.state}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-km"></i> Km đã đi: <b th:text="${item.carNew.gone}">  km</b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-hop-so"></i> Hộp số: <b th:text="${item.carNew.gear}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-nhien-lieu"></i> Nhiên liệu: <b th:text="${item.carNew.fuel}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-ng-ban"></i> Người bán: <b th:text="${item.user.name}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-dong-xe"></i> Dòng xe: <b th:text="${item.carNew.form}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-nam-sx"></i> Năm sản xuất: <b th:text="${item.carNew.create_car}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-dan-dong"></i> Hãng: <b th:text="${item.carNew.brand.name}"></b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-mau-xe"></i> Thành phố: <b th:text="${item.carNew.city.name}"> </b></div>
-                        <div class="detail-xe"><i class="icon-sprite-24 icon-xuat-xu"></i> Xuất xứ: <b th:text="${item.carNew.nation}"></b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-status"></i> Tình trạng: <b
+                                th:text="${item.carNew.state}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-km"></i> Km đã đi: <b
+                                th:text="${item.carNew.gone}"> km</b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-hop-so"></i> Hộp số: <b
+                                th:text="${item.carNew.gear}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-nhien-lieu"></i> Nhiên liệu: <b
+                                th:text="${item.carNew.fuel}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-ng-ban"></i> Người bán: <b
+                                th:text="${item.user.name}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-dong-xe"></i> Dòng xe: <b
+                                th:text="${item.carNew.form}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-nam-sx"></i> Năm sản xuất: <b
+                                th:text="${item.carNew.create_car}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-dan-dong"></i> Hãng: <b
+                                th:text="${item.carNew.brand.name}"></b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-mau-xe"></i> Thành phố: <b
+                                th:text="${item.carNew.city.name}"> </b></div>
+                        <div class="detail-xe"><i class="icon-sprite-24 icon-xuat-xu"></i> Xuất xứ: <b
+                                th:text="${item.carNew.nation}"></b></div>
                     </div>
 
                     <hr class="mb0">
@@ -133,61 +161,65 @@
                 </div>
                 -->
 
-<!--                <div class="list-social visible-xs bg-white-mb pb20mb row m0">-->
+                <!--                <div class="list-social visible-xs bg-white-mb pb20mb row m0">-->
 
-<!--                    <a class="" href="mailto:?&subject=Xe Cũ Toyota Wigo 2018 2018">-->
-<!--                        <i class="icon-sprite-24 icon-email"></i>-->
-<!--                        Email-->
-<!--                    </a>-->
+                <!--                    <a class="" href="mailto:?&subject=Xe Cũ Toyota Wigo 2018 2018">-->
+                <!--                        <i class="icon-sprite-24 icon-email"></i>-->
+                <!--                        Email-->
+                <!--                    </a>-->
 
-<!--                    <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
-<!--                        <i class="icon-sprite-24 icon-fb"></i>-->
-<!--                        Facebook-->
-<!--                    </a>-->
+                <!--                    <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
+                <!--                        <i class="icon-sprite-24 icon-fb"></i>-->
+                <!--                        Facebook-->
+                <!--                    </a>-->
 
-<!--                    <a class="" href="https://plus.google.com/share?url=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
-<!--                        <i class="icon-sprite-24 icon-gl"></i>-->
-<!--                        Google+-->
-<!--                    </a>-->
-<!--                </div>-->
+                <!--                    <a class="" href="https://plus.google.com/share?url=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
+                <!--                        <i class="icon-sprite-24 icon-gl"></i>-->
+                <!--                        Google+-->
+                <!--                    </a>-->
+                <!--                </div>-->
 
 
-<!--                <div class="list-social mt5 p15mb hidden-xs">-->
-<!--                    <a class="" href="javascript:window.print();">-->
-<!--                        <i class="icon-sprite-24 icon-printer"></i>-->
-<!--                        In-->
-<!--                    </a>-->
+                <!--                <div class="list-social mt5 p15mb hidden-xs">-->
+                <!--                    <a class="" href="javascript:window.print();">-->
+                <!--                        <i class="icon-sprite-24 icon-printer"></i>-->
+                <!--                        In-->
+                <!--                    </a>-->
 
-<!--                    <a class="" href="mailto:?&subject=Xe Cũ Toyota Wigo 2018 2018">-->
-<!--                        <i class="icon-sprite-24 icon-email"></i>-->
-<!--                        Chia sẻ qua Email-->
-<!--                    </a>-->
+                <!--                    <a class="" href="mailto:?&subject=Xe Cũ Toyota Wigo 2018 2018">-->
+                <!--                        <i class="icon-sprite-24 icon-email"></i>-->
+                <!--                        Chia sẻ qua Email-->
+                <!--                    </a>-->
 
-<!--                    <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
-<!--                        <i class="icon-sprite-24 icon-fb"></i>-->
-<!--                        Chia sẻ qua Facebook-->
-<!--                    </a>-->
+                <!--                    <a class="" href="https://www.facebook.com/sharer/sharer.php?u=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
+                <!--                        <i class="icon-sprite-24 icon-fb"></i>-->
+                <!--                        Chia sẻ qua Facebook-->
+                <!--                    </a>-->
 
-<!--                    <a class="" href="https://plus.google.com/share?url=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
-<!--                        <i class="icon-sprite-24 icon-gl"></i>-->
-<!--                        Chia sẻ qua Google+-->
-<!--                    </a>-->
-<!--                </div>-->
+                <!--                    <a class="" href="https://plus.google.com/share?url=https://choxe.net/xe-cu/ban-xe-cu-toyota-wigo-2018-2018-tai-dong-nai-341176.html" target="_blank">-->
+                <!--                        <i class="icon-sprite-24 icon-gl"></i>-->
+                <!--                        Chia sẻ qua Google+-->
+                <!--                    </a>-->
+                <!--                </div>-->
 
                 <div class="box-filter right-detail mt20">
-                    <form method="post" action="https://choxe.net/quan-tam" enctype="multipart/form-data" class="validate-form">
+                    <form method="post" action="https://choxe.net/quan-tam" enctype="multipart/form-data"
+                          class="validate-form">
                         <div class="pl15 pr15">
-                            <input type="hidden" name="auto_id" value="341176" />
+                            <input type="hidden" name="auto_id" value="341176"/>
                             <div class="txt-white">Tôi quan tâm đến xe này</div>
                             <div>
-                                <input type="text" class="form-control" placeholder="Họ tên" name="fullname" value="Huy Phạm" />
+                                <input type="text" class="form-control" placeholder="Họ tên" name="fullname"
+                                       value="Huy Phạm"/>
                             </div>
                             <div class="row row-input">
                                 <div class="col-md-6 col-sm-6">
-                                    <input type="text" class="form-control" placeholder="Điện thoại" name="phone" value="" />
+                                    <input type="text" class="form-control" placeholder="Điện thoại" name="phone"
+                                           value=""/>
                                 </div>
                                 <div class="col-md-6 col-sm-6">
-                                    <input type="text" class="form-control" placeholder="Email" name="email" value="phuysgu8@gmail.com" />
+                                    <input type="text" class="form-control" placeholder="Email" name="email"
+                                           value="phuysgu8@gmail.com"/>
                                 </div>
                             </div>
                             <style type="text/css">
@@ -207,22 +239,30 @@
                                         margin-bottom: 0;
                                     }
                                 }
+
                             </style>
                             <label class="lbinput lb-white mt10">
-                                <input type="hidden" name="receive_news" value="N" />
-                                <input type="checkbox" name="receive_news" class="icheck" value="Y" /> Cập nhật xe tương tự qua Email
+                                <input type="hidden" name="receive_news" value="N"/>
+                                <input type="checkbox" name="receive_news" class="icheck" value="Y"/> Cập nhật xe tương
+                                tự qua Email
                             </label>
                         </div>
                         <div class="pl15 pr15">
                             <div class="row row-input">
                                 <div class="col-md-4 col-sm-12">
-                                    <button type="submit" name="type" value="call" class="btn btn-orange-48 mb-10 font16">GỌI NGAY CHO TÔI</button>
+                                    <button type="submit" name="type" value="call"
+                                            class="btn btn-orange-48 mb-10 font16">GỌI NGAY CHO TÔI
+                                    </button>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <button type="submit" name="type" value="email" class="btn btn-blue-48" href="#">EMAIL CHI TIẾT CHO TÔI</button>
+                                    <button type="submit" name="type" value="email" class="btn btn-blue-48" href="#">
+                                        EMAIL CHI TIẾT CHO TÔI
+                                    </button>
                                 </div>
                                 <div class="col-md-4 col-sm-6">
-                                    <button type="submit" name="type" value="test_drive" class="btn btn-blue2-48" data-toggle="modal" data-target="#myModal2">ĐĂNG KÝ LÁI THỬ XE</button>
+                                    <button type="submit" name="type" value="test_drive" class="btn btn-blue2-48"
+                                            data-toggle="modal" data-target="#myModal2">ĐĂNG KÝ LÁI THỬ XE
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -232,26 +272,32 @@
 
 
             <div class="col-left fix-col-mb mt15mb" id="col-fix">
-                <div class="box-info-nban row m0" style="padding: 2px; border-radius: 0; margin-top: 0 !important; background: #8ba7b2;">
-                    <div class="box-gia-ban hidden-xs" style="background: #f5f5f5; border: 0; border-bottom: 1px solid #ccc; padding: 10px 15px; ">
+                <div class="box-info-nban row m0"
+                     style="padding: 2px; border-radius: 0; margin-top: 0 !important; background: #8ba7b2;">
+                    <div class="box-gia-ban hidden-xs"
+                         style="background: #f5f5f5; border: 0; border-bottom: 1px solid #ccc; padding: 10px 15px; ">
                         <!--                        Giá bán: <br>-->
-                        <span class="txt-gia" th:text="${item.carNew.price} + ' Triệu'" ></span>
+                        <span class="txt-gia" th:text="${item.carNew.price} + ' Triệu'"></span>
 
-                        <a class="btn btn-orange-40 mt15 hidden-xs" id="show-hide"  data-object-id="341176" data-object-type="auto" onclick="ga(ga_tracker_name + '.send', 'event', 'Tin', 'Xem thông tin liên hệ', '341176'); dataLayer.push({'event':'Button_XemDienThoaiLienHe'});">
+                        <a class="btn btn-orange-40 mt15 hidden-xs" id="show-hide" data-object-id="341176"
+                           data-object-type="auto"
+                           onclick="ga(ga_tracker_name + '.send', 'event', 'Tin', 'Xem thông tin liên hệ', '341176'); dataLayer.push({'event':'Button_XemDienThoaiLienHe'});">
                             Xem số điện thoại
                         </a>
                         <div class="deta-info" style="margin-bottom: 0; padding-top: 20px; border-top: 1px solid #ccc;">
-                            <p class="sp-txt relative" th:text="${item.user.email}"><i class="icon-sprite-24 icon-address-big"></i></p>
-                            <p class="relative" th:text="${item.user.sdt}"><i class="icon-sprite-24 icon-phone"></i> </p>
+                            <p class="sp-txt relative" th:text="${item.user.email}"><i
+                                    class="icon-sprite-24 icon-address-big"></i></p>
+                            <p class="relative" th:text="${item.user.sdt}"><i class="icon-sprite-24 icon-phone"></i></p>
                         </div>
                     </div>
-                    <div class="bg-white"  style="width: 100%; padding: 10px 15px; border-radius: 0;">
+                    <div class="bg-white" style="width: 100%; padding: 10px 15px; border-radius: 0;">
                         <div class="txt-info" style="padding-left: 70px; height: 75px;">
                             <a class="" href="https://choxe.net/xe?u=341028">
-                                <img src="https://choxe.net//assets/frontend/img/avatar_default.png" height="60" width="60" />
+                                <img src="https://choxe.net//assets/frontend/img/avatar_default.png" height="60"
+                                     width="60"/>
                             </a>
                             <div class="" style="margin-top: -15px;">
-                                <a class="" href="#" th:text="${item.user.name}" ></a>
+                                <a class="" href="#" th:text="${item.user.name}"></a>
                                 <div class="rating">
                                     <span class="star star-yellow"></span>
                                     <span class="star star-yellow"></span>
@@ -263,7 +309,8 @@
                         </div>
                         <div class="short-info ">
                             <p>
-                                <span class="sp-txt" th:text="${item.carNew.city.name}"><i class="icon-sprite-24 icon-address-big"></i></span>
+                                <span class="sp-txt" th:text="${item.carNew.city.name}"><i
+                                        class="icon-sprite-24 icon-address-big"></i></span>
                             </p>
                         </div>
                         <!--                            <div class="txc mt10">-->
@@ -281,7 +328,10 @@
 
                 <!-- Box Xe bán gấp -->
                 <div class="deal table-xe">
-                    <div class="title-underline" style="overflow: hidden; text-overflow: ellipsis;">Xe tương tự <span class="hidden-xs" th:text="${item.carNew.brand.name} + ' ' + ${item.carNew.name} + ' ' + ${item.carNew.create_car}">Xe Cũ Toyota Wigo 2018 2018</span></div>
+                    <div class="title-underline" style="overflow: hidden; text-overflow: ellipsis;">Xe tương tự <span
+                            class="hidden-xs"
+                            th:text="${item.carNew.brand.name} + ' ' + ${item.carNew.name} + ' ' + ${item.carNew.create_car}">Xe Cũ Toyota Wigo 2018 2018</span>
+                    </div>
                     <table class="table list-news">
 
                         <tr th:each="item : ${news}">
@@ -296,14 +346,15 @@
                                             <a class="tit-news" th:href="@{'/Web/chi-tiet-bai-dang/' + ${item.id}}">
                                                 <h2 th:text="${item.title}"></h2>
                                             </a>
-                                            <div class="price visible-xs" th:text="${item.carNew.price}"> </div>
+                                            <div class="price visible-xs" th:text="${item.carNew.price}"></div>
 
                                             <div class="row" style="margin: 0">
                                                 <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.state}">
-                                                    <i class="icon-24 icon-sprite-24 icon-status"></i> </div>
+                                                    <i class="icon-24 icon-sprite-24 icon-status"></i></div>
 
-                                                <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.create_car}">
-                                                    <i class="icon-24 icon-sprite-24 icon-calendar2"></i> </div>
+                                                <div class="col-xs-3 col-sm-3 list-char"
+                                                     th:text="${item.carNew.create_car}">
+                                                    <i class="icon-24 icon-sprite-24 icon-calendar2"></i></div>
 
                                                 <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gone}">
                                                     <i class="icon-24 icon-sprite-24 icon-speed2"></i>
@@ -311,10 +362,11 @@
                                                 </div>
 
                                                 <div class="col-xs-3 col-sm-3 list-char" th:text="${item.carNew.gear}">
-                                                    <i class="icon-24 icon-sprite-24 icon-auto2"></i> </div>
+                                                    <i class="icon-24 icon-sprite-24 icon-auto2"></i></div>
                                             </div>
 
-                                            <div class="city visible-xs" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                                            <div class="city visible-xs" th:text="${item.carNew.city.name}"><i
+                                                    class="icon-24 icon-sprite-24 icon-address"></i></div>
                                             <hr>
                                             <div class="old-news">Đăng 4 ngày trước</div>
                                         </div>
@@ -328,18 +380,23 @@
                                             <!--                    </div>-->
 
                                             <div class="col-xs-3 col-sm-5 p0">
-                                                <button class="btn-show-phone-list" onclick="showPhoneNumner(341635, '0945609563')" id="salon_id_341635">
+                                                <button class="btn-show-phone-list"
+                                                        onclick="showPhoneNumner(341635, '0945609563')"
+                                                        id="salon_id_341635">
                                                     Xem số điện thoại
                                                 </button>
                                             </div>
 
                                             <div class="col-xs-3 col-sm-3 p0">
-                                                <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor" data-toggle="tooltip" title="Thích loại xe này" data-placement="bottom">
+                                                <a href="danh-sach-yeu-thich.html?auto_id=341635" class="favor"
+                                                   data-toggle="tooltip" title="Thích loại xe này"
+                                                   data-placement="bottom">
                                                     <i class="icon-sprite-24 icon-heart"></i> Yêu thích
                                                 </a>
                                             </div>
                                             <div class="col-xs-3 col-sm-3 p0">
-                                                <a href="tin-luu.html?auto_id=341635" class="save" data-toggle="tooltip" title="Lưu tin này" data-placement="bottom">
+                                                <a href="tin-luu.html?auto_id=341635" class="save" data-toggle="tooltip"
+                                                   title="Lưu tin này" data-placement="bottom">
                                                     <i class="icon-sprite-24 icon-save"></i> Lưu tin
                                                 </a>
                                             </div>
@@ -347,7 +404,8 @@
                                     </div>
                                     <div class="price-addr txr hidden-xs">
                                         <div class="price" th:text="${item.carNew.price}"></div>
-                                        <div class="city" th:text="${item.carNew.city.name}"><i class="icon-24 icon-sprite-24 icon-address"></i></div>
+                                        <div class="city" th:text="${item.carNew.city.name}"><i
+                                                class="icon-24 icon-sprite-24 icon-address"></i></div>
                                     </div>
 
                                 </div>
@@ -363,7 +421,11 @@
                     <div class="title-underline">Các tỉnh thành khác</div>
                     <div class="row m0 mt20 mt10mb">
                         <div class="col-xs-6 col-sm-4 p0 mt5">
-                            <a class="city" th:each="province : ${provinces}" th:href="@{'/Web/tinh-thanh/'+ ${province.code} +'/'+${item.carNew.brand.name} +'/'+${item.carNew.name}}"><i class="icon-24 icon-sprite-24 icon-address"></i><h3 th:text="${item.carNew.brand.name} + ' ' + ${item.carNew.name} + ' ' + ${province.name}"></h3></a>
+                            <a class="city" th:each="province : ${provinces}"
+                               th:href="@{'/Web/tinh-thanh/'+ ${province.code} +'/'+${item.carNew.brand.name} +'/'+${item.carNew.name}}"><i
+                                    class="icon-24 icon-sprite-24 icon-address"></i>
+                                <h3 th:text="${item.carNew.brand.name} + ' ' + ${item.carNew.name} + ' ' + ${province.name}"></h3>
+                            </a>
                         </div>
                     </div>
 
@@ -385,18 +447,20 @@
                     <div class="list-tit list-loai-xe" style="padding-bottom: 0;">
                         <ul class="list-link">
                             <li style="text-align: left">
-                                <span style="color: #999;">→</span> <a href="https://choxe.net/xe/toyota/innova">Toyota Innova</a>
+                                <span style="color: #999;">→</span> <a href="https://choxe.net/xe/toyota/innova">Toyota
+                                Innova</a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- Box advertising -->
-                <div class="bg-advertise mt25" >
+                <div class="bg-advertise mt25">
                     <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
                     <script>
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
-</script>
+
+                    </script>
 
                     <script>
   googletag.cmd.push(function() {
@@ -404,13 +468,16 @@
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
   });
-</script>
+
+                    </script>
                     <!-- /57746206/Oto24H_Background_Left -->
                     <div id='div-gpt-ad-1491596558857-0' style='height:600px; width:160px;'>
                         <script>
 googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491596558857-0'); });
-</script>
-                    </div>	</div>
+
+                        </script>
+                    </div>
+                </div>
                 <!-- End Box advertising -->
             </div>
             <!-- End Column Left -->
@@ -432,7 +499,7 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491596558857-0');
             </div>
         </div>
     </div>
-    <!-- End Slider Salon nổi bật -->	<!-- End Slider Salon nổi bật -->
+    <!-- End Slider Salon nổi bật -->    <!-- End Slider Salon nổi bật -->
 
 </div>
 <!-- End Body -->
@@ -449,7 +516,8 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491596558857-0');
 <script type="text/javascript ">
         var bookmark_ids = [];
         var wishlist_ids = [];
-    </script>
+
+</script>
 
 <script src="/assets/frontend/js/common30f4.js?v=3"></script>
 <script src="/assets/frontend/js/js_mobile3860.js?v=1"></script>
@@ -457,7 +525,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1491596558857-0');
 <script src="/assets/frontend/js/sortable3860.js?v=1"></script>
 <script src="/assets/frontend/js/choxe0e34.js?v=33"></script>
 <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=51vkdv3kfo80drfju5t1s7u9eae67dqqytn7k1mdleidgi2p"></script>
-
 
 
 </body>

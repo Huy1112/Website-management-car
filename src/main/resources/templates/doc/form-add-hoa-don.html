@@ -4,7 +4,7 @@
                                                 ~{:: #home-header},
                                                 ~{:: #home-aside},
                                                 ~{:: #home-mainContent}
-                                               )}">
+                                             )}">
 <body>
 <style>
     .Choicefile {
@@ -75,69 +75,76 @@
       transform: rotate(-45deg);
       margin-top: -2px;
     }
+
+
 </style>
 <div class="app-header" id="home-header" th:replace="~{fragments/app-fragments :: header}"></div>
 <div id="home-aside" th:replace="~{fragments/app-fragments :: aside}"></div>
 <!-- Main Content-->
 <main id="home-mainContent">
-  <div class="app-title">
-    <ul class="app-breadcrumb breadcrumb">
-      <li class="breadcrumb-item">Danh sách hoá đơn</li>
-      <li class="breadcrumb-item"><a href="#">Thêm hoá đơn</a></li>
-    </ul>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-
-      <div class="tile">
-
-        <h3 class="tile-title">Tạo mới hoá đơn</h3>
-        <div class="tile-body">
-          <form class="row" th:action="@{/doc/form-add-hoa-don}" th:object="${hoadon}" method="post">
-
-            <div class="form-group  col-md-6">
-              <label for="exampleSelect1" class="control-label">Đơn hàng</label>
-              <select class="form-control" th:field="*{idNew}"  id="exampleSelect1" >
-                <option th:each="new1 : ${news}"  th:value="${new1.id}" th:text="${new1.title}"></option>
-              </select>
-
-              <div class="alert alert-warning" th:if="${#fields.hasErrors('idNew')}" th:errors="*{idNew}" ></div>
-            </div>
-
-            <div class="form-group  col-md-6">
-              <label for="exampleSelect1" class="control-label">Loại Tin</label>
-              <select class="form-control" th:field="*{idLoaiTin}"  id="exampleSelect2" >
-                <option th:each="loaitin : ${loaitins}"  th:value="${loaitin.id}" th:text="${loaitin.name}"></option>
-              </select>
-
-              <div class="alert alert-warning" th:if="${#fields.hasErrors('idLoaiTin')}" th:errors="*{idLoaiTin}" ></div>
-            </div>
-            <div class="form-group  col-md-6">
-              <label for="exampleSelect1" class="control-label">Số ngày đăng tin</label>
-              <select class="form-control" th:field="*{quantity}"  id="exampleSelect3" >
-                <option value="7">7 ngày</option>
-                <option value="15">15 ngày</option>
-                <option value="30">30 ngày</option>
-              </select>
-
-              <div class="alert alert-warning" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}" ></div>
-            </div>
-            <div class="form-group col-md-6">
-              <label class="control-label">Tình trạng</label>
-              <select class="form-control" th:field="*{state}"  id="exampleSelect4">
-                <option value="Còn hạn">Còn hạn</option>
-                <option value="Hết hạn">Hết hạn</option>
-              </select>
-
-              <div class="alert alert-warning" th:if="${#fields.hasErrors('state')}" th:errors="*{state}" ></div>
-            </div>
-            <input class="btn btn-save" type="submit" value="Lưu lại"/>
-            <a class="btn btn-cancel" th:href="@{/doc/table-data-hoa-don}">Hủy bỏ</a>
-          </form>
-        </div>
-      </div>
+    <div class="app-title">
+        <ul class="app-breadcrumb breadcrumb">
+            <li class="breadcrumb-item">Danh sách hoá đơn</li>
+            <li class="breadcrumb-item"><a href="#">Thêm hoá đơn</a></li>
+        </ul>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="tile">
+
+                <h3 class="tile-title">Tạo mới hoá đơn</h3>
+                <div class="tile-body">
+                    <form class="row" th:action="@{/doc/form-add-hoa-don}" th:object="${hoadon}" method="post">
+
+                        <div class="form-group  col-md-6">
+                            <label for="exampleSelect1" class="control-label">Đơn hàng</label>
+                            <select class="form-control" th:field="*{idNew}" id="exampleSelect1">
+                                <option th:each="new1 : ${news}" th:value="${new1.id}" th:text="${new1.title}"></option>
+                            </select>
+
+                            <div class="alert alert-warning" th:if="${#fields.hasErrors('idNew')}"
+                                 th:errors="*{idNew}"></div>
+                        </div>
+
+                        <div class="form-group  col-md-6">
+                            <label for="exampleSelect1" class="control-label">Loại Tin</label>
+                            <select class="form-control" th:field="*{idLoaiTin}" id="exampleSelect2">
+                                <option th:each="loaitin : ${loaitins}" th:value="${loaitin.id}"
+                                        th:text="${loaitin.name}"></option>
+                            </select>
+
+                            <div class="alert alert-warning" th:if="${#fields.hasErrors('idLoaiTin')}"
+                                 th:errors="*{idLoaiTin}"></div>
+                        </div>
+                        <div class="form-group  col-md-6">
+                            <label for="exampleSelect1" class="control-label">Số ngày đăng tin</label>
+                            <select class="form-control" th:field="*{quantity}" id="exampleSelect3">
+                                <option value="7">7 ngày</option>
+                                <option value="15">15 ngày</option>
+                                <option value="30">30 ngày</option>
+                            </select>
+
+                            <div class="alert alert-warning" th:if="${#fields.hasErrors('quantity')}"
+                                 th:errors="*{quantity}"></div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Tình trạng</label>
+                            <select class="form-control" th:field="*{state}" id="exampleSelect4">
+                                <option value="Còn hạn">Còn hạn</option>
+                                <option value="Hết hạn">Hết hạn</option>
+                            </select>
+
+                            <div class="alert alert-warning" th:if="${#fields.hasErrors('state')}"
+                                 th:errors="*{state}"></div>
+                        </div>
+                        <input class="btn btn-save" type="submit" value="Lưu lại"/>
+                        <a class="btn btn-cancel" th:href="@{/doc/table-data-hoa-don}">Hủy bỏ</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 </body>
 </html>
