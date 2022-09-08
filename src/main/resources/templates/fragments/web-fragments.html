@@ -59,7 +59,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>➤ Mua bán xe ô tô cũ mới đã qua sử dụng, xe hơi cũ mới giá rẻ | ChoXe.net</title>
+    <title>Chợ Xe Bo</title>
 
 
     <script type="application/ld+json">
@@ -74,13 +74,11 @@
             }
         }
     </script>
-
-    <link rel="canonical" href="https://choxe.net/"/>
     <meta name="description"
           content="Bán xe ô tô cũ mới tại Hà Nội, xe hơi cũ giá rẻ tại Tp HCM, đăng tin bán ô tô cũ mới Choxe.net: Toyota, Kia, Ford, Mercedes, Mazda cũ..."/>
     <!-- <meta name="keywords" content="cho xe oto, chợ xe ô tô, mua ban oto, mua oto, ban oto, mua ô tô, bán ô tô, xe hơi, bốn bánh, chợ xe, cho oto, chợ ô tô, chợ xe hơi"> -->
     <meta name="keywords" content="mua bán ô tô, bán xe hơi cũ, chợ xe cũ, đăng tin bán ô tô">
-    <meta name="author" content="Chợ Xe"/>
+    <meta name="author" content="Choxebo"/>
 
     <meta property="fb:app_id" content="1891135751174652"/>
     <meta name="msvalidate.01" content="EBFA198867638E16AF90513C35BA4F78"/>
@@ -100,26 +98,26 @@
     <meta name="mobile-web-app-capable" content="yes"/>
 
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/frontend/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/frontend/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/frontend/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/frontend/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/frontend/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/frontend/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/frontend/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/frontend/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/frontend/icons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/frontend/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/frontend/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/frontend/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/frontend/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" th:href="@{/assets/frontend/icons/apple-icon-57x57.png}">
+    <link rel="apple-touch-icon" sizes="60x60" th:href="@{/assets/frontend/icons/apple-icon-60x60.png}">
+    <link rel="apple-touch-icon" sizes="72x72" th:href="@{/assets/frontend/icons/apple-icon-72x72.png}">
+    <link rel="apple-touch-icon" sizes="76x76" th:href="@{/assets/frontend/icons/apple-icon-76x76.png}">
+    <link rel="apple-touch-icon" sizes="114x114" th:href="@{/assets/frontend/icons/apple-icon-114x114.png}">
+    <link rel="apple-touch-icon" sizes="120x120" th:href="@{/assets/frontend/icons/apple-icon-120x120.png}">
+    <link rel="apple-touch-icon" sizes="144x144" th:href="@{/assets/frontend/icons/apple-icon-144x144.png}">
+    <link rel="apple-touch-icon" sizes="152x152" th:href="@{/assets/frontend/icons/apple-icon-152x152.png}">
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/assets/frontend/icons/apple-icon-180x180.png}">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/frontend/icons/android-icon-192x192.png}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/frontend/icons/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/frontend/icons/favicon-96x96.png}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/frontend/icons/favicon-16x16.png}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/assets/frontend/icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" th:content="@{/assets/frontend/icons/ms-icon-144x144.png}">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=vietnamese"
+    <link th:href="@{//fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&amp;subset=vietnamese}"
           rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/frontend/css/common3f56.css?v=11">
+    <link rel="stylesheet" type="text/css" th:href="@{/assets/frontend/css/common3f56.css}">
 
 </head>
 
@@ -920,8 +918,8 @@
 <div th:fragment="tinhThanh" class="deal mt25 tinh-thanh hidden-xs">
     <div class="title-underline">Xem xe theo tỉnh thành</div>
     <div class="row m0 mt20 mt10mb">
-        <div class="col-xs-6 col-sm-3 p0 mt5">
-            <a class="city" th:each="province : ${provinces}" th:href="@{'/Web/tinh-thanh/'+ ${province.code}}"
+        <div class="col-sm-3 p0 mt5">
+            <a class="city px" th:each="province : ${provinces}" th:href="@{'/Web/tinh-thanh/'+ ${province.code}}"
                th:text="${province.name}"><i class="icon-24 icon-sprite-24 icon-address"></i><span
                     class="txt-num">()</span></a>
         </div>
@@ -930,6 +928,12 @@
 
     <div class="a-see-all ">
         <a class=" " th:href="@{/Web/tinh-thanh}">Xem tất cả Tỉnh thành »</a>
+    </div>
+
+    <div class="d-flex p-3 bg-secondary text-white">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
     </div>
 </div>
 
